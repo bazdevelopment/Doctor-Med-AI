@@ -11,6 +11,9 @@ importers:
 
   .:
     dependencies:
+      '@expo-google-fonts/work-sans':
+        specifier: ^0.4.2
+        version: 0.4.2
       '@expo/metro-runtime':
         specifier: ^5.0.4
         version: 5.0.5(react-native@0.79.5(@babel/core@7.28.5)(@types/react@19.0.14)(react@19.0.0))
@@ -943,6 +946,9 @@ packages:
   '@eslint/plugin-kit@0.4.0':
     resolution: {integrity: sha512-sB5uyeq+dwCWyPi31B2gQlVlo+j5brPlWx4yZBrEaRo/nhdDE8Xke1gsGgtiBdaBTxuTkceLVuVt/pclrasb0A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@expo-google-fonts/work-sans@0.4.2':
+    resolution: {integrity: sha512-v+I8jQgoOAmI77v1V0EXvgKA4NGg8Agy2BCHAI6sswAKTub2sKsi6PXT4vLBn95dbbTqelSlcT79YRDTlCBrRg==}
 
   '@expo/cli@0.24.22':
     resolution: {integrity: sha512-cEg6/F8ZWjoVkEwm0rXKReWbsCUROFbLFBYht+d5RzHnDwJoTX4QWJKx4m+TGNDPamRUIGw36U4z41Fvev0XmA==}
@@ -7952,6 +7958,8 @@ snapshots:
     dependencies:
       '@eslint/core': 0.16.0
       levn: 0.4.1
+
+  '@expo-google-fonts/work-sans@0.4.2': {}
 
   '@expo/cli@0.24.22':
     dependencies:

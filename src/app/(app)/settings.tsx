@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 import { Env } from '@env';
 import { useColorScheme } from 'nativewind';
 
@@ -27,7 +26,7 @@ export default function Settings() {
 
       <ScrollView>
         <View className="flex-1 px-4 pt-16 ">
-          <Text className="text-xl font-bold">
+          <Text className="font-bold-work-sans text-xl">
             {translate('settings.title')}
           </Text>
           <ItemsContainer title="settings.generale">

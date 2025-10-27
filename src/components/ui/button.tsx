@@ -1,13 +1,22 @@
-import React from 'react';
-import type { PressableProps, View } from 'react-native';
-import { ActivityIndicator, Pressable, Text } from 'react-native';
+/* eslint-disable max-lines-per-function */
+import React, { type ReactElement } from 'react';
+import type { PressableProps } from 'react-native';
+import {
+  ActivityIndicator,
+  Pressable,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import type { VariantProps } from 'tailwind-variants';
 import { tv } from 'tailwind-variants';
+
+import colors from './colors';
 
 const button = tv({
   slots: {
     container: 'my-2 flex flex-row items-center justify-center rounded-md px-4',
-    label: 'font-inter text-base font-semibold',
+    label: 'font-semibold-nunito text-base',
     indicator: 'h-6 text-white',
   },
 
@@ -19,7 +28,7 @@ const button = tv({
         indicator: 'text-white dark:text-black',
       },
       secondary: {
-        container: 'bg-primary-600',
+        container: 'bg-primary-900',
         label: 'text-secondary-600',
         indicator: 'text-white',
       },
@@ -29,7 +38,8 @@ const button = tv({
         indicator: 'text-black dark:text-neutral-100',
       },
       destructive: {
-        container: 'bg-red-600',
+        container:
+          'rounded-xl border-2 border-red-100 bg-red-500 dark:border-0 dark:bg-red-600',
         label: 'text-white',
         indicator: 'text-white',
       },
@@ -40,7 +50,7 @@ const button = tv({
       },
       link: {
         container: 'bg-transparent',
-        label: 'text-black',
+        label: 'text-black active:opacity-80',
         indicator: 'text-black',
       },
     },
@@ -50,7 +60,7 @@ const button = tv({
         label: 'text-base',
       },
       lg: {
-        container: 'h-12 px-8',
+        container: 'h-14 px-8',
         label: 'text-xl',
       },
       sm: {
@@ -62,7 +72,7 @@ const button = tv({
     },
     disabled: {
       true: {
-        container: 'bg-neutral-300 dark:bg-neutral-300',
+        container: 'disabled:border-neutral-200 disabled:bg-primary-600 ',
         label: 'text-neutral-600 dark:text-neutral-600',
         indicator: 'text-neutral-400 dark:text-neutral-400',
       },
@@ -90,6 +100,9 @@ interface Props extends ButtonVariants, Omit<PressableProps, 'disabled'> {
   loading?: boolean;
   className?: string;
   textClassName?: string;
+  icon?: ReactElement;
+  iconPosition?: 'left' | 'right';
+  withGradientText?: boolean;
 }
 
 export const Button = React.forwardRef<View, Props>(
@@ -101,8 +114,11 @@ export const Button = React.forwardRef<View, Props>(
       disabled = false,
       size = 'default',
       className = '',
+      icon,
       testID,
       textClassName = '',
+      withGradientText = false,
+      iconPosition = 'right',
       ...props
     },
     ref
@@ -124,6 +140,7 @@ export const Button = React.forwardRef<View, Props>(
           props.children
         ) : (
           <>
+            {!!icon && iconPosition == 'left' && <View>{icon}</View>}
             {loading ? (
               <ActivityIndicator
                 size="small"
@@ -131,12 +148,31 @@ export const Button = React.forwardRef<View, Props>(
                 testID={testID ? `${testID}-activity-indicator` : undefined}
               />
             ) : (
-              <Text
-                testID={testID ? `${testID}-label` : undefined}
-                className={styles.label({ className: textClassName })}
-              >
-                {text}
-              </Text>
+              <>
+                {withGradientText ? (
+                  <GradientText
+                    colors={[colors.lightSkyBlue, colors.primaryPurple]}
+                  >
+                    <Text
+                      testID={testID ? `${testID}-label` : undefined}
+                      className={styles.label({ className: textClassName })}
+                    >
+                      {text}
+                    </Text>
+                  </GradientText>
+                ) : (
+                  <Text
+                    testID={testID ? `${testID}-label` : undefined}
+                    className={styles.label({ className: textClassName })}
+                  >
+                    {text}
+                  </Text>
+                )}
+
+                {!!icon && iconPosition === 'right' && (
+                  <View className="ml-2">{icon}</View>
+                )}
+              </>
             )}
           </>
         )}
@@ -144,3 +180,30 @@ export const Button = React.forwardRef<View, Props>(
     );
   }
 );
+
+interface IRoundedButton {
+  icon: ReactElement;
+  label: string;
+  onPress: () => void;
+  className?: string;
+  textClassName?: string;
+}
+export const RoundedButton = ({
+  icon,
+  label,
+  onPress,
+  className,
+  textClassName,
+}: IRoundedButton) => {
+  return (
+    <TouchableOpacity
+      className={`h-[100px] w-[120px] items-center justify-center gap-3 rounded-2xl bg-primary-100 dark:bg-black ${className}`}
+      onPress={onPress}
+    >
+      {icon}
+      <Text className={`font-semibold-nunito text-center ${textClassName}`}>
+        {label}
+      </Text>
+    </TouchableOpacity>
+  );
+};

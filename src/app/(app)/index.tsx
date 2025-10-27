@@ -1,12 +1,13 @@
 import React from 'react';
 
-import { FocusAwareStatusBar, Text, View } from '@/components/ui';
+import CustomHomeHeader from '@/components/custom-home-header';
+import { ScrollView, Text } from '@/components/ui';
 
 export default function Home() {
   return (
-    <View className="flex-1 ">
-      <FocusAwareStatusBar />
+    <ScrollView className="flex-1">
+      <CustomHomeHeader />
       <Text> Home screen</Text>
-    </View>
+    </ScrollView>
   );
 }
