@@ -37,7 +37,7 @@ require('dotenv').config({
 
 const BUNDLE_ID = 'com.doctormedai'; // ios bundle id
 const PACKAGE = 'com.doctormedai'; // android package name
-const NAME = 'Doctor Med AI'; // app name
+const NAME = 'Doctor Med AI'; // app name //or 'Doctor Med AI' or //"Medical Doctor" //"Medical DoctorAI"
 const EXPO_ACCOUNT_OWNER = 'bazdevelopment'; // expo account owner
 const EAS_PROJECT_ID = '4a0df3e2-5039-4365-9850-5265605498ab'; // eas project id
 const SCHEME = 'doctormedai'; // app scheme

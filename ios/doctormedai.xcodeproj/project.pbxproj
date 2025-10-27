@@ -18,13 +18,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		13B07F961A680F5B00A75B9A /* doctormedai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = doctormedai.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* DoctorMedAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctorMedAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = doctormedai/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = doctormedai/Info.plist; sourceTree = "<group>"; };
 		21139F89E42086290D66E8D7 /* Pods-doctormedai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doctormedai.debug.xcconfig"; path = "Target Support Files/Pods-doctormedai/Pods-doctormedai.debug.xcconfig"; sourceTree = "<group>"; };
-		2EFF05F2015070927E7A453D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = doctormedai/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		2EFF05F2015070927E7A453D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = doctormedai/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		53A861FF963C7DCDAD3829BC /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-doctormedai/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		5ED67305CCB14F54B8D2A9C2 /* Inter.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Inter.ttf; path = ../assets/fonts/Inter.ttf; sourceTree = "<group>"; };
+		5ED67305CCB14F54B8D2A9C2 /* Inter.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Inter.ttf; path = ../assets/fonts/Inter.ttf; sourceTree = "<group>"; };
 		6C0A9154A0618C080EFEC78F /* libPods-doctormedai.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-doctormedai.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = doctormedai/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
@@ -66,7 +66,6 @@
 				21139F89E42086290D66E8D7 /* Pods-doctormedai.debug.xcconfig */,
 				CF819D330888A766B17D7113 /* Pods-doctormedai.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -93,7 +92,6 @@
 				5ED67305CCB14F54B8D2A9C2 /* Inter.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -122,7 +120,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* doctormedai.app */,
+				13B07F961A680F5B00A75B9A /* DoctorMedAI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,7 +164,7 @@
 			);
 			name = doctormedai;
 			productName = doctormedai;
-			productReference = 13B07F961A680F5B00A75B9A /* doctormedai.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* DoctorMedAI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -357,6 +355,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = doctormedai/doctormedai.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GWKM3M7S5P;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -375,8 +374,8 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.doctormedai";
-				PRODUCT_NAME = "DoctorMedAI";
+				PRODUCT_BUNDLE_IDENTIFIER = com.doctormedai;
+				PRODUCT_NAME = DoctorMedAI;
 				SWIFT_OBJC_BRIDGING_HEADER = "doctormedai/doctormedai-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -393,6 +392,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = doctormedai/doctormedai.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GWKM3M7S5P;
 				INFOPLIST_FILE = doctormedai/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,8 +406,8 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.doctormedai";
-				PRODUCT_NAME = "DoctorMedAI";
+				PRODUCT_BUNDLE_IDENTIFIER = com.doctormedai;
+				PRODUCT_NAME = DoctorMedAI;
 				SWIFT_OBJC_BRIDGING_HEADER = "doctormedai/doctormedai-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

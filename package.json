@@ -157,5 +157,10 @@
   },
   "osMetadata": {
     "initVersion": "8.0.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "react-native-css-interop": "0.1.22"
+    }
   }
 }

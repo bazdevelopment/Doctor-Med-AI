@@ -1,14 +1,42 @@
 import * as React from 'react';
-import type { SvgProps } from 'react-native-svg';
-import Svg, { Path } from 'react-native-svg';
+import Svg, { ClipPath, Defs, G, Path } from 'react-native-svg';
 
-export function Home({ color = '#000', ...props }: SvgProps) {
-  return (
-    <Svg width={24} height={24} viewBox="0 0 24 24" fill="none" {...props}>
+import { type ISvgProps } from '@/types';
+
+import colors from '../colors';
+
+export const HomeIcon = (props: ISvgProps) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    {...props}
+  >
+    <G clipPath="url(#a)">
       <Path
-        d="M12.848 2.751a1.2 1.2 0 0 0-1.697 0l-8.4 8.4a1.2 1.2 0 1 0 1.698 1.697l.351-.351V20.4A1.2 1.2 0 0 0 6 21.6h2.4a1.2 1.2 0 0 0 1.2-1.2V18a1.2 1.2 0 0 1 1.2-1.2h2.4a1.2 1.2 0 0 1 1.2 1.2v2.4a1.2 1.2 0 0 0 1.2 1.2H18a1.2 1.2 0 0 0 1.2-1.2v-7.903l.352.351a1.2 1.2 0 1 0 1.697-1.697l-8.4-8.4Z"
-        fill={color}
+        fill={props.isFocused ? '#00ACB8' : 'transparent'}
+        d="M9.75 20.25v-6h4.5v6h6v-9a.75.75 0 0 0-.22-.53l-7.5-7.5a.749.749 0 0 0-1.06 0l-7.5 7.5a.75.75 0 0 0-.22.53v9h6Z"
+        opacity={0.2}
       />
-    </Svg>
-  );
-}
+      <Path
+        stroke={
+          props.isFocused
+            ? '#00ACB8'
+            : props.isDark
+              ? colors.charcoal[300]
+              : colors.charcoal[800]
+        }
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+        d="M9.75 20.25v-6h4.5v6h6v-9a.75.75 0 0 0-.22-.53l-7.5-7.5a.749.749 0 0 0-1.06 0l-7.5 7.5a.75.75 0 0 0-.22.53v9h6Z"
+      />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M0 0h24v24H0z" />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
