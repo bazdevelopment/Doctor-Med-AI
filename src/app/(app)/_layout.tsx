@@ -7,25 +7,22 @@ import { HomeIcon } from '@/components/ui/icons';
 import { ChatIcon } from '@/components/ui/icons/chat';
 import { StethoscopeIcon } from '@/components/ui/icons/stethoscope';
 import { WheelIcon } from '@/components/ui/icons/wheel';
-import { useAuth, useIsFirstTime } from '@/lib';
 import { DEVICE_TYPE } from '@/utilities/device-type';
 
 export default function TabLayout() {
-  const status = useAuth.use.status();
-  const [isFirstTime] = useIsFirstTime();
-
   const { colorScheme } = useColorScheme();
   const isDark = colorScheme === 'dark';
 
   return (
     <SafeAreaView
-      className="flex-1"
+      className="flex-1 bg-white dark:bg-transparent"
       edges={DEVICE_TYPE.ANDROID ? ['bottom'] : ['top']}
     >
       <Tabs
         screenOptions={{
           tabBarLabelStyle: { fontSize: 12, fontWeight: 'bold' },
           tabBarActiveTintColor: colors.primary[900],
+          tabBarInactiveTintColor: isDark ? colors.white : colors.charcoal[500],
         }}
       >
         <Tabs.Screen

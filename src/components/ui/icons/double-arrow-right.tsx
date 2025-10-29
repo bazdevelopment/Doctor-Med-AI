@@ -13,14 +13,14 @@ export const DoubleArrowRight = (props: ISvgProps) => (
     {...props}
   >
     <Path
-      stroke="#fff"
+      stroke={props.color || '#fff'}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.28}
       d="M4.305 4.518 8.787 9 4.305 13.48"
     />
     <Path
-      stroke="#fff"
+      stroke={props.color || '#fff'}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeOpacity={0.5}

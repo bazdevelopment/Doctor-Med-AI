@@ -9,10 +9,10 @@ import { CrownIcon } from '../ui/icons/crown';
 
 const CustomHomeHeader = () => {
   return (
-    <View className="px-4">
+    <View className="bg-white px-4 dark:bg-transparent">
       <Branding isLogoVisible />
-      <View className="mt-2 flex-row items-center justify-between">
-        <MedicalDisclaimerButton />
+      <View className=" flex-row items-center justify-between">
+        <MedicalDisclaimerButton className="mt-2" />
         <Button
           label="PRO" //or PREMIUM
           variant="default"
@@ -24,8 +24,9 @@ const CustomHomeHeader = () => {
       </View>
       <HorizontalLine
         color={colors.primary[900]}
-        thickness={0.5}
+        thickness={0.3}
         className="my-2"
+        className="-ml-10 -mr-5"
       />
     </View>
   );

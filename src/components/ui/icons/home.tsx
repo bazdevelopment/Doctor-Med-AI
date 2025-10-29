@@ -24,7 +24,7 @@ export const HomeIcon = (props: ISvgProps) => (
           props.isFocused
             ? '#00ACB8'
             : props.isDark
-              ? colors.charcoal[300]
+              ? colors.white
               : colors.charcoal[800]
         }
         strokeLinecap="round"

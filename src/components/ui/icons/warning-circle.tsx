@@ -13,7 +13,7 @@ export const WarningCircleIcon = (props: ISvgProps) => (
     {...props}
   >
     <Path
-      stroke="#fff"
+      stroke={props.color || '#fff'}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.125}
@@ -21,14 +21,14 @@ export const WarningCircleIcon = (props: ISvgProps) => (
       clipRule="evenodd"
     />
     <Path
-      stroke="#fff"
+      stroke={props.color || '#fff'}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.125}
       d="M8.996 6.153v3.314"
     />
     <Path
-      stroke="#fff"
+      stroke={props.color || '#fff'}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
