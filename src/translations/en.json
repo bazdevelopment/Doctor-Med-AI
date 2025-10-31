@@ -1,5 +1,18 @@
 {
   "general": {
+    "back": "Back",
+    "welcome": "Hi",
+    "welcomeBack": "Welcome Back!",
+    "welcomeMessage": "Welcome!",
+    "continue": "Continue",
+    "retry": "Retry",
+    "close": "Close",
+    "gallery": "Gallery",
+    "files": "Files",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "attention": "Attention!",
+    "new": "New",
     "activeSubscription": "Subscription active",
     "agreeingMessage": "By continuing, you agree to our",
     "and": "and",
@@ -65,14 +78,28 @@
   "onboarding": {
     "message": "Welcome to obytes app site"
   },
+  "components": {
+    "PremiumFeaturesOverview": {
+      "first": "Get analysis from various medical scans, including X-RAY, CT, MRI, ECG and more",
+      "second": "Access to all premium features",
+      "fourth": "Unlimited chats with a 24/7 medical AI assistants",
+      "third": "No ads"
+    }
+  },
   "rootLayout": {
     "screens": {
       "welcome": {
         "accountButton": "I already have an account",
         "heading": "Welcome to Doctor Med AI!",
         "startButton": "Let's get started!"
+      },
+      "freeTrialPreview": {
+        "heading": "Enjoy your free trial! 🎉",
+        "review": "The medical scan analysis gave me valuable insights into the images, and the chat support is very helpful.",
+        "reviewTrust": "📈 Trusted by 5,212+ users"
       }
     },
+
     "settings": {
       "about": "About",
       "app_name": "App Name",

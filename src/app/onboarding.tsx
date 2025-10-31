@@ -1,54 +1,51 @@
-import { useRouter } from 'expo-router';
-import React from 'react';
+import { router } from 'expo-router';
+import React, { useState } from 'react';
 
-import { Cover } from '@/components/cover';
-import {
-  Button,
-  FocusAwareStatusBar,
-  SafeAreaView,
-  Text,
-  View,
-} from '@/components/ui';
-import { useIsFirstTime } from '@/lib/hooks';
+import FlowModal from '@/components/flow-modal';
+import SecondOnboardingScreen from '@/screens/onboarding/second-onboarding-screen';
+import { useIsOnboarded } from '@/lib/hooks/use-is-onboarded';
+import FirstOnboardingScreen from '@/screens/onboarding/first-onboarding-screen';
+import ThirdOnboardingScreen from '@/screens/onboarding/third-screen-onboarding';
+import FreeTrialPreview from '@/screens/onboarding/free-trial-preview';
+
+export interface IOnboardingCollectedData {
+  preferredName: string;
+}
+
 export default function Onboarding() {
-  const [_, setIsFirstTime] = useIsFirstTime();
-  const router = useRouter();
-  return (
-    <View className="flex h-full items-center  justify-center">
-      <FocusAwareStatusBar />
-      <View className="w-full flex-1">
-        <Cover />
-      </View>
-      <View className="justify-end ">
-        <Text className="my-3 text-center text-5xl font-bold">
-          Obytes Starter
-        </Text>
-        <Text className="mb-2 text-center text-lg text-gray-600">
-          The right way to build your mobile app
-        </Text>
+  const [collectedData, setCollectedData] = useState<IOnboardingCollectedData>({
+    preferredName: '',
+  });
+  const [currentScreenIndex, setCurrentScreenIndex] = useState(0);
+  const [_, setIsOnboardingRunning] = useIsOnboarded();
 
-        <Text className="my-1 pt-6 text-left text-lg">
-          🚀 Production-ready{' '}
-        </Text>
-        <Text className="my-1 text-left text-lg">
-          🥷 Developer experience + Productivity
-        </Text>
-        <Text className="my-1 text-left text-lg">
-          🧩 Minimal code and dependencies
-        </Text>
-        <Text className="my-1 text-left text-lg">
-          💪 well maintained third-party libraries
-        </Text>
-      </View>
-      <SafeAreaView className="mt-6">
-        <Button
-          label="Let's Get Started "
-          onPress={() => {
-            setIsFirstTime(false);
-            router.replace('/login');
-          }}
-        />
-      </SafeAreaView>
-    </View>
+  const handleGoToNextScreen = () => {
+    setCurrentScreenIndex((prevIndex) => prevIndex + 1);
+  };
+
+  const handleGoToPreviousScreen = () =>
+    setCurrentScreenIndex((prevIndex) => prevIndex - 1);
+
+  const handleOnFinishFlow = () => {
+    setIsOnboardingRunning(false);
+    router.navigate({
+      pathname: '/paywall-new',
+      params: { allowAppAccess: true },
+    });
+  };
+
+  return (
+    <FlowModal
+      currentScreenIndex={currentScreenIndex}
+      onGoNext={handleGoToNextScreen}
+      onFinish={handleOnFinishFlow}
+      onGoBack={handleGoToPreviousScreen}
+      collectedData={collectedData}
+    >
+      <FirstOnboardingScreen />
+      <SecondOnboardingScreen />
+      <ThirdOnboardingScreen />
+      <FreeTrialPreview />
+    </FlowModal>
   );
 }

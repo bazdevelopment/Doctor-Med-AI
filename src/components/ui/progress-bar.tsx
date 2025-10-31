@@ -7,6 +7,7 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 import { twMerge } from 'tailwind-merge';
+import colors from './colors';
 
 type Props = {
   initialProgress?: number;
@@ -34,8 +35,8 @@ export const ProgressBar = forwardRef<ProgressBarRef, Props>(
     const style = useAnimatedStyle(() => {
       return {
         width: `${progress.value}%`,
-        backgroundColor: '#000',
-        height: 2,
+        backgroundColor: colors.primary[900],
+        height: 5,
       };
     });
     return (

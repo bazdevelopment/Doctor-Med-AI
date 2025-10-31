@@ -1,15 +1,37 @@
 import { router } from 'expo-router';
 import React from 'react';
-import { Linking, ScrollView, TouchableOpacity, View } from 'react-native';
+import {
+  Keyboard,
+  Linking,
+  ScrollView,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
 import Branding from '@/components/branding';
 import { Button, SafeAreaView, Text } from '@/components/ui';
 import { WelcomeIllustration } from '@/components/ui/illustrations/welcome';
-import { translate } from '@/lib';
+import { translate, useIsFirstTime, useSelectedLanguage } from '@/lib';
 import getDeviceSizeCategory from '@/utilities/get-device-size-category';
+import { useCreateAnonymousAccount } from '@/api/user/user.hooks';
+import { useStoreUserId } from '@/lib/hooks/use-store-user-id';
+import { firebaseAuth } from '@/firebase/config';
 
 const Welcome = () => {
   const { isVerySmallDevice, isLargeDevice } = getDeviceSizeCategory();
+  const [storedUserId, setUserId] = useStoreUserId();
+  const { language } = useSelectedLanguage();
+  const [_, setIsFirstTime] = useIsFirstTime();
+
+  const onSuccessHandler = (userId: string) => {
+    //update internal storage with userId and set is first time when opening the app to false
+    setUserId(userId);
+    setIsFirstTime(false);
+    router.navigate('/onboarding');
+  };
+
+  const { mutate: onCreateAnonymousAccount, isPending: isLoginPending } =
+    useCreateAnonymousAccount(onSuccessHandler);
 
   return (
     <ScrollView
@@ -36,7 +58,17 @@ const Welcome = () => {
               className="h-[55px] rounded-xl bg-primary-900 pl-5 dark:bg-primary-900"
               textClassName="font-semibold-work-sans text-lg dark:text-white "
               iconPosition="left"
-              onPress={() => router.navigate('/anonymous-login')}
+              loading={isLoginPending}
+              onPress={() => {
+                onCreateAnonymousAccount({
+                  username: '-',
+                  language,
+                  // submit the stored user id, otherwise check for firebase uid
+                  //do not rely only on firebaseAuth.currentUser?.uid,because if the user logs out it will become undefined, but the storedUserId will still be populated
+                  actualUserId: storedUserId || firebaseAuth.currentUser?.uid,
+                });
+                Keyboard.dismiss();
+              }}
             />
 
             {/* TODO: add the button "Already have an account" */}

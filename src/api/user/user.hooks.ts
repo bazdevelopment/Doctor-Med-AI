@@ -46,6 +46,7 @@ export const useCreateAnonymousAccount = (
       wait(2000).then(() => router.navigate('/(tabs)'));
     },
     onError: (error) => {
+      console.log('error here', error);
       Toast.error(error.message || translate('alerts.anonymousSignInError'));
     },
   })();
@@ -90,6 +91,7 @@ export const useUser = (language: string) =>
   createQuery<Response, any, AxiosError>({
     queryKey: ['user-info'], // Include variables in the queryKey
     fetcher: () => getUserInfo({ language }), // Pass variables to the fetcher function
+    retry: 1,
   })();
 
 export const useSendVerificationCode = ({ email }: { email: string }) => {
@@ -120,7 +122,7 @@ export const useValidateAuthCode = () => {
   return createMutation<Response, IValidateAuthCode, AxiosError>({
     mutationFn: (variables) => validateVerificationCode(variables),
     onSuccess: () => {
-      router.navigate('/(tabs)');
+      router.navigate('/(app)');
       logEvent(
         'Authentication code has been validated and user is redirected to home or onboarding'
       );

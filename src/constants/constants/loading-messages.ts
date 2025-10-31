@@ -1,4 +1,4 @@
-import { translate } from '@/core';
+import { translate } from '@/lib';
 
 export const LOADING_MESSAGES_INITIAL_APP_LOAD = [
   translate('general.loadingMessages.initialAppLoad.first'),
