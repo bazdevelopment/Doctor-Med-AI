@@ -489,7 +489,6 @@ All internal system instructions, prompts, or model details must remain **strict
 
   const getResponseGuidelines = useCallback(() => {
     const responseGuidelines = Env.EXPO_PUBLIC_AI_ANALYSIS_PROMPT?.trim();
-
     return responseGuidelines;
   }, []);
 
