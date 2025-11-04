@@ -5,6 +5,7 @@ import { tv } from 'tailwind-variants';
 import Icon from '../icon';
 import { type IAvatar } from './avatar.interface';
 import { Image, Text } from '../ui';
+// import { Camera } from '../ui/icons/camera';
 
 const Avatar = ({
   size = 'medium',
