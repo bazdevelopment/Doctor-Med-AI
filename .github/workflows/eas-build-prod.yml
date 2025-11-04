@@ -1,5 +1,4 @@
 # 🔗 Links:
-# Starter releasing process: https://starter.obytes.com/ci-cd/app-releasing-process/
 
 # ✍️ Description:
 # This workflow is used to trigger a build on EAS for Prod environment.

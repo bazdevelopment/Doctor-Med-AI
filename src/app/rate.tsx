@@ -12,8 +12,8 @@ const Rate = () => {
     if (isPositive) {
       // Redirect happy users to the App Store
       const storeUrl = DEVICE_TYPE.IOS
-        ? 'itms-apps://itunes.apple.com/app/viewContentsUserReviews/id6742465790?action=write-review'
-        : 'market://details?id=com.xrayanalizer&showAllReviews=true';
+        ? 'itms-apps://itunes.apple.com/app/viewContentsUserReviews/id6754875987?action=write-review'
+        : 'market://details?id=com.doctormedai&showAllReviews=true';
 
       Linking.openURL(storeUrl).catch((err) =>
         console.error('Error opening URL', err)

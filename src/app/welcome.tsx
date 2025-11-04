@@ -90,13 +90,23 @@ const Welcome = () => {
             <Text className="text-sm">
               {translate('general.agreeingMessage')}{' '}
             </Text>
-            <TouchableOpacity onPress={() => Linking.openURL('')}>
+            <TouchableOpacity
+              onPress={() =>
+                Linking.openURL(
+                  'https://doctormedaitermsconditions.netlify.app/'
+                )
+              }
+            >
               <Text className="text-sm text-primary-900 dark:text-primary-900">
                 {translate('general.termsAndConditions')}
               </Text>
             </TouchableOpacity>
             <Text className="text-sm"> {translate('general.and')} </Text>
-            <TouchableOpacity onPress={() => Linking.openURL('')}>
+            <TouchableOpacity
+              onPress={() =>
+                Linking.openURL('https://doctormedaiprivacy.netlify.app/')
+              }
+            >
               <Text className="text-sm text-primary-900 dark:text-primary-900">
                 {translate('general.privacyPolicy')}
               </Text>

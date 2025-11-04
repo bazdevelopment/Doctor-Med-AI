@@ -18,7 +18,11 @@
       "env": {
         "EXPO_NO_DOTENV": "1",
         "APP_ENV": "production",
-        "FLIPPER_DISABLE": "1"
+        "FLIPPER_DISABLE": "1",
+        "EXPO_PUBLIC_REVENUE_CAT_API_KEYS_GOOGLE": "EXPO_PUBLIC_REVENUE_CAT_API_KEYS_GOOGLE_CI",
+        "EXPO_PUBLIC_REVENUE_CAT_API_KEYS_APPLE": "EXPO_PUBLIC_REVENUE_CAT_API_KEYS_APPLE_CI",
+        "EXPO_PUBLIC_AI_ANALYSIS_PROMPT": "EXPO_PUBLIC_AI_ANALYSIS_PROMPT_CI",
+        "EXPO_PUBLIC_GEMINI_API_KEY": "EXPO_PUBLIC_GEMINI_API_KEY_CI"
       }
     },
     "staging": {
@@ -76,7 +80,7 @@
         "releaseStatus": "draft"
       },
       "ios": {
-        "ascAppId": "231212" //Apple ID from app information tab in app store connect, move to env file in the future if it's possible
+        "ascAppId": "6754875987" //Apple ID from app information tab in app store connect, move to env file in the future if it's possible
       }
     }
   }

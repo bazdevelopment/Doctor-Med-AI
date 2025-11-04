@@ -1,5 +1,4 @@
 # 🔗 Links:
-# End-to-end testing: https://starter.obytes.com/testing/end-to-end-testing/
 
 # ✍️ Description:
 # This workflow is used to run end-to-end tests for EAS build on Android.
@@ -16,9 +15,9 @@ on:
     inputs:
       apk-url:
         type: string
-        description: "EAS APK URL"
+        description: 'EAS APK URL'
         required: true
-        default: ""
+        default: ''
 
 jobs:
   download-eas-apk:
@@ -93,7 +92,7 @@ jobs:
           profile: Nexus 6
           script: |
             adb install "${{ github.workspace }}/app-release.apk"
-            $HOME/.maestro/bin/maestro test .maestro/ --env=APP_ID=com.obytes.staging  --format junit
+            $HOME/.maestro/bin/maestro test .maestro/ --env=APP_ID=com.microscanai.staging  --format junit
 
       - name: Upload artifacts
         if: always()

@@ -1,4 +1,3 @@
-import { useColorScheme } from 'nativewind';
 import React from 'react';
 import { Linking, View } from 'react-native';
 
@@ -11,7 +10,9 @@ import { translate } from '@/lib';
 const NewAppVersion = () => {
   const openAppStore = () => {
     // Determine the URL based on device type
-    const storeUrl = DEVICE_TYPE.IOS ? '' : '';
+    const storeUrl = DEVICE_TYPE.IOS
+      ? 'https://apps.apple.com/us/app/medical-assistant-ai-doctor/id6754875987'
+      : 'https://play.google.com/store/apps/details?id=com.doctormedai';
 
     // Try opening the appropriate URL
     Linking.openURL(storeUrl).catch((err) => {

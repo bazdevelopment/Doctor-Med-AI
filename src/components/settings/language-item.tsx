@@ -48,11 +48,11 @@ export const LanguageItem = () => {
         label: `${translate('settings.languages.spanish_mexico')} 🇲🇽`,
         value: 'es-MX',
       },
-      // // Arabic - Widely used in multiple countries
-      // {
-      //   label: `${translate('settings.languages.arabic')} 🇸🇦`,
-      //   value: 'ar',
-      // },
+      // Arabic - Widely used in multiple countries
+      {
+        label: `${translate('settings.languages.arabic')} 🇸🇦`,
+        value: 'ar',
+      },
       // French - Major international language
       {
         label: `${translate('settings.languages.french')} 🇫🇷`,
