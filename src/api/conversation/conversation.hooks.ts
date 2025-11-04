@@ -9,13 +9,13 @@ import dayjs from 'dayjs';
 import firestore from '@react-native-firebase/firestore';
 import storage from '@react-native-firebase/storage';
 
-import { queryClient } from '../common';
 import {
   fetchAllUserConversations,
   fetchConversation,
 } from './conversation.requests';
 import { LANGUAGES } from '@/utilities/languages';
 import { Env } from '@/lib/env';
+import { queryClient } from '../common';
 
 // -------------------------------
 // 🔹 Types & Interfaces

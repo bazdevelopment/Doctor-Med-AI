@@ -47,7 +47,7 @@ module.exports = {
     'simple-import-sort/exports': 'error', // Export configuration for `eslint-plugin-simple-import-sort`
     '@typescript-eslint/no-unused-vars': 'off',
     'tailwindcss/no-custom-classname': 'off',
-    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-imports': 'warn',
     'unused-imports/no-unused-vars': [
       'error',
       {

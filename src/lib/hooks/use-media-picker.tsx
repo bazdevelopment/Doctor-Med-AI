@@ -10,7 +10,6 @@ import { Linking, Platform } from 'react-native';
 import CustomAlert from '@/components/custom-alert';
 import Toast from '@/components/toast';
 
-import { translate } from '../i18n';
 import {
   IMAGE_SIZE_LIMIT_MB,
   VIDEO_LENGTH_SECONDS_LIMIT,
@@ -23,6 +22,7 @@ import { getFileSizeInMB } from '@/utilities/get-file-size-in-mb';
 import { checkFileSize } from '@/utilities/check-file-size';
 import { getVideoDuration } from '@/utilities/get-video-duration';
 import { generateUniqueId } from '@/utilities/generate-unique-id';
+import { translate } from '../i18n';
 
 interface IMediaPicker {
   onCloseModal: () => void;

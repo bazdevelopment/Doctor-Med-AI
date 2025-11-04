@@ -5,6 +5,7 @@ import { TextInput, TouchableOpacity, View } from 'react-native';
 import { colors } from '../ui';
 import { CloseIcon } from '../ui/icons/close';
 import { SearchIcon } from '../ui/icons/search';
+import { translate } from '@/lib';
 
 interface ISearchBar {
   value: string;
@@ -15,7 +16,7 @@ interface ISearchBar {
 const SearchBar: React.FC<ISearchBar> = ({
   value,
   onChangeText,
-  placeholder = 'Search assistant...',
+  placeholder = translate('general.searchAssistant'),
   onClear,
 }) => {
   const { colorScheme } = useColorScheme();

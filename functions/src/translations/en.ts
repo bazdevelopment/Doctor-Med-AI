@@ -41,4 +41,42 @@ export const en: ITranslation = {
     noUserInfoData: 'The user document exists, but no data is available',
     getUserFetchError: 'An error occurred while fetching the user information',
   },
+  storeDeviceToken: {
+    deviceTokenRequired: 'Providing a device token is mandatory.',
+    generalError: 'Error storing device token',
+  },
+
+  sendGlobalPushNotifications: {
+    requiredParams: 'Notification title and body are mandatory.',
+    generalError: 'An error occurred while processing notifications',
+    generalErrorAdditional: 'Failed to send global notification',
+  },
+
+  checkDeviceUniqueIdentifier: {
+    deviceMandatory: 'Device ID is mandatory',
+    languageMandatory: 'Language is mandatory',
+    deviceIdentified: 'Your device has been identified successfully',
+    generalError: 'An error occurred while checking device trial',
+  },
+
+  getUserNotification: {
+    generalError: 'Failed to fetch user notifications',
+    generalErrorAdditional:
+      'An error occurred while fetching user notifications',
+  },
+
+  getScanCategories: {
+    noCategoryFound: 'No categories found',
+    generalError: 'An error occurred while retrieving scan categories',
+  },
+
+  uploadScanCategories: {
+    successfullyUploaded: 'Scan categories uploaded successfully',
+    generalError: 'Failed to upload scan categories',
+  },
+
+  sendUserNotification: {
+    noTokenFound: 'No valid Expo tokens found. Unable to send notifications',
+    generalError: 'Failed to send notification',
+  },
 };

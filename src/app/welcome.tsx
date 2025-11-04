@@ -16,18 +16,22 @@ import getDeviceSizeCategory from '@/utilities/get-device-size-category';
 import { useCreateAnonymousAccount } from '@/api/user/user.hooks';
 import { useStoreUserId } from '@/lib/hooks/use-store-user-id';
 import { firebaseAuth } from '@/firebase/config';
+import { useIsOnboarded } from '@/lib/hooks/use-is-onboarded';
 
 const Welcome = () => {
   const { isVerySmallDevice, isLargeDevice } = getDeviceSizeCategory();
   const [storedUserId, setUserId] = useStoreUserId();
   const { language } = useSelectedLanguage();
   const [_, setIsFirstTime] = useIsFirstTime();
+  const [isOnboardingRunning] = useIsOnboarded();
 
   const onSuccessHandler = (userId: string) => {
     //update internal storage with userId and set is first time when opening the app to false
     setUserId(userId);
     setIsFirstTime(false);
-    router.navigate('/onboarding');
+    isOnboardingRunning
+      ? router.navigate('/onboarding')
+      : router.navigate('/(app)');
   };
 
   const { mutate: onCreateAnonymousAccount, isPending: isLoginPending } =
@@ -39,7 +43,7 @@ const Welcome = () => {
       showsVerticalScrollIndicator={false}
     >
       <SafeAreaView>
-        <View className="dark:bg-blackEerie items-center justify-center px-6 pb-32 pt-14">
+        <View className="items-center justify-center px-6 pb-32 pt-14">
           <Branding isLogoVisible invertedColors />
           <Text className="my-10 text-center font-bold-work-sans text-[30px] text-primary-900">
             {translate('rootLayout.screens.welcome.heading')}

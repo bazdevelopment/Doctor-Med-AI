@@ -11,7 +11,7 @@ const Branding = ({
   className?: string;
   invertedColors?: boolean;
 }) => {
-  const textColor = invertedColors ? 'text-black' : 'text-white';
+  const textColor = invertedColors ? 'text-black' : 'text-primary-900';
   return (
     <View className={`flex-row items-center ${className}`}>
       {isLogoVisible && (
@@ -30,7 +30,7 @@ const Branding = ({
           Doctor Med
         </Text>
         <Text
-          className={`ml-2 text-center font-bold-work-sans text-[22px] tracking-[2px] text-primary-900 dark:text-primary-900`}
+          className={`ml-2 text-center font-bold-work-sans text-[22px] tracking-[2px] text-primary-900 dark:text-primary-900 ${textColor}`}
         >
           AI
         </Text>

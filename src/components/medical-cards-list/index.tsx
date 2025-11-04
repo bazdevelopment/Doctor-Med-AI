@@ -5,30 +5,31 @@ import MedicalCard, { type IMedicalCardItem } from '../medical-card';
 import { BotAssistant } from '../ui/icons/bot-assistent';
 import { GalleyIcon } from '../ui/icons/gallery';
 import { router } from 'expo-router';
-import { Env } from 'env';
-import icon from '../icon';
+import { translate } from '@/lib';
 
 const cardData: IMedicalCardItem[] = [
   {
     id: '1',
-    title: 'Medical Images\nAnalyzer',
+    title: translate('components.MedicalCard.medicalImagesAnalyzer'),
     icon: <GalleyIcon />,
     bgColor: 'bg-primary-900',
     onPress: () =>
       router.navigate({
         pathname: '/chat',
-        params: { topic: 'Medical Images Analyzer' },
+        params: {
+          topic: translate('components.MedicalCard.medicalImagesAnalyzer'),
+        },
       }),
   },
   {
     id: '2',
-    title: 'Ask Medical\nAI Assistant',
+    title: translate('components.MedicalCard.askMedicalAssistant'),
     icon: <BotAssistant />,
     bgColor: 'bg-secondary-900',
     onPress: () =>
       router.navigate({
         pathname: '/chat',
-        params: { topic: 'Medical Assistant' },
+        params: { topic: translate('components.MedicalCard.medicalAssistant') },
       }),
   },
 ];

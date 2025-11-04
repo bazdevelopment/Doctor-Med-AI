@@ -15,7 +15,6 @@ export const storeMobileDeviceToken = async ({
   deviceName,
   deviceModel,
   deviceBrand,
-  deviceUniqueId,
   language,
 }: IMobileDeviceInfo): Promise<IStoreDeviceTokenResponse> => {
   try {
@@ -28,7 +27,6 @@ export const storeMobileDeviceToken = async ({
       deviceName,
       deviceModel,
       deviceBrand,
-      deviceUniqueId,
       language,
     });
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity, Modal, Pressable } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useMediaPiker } from '@/lib/hooks/use-media-picker';
+import { translate } from '@/lib';
 
 type ImagePickerModalProps = {
   title?: string;
@@ -23,21 +24,20 @@ export const ImagePickerModal: React.FC<ImagePickerModalProps> = ({
   onChooseImageFromGallery,
   onChooseFromFiles,
   onTakePhoto,
-  onPress,
 }) => {
   const data = [
     {
-      title: 'Photo Library',
+      title: translate('components.ImagePickerModal.photoLibrary'),
       icon: 'photo-library',
       action: onChooseImageFromGallery,
     },
     {
-      title: 'Take Photo',
+      title: translate('components.ImagePickerModal.takePhoto'),
       icon: 'photo-camera',
       action: onTakePhoto,
     },
     {
-      title: 'Choose File',
+      title: translate('components.ImagePickerModal.chooseFile'),
       icon: 'folder',
       action: onChooseFromFiles,
     },
@@ -75,7 +75,7 @@ export const ImagePickerModal: React.FC<ImagePickerModalProps> = ({
             onPress={onCancelPress}
           >
             <Text className="text-white text-lg text-base font-semibold-work-sans px-4">
-              Cancel
+              {translate('general.cancel')}
             </Text>
           </TouchableOpacity>
         </View>

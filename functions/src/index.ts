@@ -5,6 +5,7 @@ import {
   getAllConversationsHandler,
   getConversationHandler,
 } from './conversation';
+import * as pushNotificationsFunctions from './push-notifications';
 import * as userFunctions from './user';
 
 const usCentralFunctions = functions.region('us-central1');
@@ -53,4 +54,29 @@ export const getConversation = usCentralFunctions.https.onCall(
 
 export const getAllConversations = usCentralFunctions.https.onCall(
   getAllConversationsHandler
+);
+// Notifications & Device push notificaiton token
+
+export const storeDeviceToken = usCentralFunctions.https.onCall(
+  pushNotificationsFunctions.storeDeviceToken
+);
+
+export const getDeviceInfoByUniqueIdentifier =
+  usCentralFunctions.https.onRequest(
+    pushNotificationsFunctions.checkDeviceUniqueIdentifier
+  );
+
+export const sendGlobalPushNotifications = usCentralFunctions.https.onCall(
+  pushNotificationsFunctions.handleSendGlobalPushNotifications
+);
+export const sendIndividualPushNotification = usCentralFunctions.https.onCall(
+  pushNotificationsFunctions.sendUserPushNotification
+);
+
+export const fetchUserNotifications = usCentralFunctions.https.onCall(
+  pushNotificationsFunctions.handleGetUserNotification
+);
+
+export const markNotificationAsRead = usCentralFunctions.https.onCall(
+  pushNotificationsFunctions.handleMarkNotificationAsRead
 );

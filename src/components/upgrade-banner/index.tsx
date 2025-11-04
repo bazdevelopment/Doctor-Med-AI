@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button, View } from 'react-native';
+import { View } from 'react-native';
 
 import { translate } from '@/lib';
 
-import { Text } from '../ui';
+import { Button, Text } from '../ui';
 
 interface IUpgradeBanner {
   onUpgradePress: () => void;

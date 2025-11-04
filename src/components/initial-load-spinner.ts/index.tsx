@@ -12,15 +12,13 @@ const InitialLoadSpinner = () => {
   const isDark = colorScheme === 'dark';
 
   return (
-    <View className="flex-1 items-center justify-center gap-3 bg-primary-900 dark:bg-blackEerie">
+    <View className="flex-1 items-center justify-center gap-3 bg-primary-900 dark:bg-transparent">
       <Branding isLogoVisible className="top-[-25]" />
-      {/* Rotating Spinner */}
       <ActivityIndicator
         size="large"
         className="items-center justify-center"
         color={isDark ? colors.charcoal[300] : colors.charcoal[100]}
       />
-      {/* Fading Loading Message */}
       <BounceLoader
         loadingMessages={LOADING_MESSAGES_INITIAL_APP_LOAD}
         textClassName="text-white"

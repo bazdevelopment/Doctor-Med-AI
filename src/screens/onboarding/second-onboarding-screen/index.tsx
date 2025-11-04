@@ -19,10 +19,10 @@ const SecondOnboardingScreen = ({
   return (
     <>
       <ScrollView
-        contentContainerClassName="bg-white dark:bg-transparent  mt-10"
+        contentContainerClassName="bg-white dark:bg-transparent mt-10"
         showsVerticalScrollIndicator={false}
       >
-        <View className="items-center justify-center px-6 dark:bg-blackEerie">
+        <View className="items-center justify-center px-6 dark:bg-transparent">
           {/* <Branding isLogoVisible invertedColors /> */}
           <ProgressBar
             initialProgress={progress}
@@ -35,11 +35,14 @@ const SecondOnboardingScreen = ({
 
           <View className="mt-14">
             <Text className="font-bold-work-sans text-3xl">
-              Ask, Upload, and Get Instant Insights
+              {translate(
+                'rootLayout.screens.onboarding.secondOnboarding.title'
+              )}
             </Text>
             <Text className="text-lg mt-4 text-charcoal-800 dark:text-white">
-              Chat with AI doctors from different specialties, or upload medical
-              images for quick medical analysis.
+              {translate(
+                'rootLayout.screens.onboarding.secondOnboarding.subtitle'
+              )}
             </Text>
           </View>
         </View>

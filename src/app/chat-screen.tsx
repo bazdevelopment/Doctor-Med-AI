@@ -1,5 +1,3 @@
-/* eslint-disable max-lines-per-function */
-/* eslint-disable react-hooks/exhaustive-deps */
 import { Ionicons } from '@expo/vector-icons';
 import { FlashList } from '@shopify/flash-list';
 import { router, useLocalSearchParams } from 'expo-router';
@@ -46,7 +44,6 @@ import {
 } from '@/constants/constants/limits';
 import { getStorageItem } from '@/lib/storage';
 import { colors, Text } from '@/components/ui';
-import { CloseIcon } from '@/components/ui/icons/close';
 import { AI_ANALYSIS_LANGUAGE_SELECTION } from '@/constants/constants/language';
 import { shuffleArray } from '@/utilities/shuffle-array';
 import { useTextToSpeech } from '@/lib/hooks/use-text-to-speech';
@@ -66,6 +63,7 @@ import ImagePreviewGallery from '@/components/image-preview-gallery';
 import { RobotIcon } from '@/components/ui/icons/robot';
 import { SendIcon } from '@/components/ui/icons/send';
 import { requestAppRatingWithDelay } from '@/utilities/request-app-review';
+import { ChevronLeftNavigation } from '@/components/ui/icons/chevron-left-navigation';
 
 type MessageType = {
   role: string;
@@ -407,7 +405,6 @@ const ChatScreen = () => {
   } = useTranslation();
 
   const { data: userInfo } = useUser(language);
-
   const { data: conversation, isLoading: isLoadingConversation } =
     useConversationHistory(conversationId as string);
 
@@ -607,7 +604,7 @@ const ChatScreen = () => {
   };
   const mockMessage = [
     {
-      content: `Hi! If you have any questions about ${topic} domain. Dr. Med is available to assist you.`,
+      content: translate('general.chatBotPlaceholder', { topic }),
       role: 'robot',
     },
   ];
@@ -689,25 +686,30 @@ const ChatScreen = () => {
           {/* Header */}
           <View className="flex-row items-center  border-b border-gray-200 bg-white px-4 py-3 dark:border-gray-600 dark:bg-transparent">
             <Icon
-              size={20}
-              containerStyle="rounded-full bg-blackEerie dark:bg-white p-1"
+              size={32}
+              // containerStyle="rounded-full dark:bg-white p-1"
               onPress={() => {
                 stopSpeaking();
                 router.push('/(app)');
               }}
-              icon={<CloseIcon color={colors.black} />}
+              icon={
+                <ChevronLeftNavigation
+                  innerColor={isDark ? 'transparent' : colors.white}
+                  color={isDark ? colors.white : colors.black}
+                />
+              }
             />
             <View className="justify-center items-center flex-1 flex-row -left-2">
               <Image
                 source={require('../assets/images/random/assistant-avatar-3.jpg')}
                 className="mr-2 h-8 w-8 rounded-full"
               />
-              <View className="">
-                <Text className="ml-2 font-bold-nunito text-xl dark:text-white">
+              <View className="ml-2">
+                <Text className="font-bold-work-sans text-xl dark:text-white">
                   Dr. Med
                 </Text>
                 {isStreaming ? (
-                  <Text className="ml-2 text-xs text-gray-500 dark:text-white">
+                  <Text className="text-xs text-gray-500 dark:text-white">
                     {translate('general.typing')}
                   </Text>
                 ) : (
@@ -877,11 +879,10 @@ const ChatScreen = () => {
               className={twMerge(
                 'ml-2 p-2 rounded-full w-[55px] h-[55px] items-center justify-center self-center',
                 userMessage.trim() || !!files?.length
-                  ? 'bg-blue-500 dark:bg-primary-900'
+                  ? 'bg-primary-900 dark:bg-primary-900'
                   : 'bg-gray-300 dark:bg-charcoal-400'
               )}
             >
-              {/* <Ionicons name="send" size={20} color={colors.white} /> */}
               <SendIcon />
             </TouchableOpacity>
           </View>

@@ -1,7 +1,6 @@
+import { ISvgProps } from '@/types';
 import * as React from 'react';
 import Svg, { Path } from 'react-native-svg';
-
-import { type ISvgProps } from '@/types/svg-types';
 
 export const LogoutIcon = (props: ISvgProps) => (
   <Svg

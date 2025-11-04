@@ -2,6 +2,7 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 
 import { Text } from '../ui';
+import { translate } from '@/lib';
 
 const SeeAllButton = ({ onPress }: { onPress: () => void }) => {
   return (
@@ -11,7 +12,7 @@ const SeeAllButton = ({ onPress }: { onPress: () => void }) => {
       activeOpacity={0.7}
     >
       <Text className="font-semibold-work-sans text-primary-900 dark:text-primary-900">
-        See All
+        {translate('general.seeAll')}
       </Text>
     </TouchableOpacity>
   );

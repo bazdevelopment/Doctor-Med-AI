@@ -130,7 +130,7 @@ export const MediaPickerModal: React.FC<MediaPickerModalProps> = ({
           {/* Handle bar */}
           <View className="mb-6 h-1 w-12 self-center rounded-full bg-gray-300 dark:bg-gray-600" />
 
-          <Text className="mb-6 font-bold-nunito text-xl text-gray-900 dark:text-white">
+          <Text className="mb-6 font-bold-work-sans text-xl text-gray-900 dark:text-white">
             Add Media
           </Text>
 
@@ -165,7 +165,7 @@ export const MediaPickerModal: React.FC<MediaPickerModalProps> = ({
                   />
                 </View>
                 <Text
-                  className={`font-semibold-nunito text-sm ${
+                  className={`font-semibold-work-sans text-sm ${
                     option.disabled
                       ? 'text-gray-400 dark:text-gray-600'
                       : 'text-gray-800 dark:text-white'
@@ -186,7 +186,7 @@ export const MediaPickerModal: React.FC<MediaPickerModalProps> = ({
             onPress={onClose}
             className="mt-4 rounded-2xl bg-gray-100 py-4 dark:bg-gray-800"
           >
-            <Text className="text-center font-semibold-nunito text-base text-gray-800 dark:text-white">
+            <Text className="text-center font-semibold-work-sans text-base text-gray-800 dark:text-white">
               Cancel
             </Text>
           </TouchableOpacity>

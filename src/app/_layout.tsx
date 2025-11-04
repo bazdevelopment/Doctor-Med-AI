@@ -24,6 +24,7 @@ import { useThemeConfig } from '@/lib/use-theme-config';
 import { colors } from '@/components/ui';
 import CustomHeader from '@/components/cusom-header';
 import { Toaster } from 'sonner-native';
+import { useColorScheme } from 'nativewind';
 
 export { ErrorBoundary } from 'expo-router';
 
@@ -42,6 +43,9 @@ SplashScreen.setOptions({
 });
 
 export default function RootLayout() {
+  const { colorScheme } = useColorScheme();
+  const isDark = colorScheme === 'dark';
+
   const [fontsLoaded] = useFonts({
     'Font-Regular': WorkSans_400Regular,
     'Font-SemiBold': WorkSans_600SemiBold,
@@ -119,14 +123,7 @@ export default function RootLayout() {
             presentation: 'fullScreenModal',
           }}
         />
-        <Stack.Screen
-          name="new-app-version"
-          options={{
-            headerShown: false,
-            gestureEnabled: false,
-            presentation: 'fullScreenModal',
-          }}
-        />
+
         <Stack.Screen
           name="notifications"
           options={{
@@ -148,6 +145,20 @@ export default function RootLayout() {
               <CustomHeader
                 {...props}
                 title={translate('rootLayout.screens.rate.title')}
+                titlePosition="center"
+                onGoBack={router.back}
+                backIconColor={isDark ? colors.white : colors.black}
+              />
+            ),
+          }}
+        />
+        <Stack.Screen
+          name="profile"
+          options={{
+            header: (props) => (
+              <CustomHeader
+                {...props}
+                title={translate('rootLayout.screens.profile.title')}
                 titlePosition="center"
                 onGoBack={router.back}
                 backIconColor={isDark ? colors.white : colors.black}
@@ -183,6 +194,32 @@ export default function RootLayout() {
                 backIconColor={isDark ? colors.white : colors.black}
               />
             ),
+          }}
+        />
+        <Stack.Screen
+          name="medical-disclaimer"
+          options={{
+            gestureEnabled: false,
+            headerTitle: () => null,
+            animation: 'fade',
+            animationDuration: 500,
+            header: (props) => (
+              <CustomHeader
+                {...props}
+                title={translate('general.medicalDisclaimer')}
+                titlePosition="center"
+                onGoBack={router.back}
+                backIconColor={isDark ? colors.white : colors.blackBeauty}
+              />
+            ),
+          }}
+        />
+        <Stack.Screen
+          name="new-app-version"
+          options={{
+            headerShown: false,
+            gestureEnabled: false,
+            presentation: 'fullScreenModal',
           }}
         />
       </Stack>

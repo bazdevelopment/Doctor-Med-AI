@@ -37,6 +37,7 @@ export const createAnonymousAccount = async ({
 
     return { ...userCredentials, ...data };
   } catch (error) {
+    console.log('akungggggee-----');
     throw error;
   }
 };
@@ -182,8 +183,7 @@ export const getUserInfo = async ({ language }: { language: string }) => {
 
 export const logout = async () => {
   await firebaseAuth.signOut();
-  // router.navigate('/login');
-  router.navigate('/anonymous-login');
+  router.navigate('/welcome');
   queryClient.clear(); // Clears all cached queries & mutations
   Toast.success(translate('alerts.loggedOutSuccess'));
 };

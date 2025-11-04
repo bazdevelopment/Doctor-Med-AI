@@ -6,6 +6,7 @@ import { TouchableOpacity } from 'react-native';
 import { colors, Text } from '../ui';
 import { DoubleArrowRight } from '../ui/icons/double-arrow-right';
 import { WarningCircleIcon } from '../ui/icons/warning-circle';
+import { translate } from '@/lib';
 
 const MedicalDisclaimerButton = ({ className }: { className: string }) => {
   const { colorScheme } = useColorScheme();
@@ -22,8 +23,7 @@ const MedicalDisclaimerButton = ({ className }: { className: string }) => {
         color={isDark ? colors.warning[400] : colors.warning[600]}
       />
       <Text className="font-semibold-work-sans text-base text-warning-600 dark:text-warning-400">
-        {/* {translate('general.medicalDisclaimer')} */}
-        Medical Disclaimer
+        {translate('general.medicalDisclaimer')}
       </Text>
       <DoubleArrowRight
         width={22}

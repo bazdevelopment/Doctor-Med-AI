@@ -3,13 +3,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useColorScheme } from 'nativewind';
 import React, { useState } from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  Switch,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { SafeAreaView, ScrollView, TouchableOpacity, View } from 'react-native';
 import { type CustomerInfo } from 'react-native-purchases';
 
 import {
@@ -21,7 +15,14 @@ import {
 import { useUpdateUser, useUser } from '@/api/user/user.hooks';
 import Icon from '@/components/icon';
 
-import { colors, CheckboxIcon, Text, Image, Button } from '@/components/ui';
+import {
+  colors,
+  CheckboxIcon,
+  Text,
+  Image,
+  Button,
+  Switch,
+} from '@/components/ui';
 import { CloseIcon } from '@/components/ui/icons/close';
 import { useCrashlytics } from '@/lib/hooks/use-crashlytics';
 import { SUBSCRIPTION_PLANS_PER_PLATFORM } from '@/constants/constants/subscriptions';
@@ -431,7 +432,7 @@ const PaywallNew = () => {
 
             {/* Free Trial Toggle */}
             <View className="mb-8 flex-row items-center justify-between rounded-2xl bg-gray-100 p-4 dark:bg-charcoal-800">
-              <Text className="font-bold-work-sans text-lg text-gray-900 w-[90%]">
+              <Text className="font-bold-work-sans text-lg text-gray-900 flex-1 mr-2">
                 {translate(
                   'rootLayout.screens.paywallOnboarding.freeTierOfferings.freeTrialEnabled'
                 )}

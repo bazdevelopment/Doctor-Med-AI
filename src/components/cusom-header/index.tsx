@@ -6,6 +6,7 @@ import { twMerge } from 'tailwind-merge';
 import { type ICustomHeader } from './custom-header.interface';
 import { DEVICE_TYPE } from '@/utilities/device-type';
 import { colors, Text } from '../ui';
+import { ChevronLeftIcon } from '../ui/icons/chevron-left';
 
 const CustomHeader = ({
   title,

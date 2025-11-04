@@ -35,4 +35,41 @@ export interface ITranslation {
     noUserInfoData: string;
     getUserFetchError: string;
   };
+  storeDeviceToken: {
+    deviceTokenRequired: string;
+    generalError: string;
+  };
+
+  sendGlobalPushNotifications: {
+    requiredParams: string;
+    generalError: string;
+    generalErrorAdditional: string;
+  };
+
+  checkDeviceUniqueIdentifier: {
+    deviceMandatory: string;
+    languageMandatory: string;
+    deviceIdentified: string;
+    generalError: string;
+  };
+
+  getUserNotification: {
+    generalError: string;
+    generalErrorAdditional: string;
+  };
+
+  getScanCategories: {
+    noCategoryFound: string;
+    generalError: string;
+  };
+
+  uploadScanCategories: {
+    successfullyUploaded: string;
+    generalError: string;
+  };
+
+  sendUserNotification: {
+    noTokenFound: string;
+    generalError: string;
+  };
 }

@@ -8,7 +8,6 @@ import { Env } from '@/lib/env';
 import { useCrashlytics } from '@/lib/hooks/use-crashlytics';
 import { wait } from '@/utilities/wait';
 
-import { queryClient } from '../common';
 import {
   createAnonymousAccount,
   decrementNumberOfScans,
@@ -20,6 +19,7 @@ import {
   updateUserPreferredLanguage,
   validateVerificationCode,
 } from './user.requests';
+import { queryClient } from '../common';
 
 type Response = any;
 
@@ -41,9 +41,13 @@ export const useCreateAnonymousAccount = (
     mutationFn: (variables) => createAnonymousAccount(variables),
     onSuccess: (data) => {
       onSuccessHandler(data.user.uid);
+      queryClient.setQueryData(['user-info'], (oldData: IUserInfo) => ({
+        ...oldData,
+        userId: data.user.uid,
+      }));
       Toast.success(data.message);
       //add a small delay to display the toast message
-      wait(2000).then(() => router.navigate('/(tabs)'));
+      wait(2000).then(() => router.navigate('/(app)'));
     },
     onError: (error) => {
       console.log('error here', error);
@@ -51,89 +55,11 @@ export const useCreateAnonymousAccount = (
     },
   })();
 
-export const useLoginWithEmail = (variables: { email: string }) => {
-  const { setUser, logEvent, recordError } = useCrashlytics();
-
-  return createMutation<Response, any, AxiosError>({
-    mutationFn: (variables) => loginWithEmail(variables),
-    onSuccess: (data) => {
-      logEvent(
-        'Login with email successful and user is redirected to the auth verification screen'
-      );
-
-      Toast.success(
-        `${translate(`rootLayout.screens.verifyAuthCode.verificationCodeSent`)} ${variables.email}`
-      );
-
-      // Set the user in Crashlytics (if you have a userId in the response)
-      if (data.user.uid) {
-        setUser(data.user.uid);
-      }
-
-      router.navigate({
-        pathname:
-          variables.email === Env.EXPO_PUBLIC_TEST_ACCOUNT
-            ? '/(tabs)/'
-            : '/verify-auth-code',
-        params: { email: variables.email },
-      });
-    },
-
-    onError: (error) => {
-      logEvent('Login with email failed', 'error');
-      recordError(error, 'Login with email failed');
-      Toast.error(error.message || translate('alerts.emailLoginError'));
-    },
-  });
-};
-
 export const useUser = (language: string) =>
   createQuery<Response, any, AxiosError>({
     queryKey: ['user-info'], // Include variables in the queryKey
     fetcher: () => getUserInfo({ language }), // Pass variables to the fetcher function
-    retry: 1,
   })();
-
-export const useSendVerificationCode = ({ email }: { email: string }) => {
-  const { logEvent, recordError } = useCrashlytics();
-
-  return createMutation<Response, ISendOtpCodeVariables, AxiosError>({
-    mutationFn: (variables) => sendOtpCodeViaEmail(variables),
-    onSuccess: (data) => {
-      Toast.success(data.message);
-      router.navigate({ pathname: '/verify-auth-code', params: { email } });
-      logEvent(
-        'Verification code has been send successfully and user redirected to the verify auth screen'
-      );
-    },
-    onError: (error) => {
-      Toast.error(
-        error.message || translate('alerts.sendVerificationCodeError')
-      );
-      logEvent('Sending verification failed', 'error');
-      recordError(error, 'Sending verification failed');
-    },
-  })();
-};
-
-export const useValidateAuthCode = () => {
-  const { logEvent, recordError } = useCrashlytics();
-
-  return createMutation<Response, IValidateAuthCode, AxiosError>({
-    mutationFn: (variables) => validateVerificationCode(variables),
-    onSuccess: () => {
-      router.navigate('/(app)');
-      logEvent(
-        'Authentication code has been validated and user is redirected to home or onboarding'
-      );
-    },
-    onError: (error) => {
-      Toast.error(error.message || translate('alerts.validateAuthCodeError'));
-      logEvent('Validating authentication code failed', 'error');
-      recordError(error, 'Validating authentication code failed');
-    },
-  })();
-};
 
 export const useDecrementScans = () => {
   const { logEvent, recordError } = useCrashlytics();

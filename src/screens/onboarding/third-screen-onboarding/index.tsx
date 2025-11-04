@@ -18,7 +18,7 @@ const ThirdOnboardingScreen = ({
         contentContainerClassName="bg-white dark:bg-transparent mt-10"
         showsVerticalScrollIndicator={false}
       >
-        <View className="items-center justify-center px-6 dark:bg-blackEerie">
+        <View className="items-center justify-center px-6 dark:bg-transparent">
           {/* <Branding isLogoVisible invertedColors /> */}
           <ProgressBar
             initialProgress={progress}
@@ -32,12 +32,12 @@ const ThirdOnboardingScreen = ({
 
           <View className="mt-14">
             <Text className="font-bold-work-sans text-4xl">
-              Your Privacy Matters
+              {translate('rootLayout.screens.onboarding.thirdOnboarding.title')}
             </Text>
             <Text className="text-lg font-primary-work-sans mt-4 text-charcoal-800 dark:text-white">
-              We are committed to protect your privacy. We do not collect
-              personal data. Any files you upload remain private and are never
-              shared.
+              {translate(
+                'rootLayout.screens.onboarding.thirdOnboarding.subtitle'
+              )}
             </Text>
           </View>
         </View>

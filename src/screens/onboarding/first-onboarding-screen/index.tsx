@@ -24,7 +24,7 @@ const FirstOnboardingScreen = ({
         contentContainerClassName="bg-white dark:bg-transparent mt-10"
         showsVerticalScrollIndicator={false}
       >
-        <View className="items-center justify-center px-6 dark:bg-blackEerie">
+        <View className="items-center justify-center px-6 dark:bg-transparent">
           {/* <Branding isLogoVisible invertedColors /> */}
           <ProgressBar
             initialProgress={progress}
@@ -37,11 +37,12 @@ const FirstOnboardingScreen = ({
 
           <View className="mt-14">
             <Text className="font-bold-work-sans text-3xl">
-              Your AI-Powered Healthcare Companion
+              {translate('rootLayout.screens.onboarding.firstOnboarding.title')}
             </Text>
             <Text className="text-lg mt-4 text-charcoal-800 dark:text-white">
-              Get instant medical insights and guidance from specialized AI
-              chatbots, anytime, anywhere.
+              {translate(
+                'rootLayout.screens.onboarding.firstOnboarding.subtitle'
+              )}
             </Text>
           </View>
         </View>

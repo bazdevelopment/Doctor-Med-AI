@@ -31,10 +31,6 @@ import { DEVICE_TYPE } from '@/utilities/device-type';
 export default function Settings() {
   const { colorScheme } = useColorScheme();
   const { language } = useSelectedLanguage();
-  const { data: userInfo } = useUser(language);
-
-  const { mutateAsync: onUpdateUser, isPending: isPendingUpdateUser } =
-    useUpdateUser();
 
   const { SHOW_FAQ_SCREEN, SHOW_RATE_SCREEN, SHOW_ADMIN_SCREENS } =
     useRemoteConfig();
@@ -71,14 +67,6 @@ export default function Settings() {
             variant: 'destructive',
             onPress: async () => {
               try {
-                await onUpdateUser({
-                  language,
-                  userId: userInfo.userId,
-                  fieldsToUpdate: {
-                    verificationCode: '',
-                    verificationCodeExpiry: '',
-                  },
-                });
                 logout();
               } catch (error) {
                 Toast.error(translate('alerts.logoutUnsuccessful'));
@@ -142,20 +130,8 @@ export default function Settings() {
               text="settings.citations"
               onPress={() => router.navigate('/citations')}
             />
-            <Item
-              text="settings.privacy"
-              onPress={() =>
-                Linking.openURL('https://microscanaiprivacy.netlify.app/')
-              }
-            />
-            <Item
-              text="settings.terms"
-              onPress={() =>
-                Linking.openURL(
-                  'https://microscanaitermsconditions.netlify.app/'
-                )
-              }
-            />
+            <Item text="settings.privacy" onPress={() => Linking.openURL('')} />
+            <Item text="settings.terms" onPress={() => Linking.openURL('')} />
             {SHOW_FAQ_SCREEN && (
               <Item
                 text="settings.faq"
@@ -167,7 +143,7 @@ export default function Settings() {
           <Button
             label={translate('settings.logout')}
             icon={<LogoutIcon width={30} height={30} />}
-            loading={isPendingUpdateUser}
+            // loading={isPendingUpdateUser}
             variant="destructive"
             className="mt-4 h-[55px] justify-start pl-5"
             textClassName="font-semibold-work-sans text-lg"

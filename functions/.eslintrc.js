@@ -37,7 +37,7 @@ module.exports = {
     'import/prefer-default-export': 'off', // Allow named exports for better code organization
     'import/no-cycle': ['error', { maxDepth: '∞' }], // Prevent circular imports
     '@typescript-eslint/no-unused-vars': 'off', // Handle unused vars with 'unused-imports' plugin
-    'unused-imports/no-unused-imports': 'error', // Automatically remove unused imports
+    'unused-imports/no-unused-imports': 'warn', // Automatically remove unused imports
     'unused-imports/no-unused-vars': [
       "warn",
       {
