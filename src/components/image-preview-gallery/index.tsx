@@ -29,7 +29,7 @@ const ImagePreviewGallery: React.FC<ImagePreviewGalleryProps> = ({
         {files.map((file) => (
           <View key={file.id} className="w-20 h-20 rounded-xl m-1 relative">
             <Image
-              source={{ uri: file.fileUri }}
+              source={{ uri: file.fileUri || file?.uri }}
               className="w-full h-full rounded-xl"
               resizeMode="cover"
             />

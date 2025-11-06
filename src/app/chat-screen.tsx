@@ -32,7 +32,6 @@ import Icon from '@/components/icon';
 
 import AnimatedChatQuestions from '@/components/animated-questions';
 import CustomAlert from '@/components/custom-alert';
-import Toast from '@/components/toast';
 
 import { LockerIcon } from '@/components/ui/icons/locker';
 import { wait } from '@/utilities/wait';
@@ -61,11 +60,10 @@ import ImagePreviewGallery from '@/components/image-preview-gallery';
 import { RobotIcon } from '@/components/ui/icons/robot';
 import { SendIcon } from '@/components/ui/icons/send';
 import { requestAppRatingWithDelay } from '@/utilities/request-app-review';
-import { ChevronLeftNavigation } from '@/components/ui/icons/chevron-left-navigation';
 import useSubscriptionAlert from '@/lib/hooks/use-subscription-banner';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-controller';
 import { CloseIcon } from '@/components/ui/icons/close';
-import icon from '@/components/icon';
+import Toast from '@/components/toast';
 
 type MessageType = {
   role: string;
@@ -409,7 +407,7 @@ const ChatScreen = () => {
   const { data: userInfo } = useUser(language);
   const { data: conversation, isLoading: isLoadingConversation } =
     useConversationHistory(conversationId as string);
-
+  console.log('userInfo', userInfo);
   const showPicker = () => setVisible(true);
   const closePicker = () => setVisible(false);
 
@@ -425,7 +423,7 @@ const ChatScreen = () => {
   const { data, isPending: isFetchingAllConversationsPending } =
     useAllUserConversations();
   const conversationsCount = data?.count || 0;
-
+  console.log('conversationsCount', conversationsCount);
   // Hooks for messaging
   const { sendStreamingMessage } = useSendStreamingMessage();
   const { isUpgradeRequired } = useSubscriptionAlert();
@@ -459,7 +457,7 @@ const ChatScreen = () => {
       );
 
       const mediaFiles = files?.map((file) => ({
-        uri: file?.fileUri || '',
+        uri: file?.fileUri || file?.uri || '',
         type: file?.type || '',
         mimeType: file?.mimeType || '',
       }));
@@ -538,7 +536,7 @@ const ChatScreen = () => {
 
     // Convert files to MediaFile format
     const mediaFiles = files?.map((file) => ({
-      uri: file?.fileUri || '',
+      uri: file?.fileUri || file?.uri || '',
       type: file?.type || '',
       mimeType: file?.mimeType || '',
     }));
@@ -799,10 +797,10 @@ const ChatScreen = () => {
               const isAssistantMessage = item.role !== 'user';
               const isFreeTrialLimitReached =
                 isUpgradeRequired &&
-                conversationsCount >= BLURRING_CONTENT_CONVERSATIONS_LIMIT &&
-                isAssistantMessage;
+                conversationsCount >= BLURRING_CONTENT_CONVERSATIONS_LIMIT;
 
-              const shouldBlurMessage = isFreeTrialLimitReached;
+              const shouldBlurMessage =
+                isFreeTrialLimitReached && isAssistantMessage && index > 1;
               return (
                 <ChatBubble
                   message={item}

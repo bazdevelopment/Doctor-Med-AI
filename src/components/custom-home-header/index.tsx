@@ -9,8 +9,11 @@ import { Button, colors } from '../ui';
 import { CrownIcon } from '../ui/icons/crown';
 import { BellIcon } from '../ui/icons/bell';
 import IconBadge from '../icon-badge';
+import useSubscriptionAlert from '@/lib/hooks/use-subscription-banner';
 
 const CustomHomeHeader = ({ unReadMessages }: { unReadMessages: number }) => {
+  const { isUpgradeRequired } = useSubscriptionAlert();
+
   return (
     <View className="bg-white px-4 dark:bg-transparent">
       <View className="flex-row justify-between">
@@ -27,16 +30,18 @@ const CustomHomeHeader = ({ unReadMessages }: { unReadMessages: number }) => {
         </TouchableOpacity>
       </View>
       <View className=" flex-row items-center justify-between">
-        <MedicalDisclaimerButton className="mt-2" />
-        <Button
-          label="PRO" //or PREMIUM
-          variant="default"
-          icon={<CrownIcon />}
-          textClassName="ml-3 text-white text-lg dark:text-white tracking-[1px]"
-          iconPosition="left"
-          className="-top-2 self-center rounded-full bg-primary-900 dark:bg-primary-900"
-          onPress={() => router.navigate('/paywall-new')}
-        />
+        <MedicalDisclaimerButton className="mt-3 mb-3" />
+        {isUpgradeRequired && (
+          <Button
+            label="PRO" //or PREMIUM
+            variant="default"
+            icon={<CrownIcon />}
+            textClassName="ml-3 text-white text-lg dark:text-white tracking-[1px]"
+            iconPosition="left"
+            className="-top-2 self-center rounded-full bg-primary-900 dark:bg-primary-900"
+            onPress={() => router.navigate('/paywall-new')}
+          />
+        )}
       </View>
       <HorizontalLine
         color={colors.primary[900]}

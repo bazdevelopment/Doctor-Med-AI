@@ -23,15 +23,15 @@ const Welcome = () => {
   const [storedUserId, setUserId] = useStoreUserId();
   const { language } = useSelectedLanguage();
   const [_, setIsFirstTime] = useIsFirstTime();
-  const [isOnboardingRunning] = useIsOnboarded();
+  // const [isOnboarded] = useIsOnboarded();
 
   const onSuccessHandler = (userId: string) => {
     //update internal storage with userId and set is first time when opening the app to false
     setUserId(userId);
     setIsFirstTime(false);
-    isOnboardingRunning
-      ? router.navigate('/onboarding')
-      : router.navigate('/(app)');
+    // !isOnboardingRunning
+    //   ? router.navigate('/onboarding')
+    //   : router.navigate('/(app)');
   };
 
   const { mutate: onCreateAnonymousAccount, isPending: isLoginPending } =
@@ -39,7 +39,7 @@ const Welcome = () => {
 
   return (
     <ScrollView
-      contentContainerClassName="bg-white dark:bg-transparent flex-1"
+      contentContainerClassName="bg-white dark:bg-transparent"
       showsVerticalScrollIndicator={false}
     >
       <SafeAreaView>

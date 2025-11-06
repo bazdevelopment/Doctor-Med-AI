@@ -7,9 +7,6 @@ import * as ImagePicker from 'expo-image-picker';
 import { useState } from 'react';
 import { Linking, Platform } from 'react-native';
 
-import CustomAlert from '@/components/custom-alert';
-import Toast from '@/components/toast';
-
 import {
   IMAGE_SIZE_LIMIT_MB,
   VIDEO_LENGTH_SECONDS_LIMIT,
@@ -23,6 +20,8 @@ import { checkFileSize } from '@/utilities/check-file-size';
 import { getVideoDuration } from '@/utilities/get-video-duration';
 import { generateUniqueId } from '@/utilities/generate-unique-id';
 import { translate } from '../i18n';
+import Toast from '@/components/toast';
+import CustomAlert from '@/components/custom-alert';
 
 interface IMediaPicker {
   onCloseModal: () => void;
@@ -30,7 +29,7 @@ interface IMediaPicker {
 
 export const useMediaPiker = ({ onCloseModal }: IMediaPicker) => {
   const [files, setFiles] = useState([]);
-
+  console.log('files', files);
   const handleRemoveFile = (fileId: string) => {
     const newFiles = files.filter((file) => file.id !== fileId);
     setFiles(newFiles);
@@ -308,9 +307,10 @@ export const useMediaPiker = ({ onCloseModal }: IMediaPicker) => {
     try {
       // Launch the document picker for selecting files
       const result = await DocumentPicker.getDocumentAsync({
-        type: ['image/*', 'video/*'], // Accepts only images and videos,
+        type: ['image/*', 'video/*'], // ! Accepts only images and videos, add like this in the future !type: ['image/*', 'video/*'], // Accepts only images and videos,
         multiple: true,
       });
+      onCloseModal(); //!very important to close the modal here after the document picker launch (especially for ios)
 
       // Check if the user canceled the action or if no assets are available
       if (!result.assets || result.assets.length === 0) {
@@ -328,36 +328,12 @@ export const useMediaPiker = ({ onCloseModal }: IMediaPicker) => {
       );
 
       if (hasImages && hasVideos) {
-        Toast.showCustomToast(
-          <CustomAlert
-            title={translate('general.attention')}
-            subtitle={translate('alerts.mixedMediaNotAllowed')}
-            buttons={[
-              {
-                label: translate('general.close'),
-                variant: 'default',
-                onPress: Toast.dismiss,
-                buttonTextClassName: 'dark:text-white',
-                className:
-                  'flex-1 rounded-xl h-[48] bg-primary-900 active:opacity-80 dark:bg-primary-900',
-              },
-            ]}
-          />,
-          {
-            position: 'middle',
-            duration: Infinity,
-          }
-        );
-        return;
-      }
-
-      // Handle video files (only single video allowed)
-      if (hasVideos) {
-        if (assets.length > 1) {
+        // ! wait(100) - workaround because there is a conflict between modal from document picker and modals that the app shows at the same time
+        wait(1000).then(() =>
           Toast.showCustomToast(
             <CustomAlert
               title={translate('general.attention')}
-              subtitle={translate('alerts.multipleVideosNotAllowed')}
+              subtitle={translate('alerts.mixedMediaNotAllowed')}
               buttons={[
                 {
                   label: translate('general.close'),
@@ -373,6 +349,35 @@ export const useMediaPiker = ({ onCloseModal }: IMediaPicker) => {
               position: 'middle',
               duration: Infinity,
             }
+          )
+        );
+        return;
+      }
+
+      // Handle video files (only single video allowed)
+      if (hasVideos) {
+        if (assets.length > 1) {
+          wait(1000).then(() =>
+            Toast.showCustomToast(
+              <CustomAlert
+                title={translate('general.attention')}
+                subtitle={translate('alerts.multipleVideosNotAllowed')}
+                buttons={[
+                  {
+                    label: translate('general.close'),
+                    variant: 'default',
+                    onPress: Toast.dismiss,
+                    buttonTextClassName: 'dark:text-white',
+                    className:
+                      'flex-1 rounded-xl h-[48] bg-primary-900 active:opacity-80 dark:bg-primary-900',
+                  },
+                ]}
+              />,
+              {
+                position: 'middle',
+                duration: Infinity,
+              }
+            )
           );
           return;
         }
@@ -382,14 +387,16 @@ export const useMediaPiker = ({ onCloseModal }: IMediaPicker) => {
         const isLongVideo = isVideoDurationLong(videoDuration as number);
 
         if (videoDuration && isLongVideo) {
-          Toast.error(
-            translate('alerts.videoLimitExceeds', {
-              videoSecondsLimit: VIDEO_LENGTH_SECONDS_LIMIT,
-            }),
-            {
-              closeButton: true,
-              duration: Infinity,
-            }
+          wait(1000).then(() =>
+            Toast.error(
+              translate('alerts.videoLimitExceeds', {
+                videoSecondsLimit: VIDEO_LENGTH_SECONDS_LIMIT,
+              }),
+              {
+                closeButton: true,
+                duration: Infinity,
+              }
+            )
           );
           return;
         }
@@ -406,28 +413,30 @@ export const useMediaPiker = ({ onCloseModal }: IMediaPicker) => {
           //   fileName: asset.name,
           // });
         } else {
-          Toast.showCustomToast(
-            <CustomAlert
-              title={translate('general.attention')}
-              subtitle={translate('alerts.videoSizeLarge', {
-                fileSize: Number(sizeInMb),
-                videoLimit: VIDEO_SIZE_LIMIT_MB,
-              })}
-              buttons={[
-                {
-                  label: translate('general.close'),
-                  variant: 'default',
-                  onPress: Toast.dismiss,
-                  buttonTextClassName: 'dark:text-white',
-                  className:
-                    'flex-1 rounded-xl h-[48] bg-primary-900 active:opacity-80 dark:bg-primary-900',
-                },
-              ]}
-            />,
-            {
-              position: 'middle',
-              duration: Infinity,
-            }
+          wait(1000).then(() =>
+            Toast.showCustomToast(
+              <CustomAlert
+                title={translate('general.attention')}
+                subtitle={translate('alerts.videoSizeLarge', {
+                  fileSize: Number(sizeInMb),
+                  videoLimit: VIDEO_SIZE_LIMIT_MB,
+                })}
+                buttons={[
+                  {
+                    label: translate('general.close'),
+                    variant: 'default',
+                    onPress: Toast.dismiss,
+                    buttonTextClassName: 'dark:text-white',
+                    className:
+                      'flex-1 rounded-xl h-[48] bg-primary-900 active:opacity-80 dark:bg-primary-900',
+                  },
+                ]}
+              />,
+              {
+                position: 'middle',
+                duration: Infinity,
+              }
+            )
           );
         }
         return;
@@ -463,29 +472,31 @@ export const useMediaPiker = ({ onCloseModal }: IMediaPicker) => {
               );
 
               if (compressedLimitReached) {
-                Toast.showCustomToast(
-                  <CustomAlert
-                    title={translate('general.attention')}
-                    subtitle={translate('alerts.imageSizeLarge', {
-                      fileSize: Number(compressedSizeInMb),
-                      imageLimit: IMAGE_SIZE_LIMIT_MB,
-                      fileName: asset.name || 'Unknown',
-                    })}
-                    buttons={[
-                      {
-                        label: translate('general.close'),
-                        variant: 'default',
-                        onPress: Toast.dismiss,
-                        buttonTextClassName: 'dark:text-white',
-                        className:
-                          'flex-1 rounded-xl h-[48] bg-primary-900 active:opacity-80 dark:bg-primary-900',
-                      },
-                    ]}
-                  />,
-                  {
-                    position: 'middle',
-                    duration: Infinity,
-                  }
+                wait(1000).then(() =>
+                  Toast.showCustomToast(
+                    <CustomAlert
+                      title={translate('general.attention')}
+                      subtitle={translate('alerts.imageSizeLarge', {
+                        fileSize: Number(compressedSizeInMb),
+                        imageLimit: IMAGE_SIZE_LIMIT_MB,
+                        fileName: asset.name || 'Unknown',
+                      })}
+                      buttons={[
+                        {
+                          label: translate('general.close'),
+                          variant: 'default',
+                          onPress: Toast.dismiss,
+                          buttonTextClassName: 'dark:text-white',
+                          className:
+                            'flex-1 rounded-xl h-[48] bg-primary-900 active:opacity-80 dark:bg-primary-900',
+                        },
+                      ]}
+                    />,
+                    {
+                      position: 'middle',
+                      duration: Infinity,
+                    }
+                  )
                 );
                 hasErrors = true;
                 continue; // Skip this image but continue with others
@@ -505,7 +516,7 @@ export const useMediaPiker = ({ onCloseModal }: IMediaPicker) => {
               fileName: finalFileName,
             });
           } catch (imageError) {
-            console.error('Error processing image:', imageError);
+            // console.error('Error processing image:', imageError);
             hasErrors = true;
           }
         }
@@ -529,7 +540,7 @@ export const useMediaPiker = ({ onCloseModal }: IMediaPicker) => {
         }
       }
     } catch (error) {
-      console.error('Error in handleChooseFromFiles:', error);
+      // console.error('Error in handleChooseFromFiles:', error);
       Toast.error(translate('alerts.errorSelectingDocumentPicker'), {
         closeButton: true,
         duration: Infinity,

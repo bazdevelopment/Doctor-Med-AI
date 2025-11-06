@@ -44,7 +44,7 @@ export default function TabLayout() {
   const isLoggedIn = !!firebaseAuth.currentUser?.uid;
   const { logEvent } = useCrashlytics();
   const [isFirstTime] = useIsFirstTime();
-  const [isOnboardingRunning] = useIsOnboarded();
+  const [isOnboarded] = useIsOnboarded();
 
   useQuickActionRouting();
 
@@ -92,12 +92,13 @@ export default function TabLayout() {
     logEvent(`User ${userInfo?.userId} is redirected to welcome screen`);
     return <Redirect href="/welcome" />;
   }
-  if (isOnboardingRunning) {
-    return <Redirect href="/onboarding" />;
-  }
   if (!isPendingUserinfo && !isPendingRevenueCatSdkInit && !userInfo) {
     return <Redirect href="/welcome" />;
   }
+  if (!isOnboarded) {
+    return <Redirect href="/onboarding" />;
+  }
+
   return (
     <SafeAreaView
       className="flex-1 bg-white dark:bg-transparent"
@@ -108,6 +109,7 @@ export default function TabLayout() {
           tabBarLabelStyle: { fontSize: 12, fontWeight: 'bold' },
           tabBarActiveTintColor: colors.primary[900],
           tabBarInactiveTintColor: isDark ? colors.white : colors.charcoal[500],
+          tabBarStyle: { paddingTop: DEVICE_TYPE.ANDROID ? 8 : 3 },
         }}
       >
         <Tabs.Screen

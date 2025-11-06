@@ -24,7 +24,7 @@ const FirstOnboardingScreen = ({
         contentContainerClassName="bg-white dark:bg-transparent mt-10"
         showsVerticalScrollIndicator={false}
       >
-        <View className="items-center justify-center px-6 dark:bg-transparent">
+        <View className="items-center justify-center px-6 dark:bg-transparent mb-[100]">
           {/* <Branding isLogoVisible invertedColors /> */}
           <ProgressBar
             initialProgress={progress}

@@ -17,7 +17,7 @@ export default function Onboarding() {
     preferredName: '',
   });
   const [currentScreenIndex, setCurrentScreenIndex] = useState(0);
-  const [_, setIsOnboardingRunning] = useIsOnboarded();
+  const [_, setIsOnboarded] = useIsOnboarded();
 
   const handleGoToNextScreen = () => {
     setCurrentScreenIndex((prevIndex) => prevIndex + 1);
@@ -27,7 +27,7 @@ export default function Onboarding() {
     setCurrentScreenIndex((prevIndex) => prevIndex - 1);
 
   const handleOnFinishFlow = () => {
-    setIsOnboardingRunning(false);
+    setIsOnboarded(true);
     router.navigate({
       pathname: '/paywall-new',
       params: { allowAppAccess: true },
