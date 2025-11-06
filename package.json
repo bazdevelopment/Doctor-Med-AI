@@ -1,6 +1,6 @@
 {
   "name": "doctor-med-ai",
-  "version": "25.10.12",
+  "version": "25.10.13",
   "private": true,
   "main": "expo-router/entry",
   "scripts": {
