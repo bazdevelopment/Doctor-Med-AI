@@ -50,7 +50,6 @@ export const useCreateAnonymousAccount = (
       wait(2000).then(() => router.navigate('/(app)'));
     },
     onError: (error) => {
-      console.log('error here', error);
       Toast.error(error.message || translate('alerts.anonymousSignInError'));
     },
   })();

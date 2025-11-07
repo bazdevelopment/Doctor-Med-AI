@@ -300,7 +300,7 @@ const PaywallNew = () => {
         : selectedPlan === 'monthly'
           ? SUBSCRIPTION_PLANS_PER_PLATFORM?.MONTHLY
           : SUBSCRIPTION_PLANS_PER_PLATFORM?.WEEKLY;
-    console.log('packageIdentifier', packageIdentifier);
+
     const customerInfoAfterPurchase = await purchaseSubscription({
       packageIdentifier,
     });

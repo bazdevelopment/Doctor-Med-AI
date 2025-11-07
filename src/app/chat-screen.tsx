@@ -62,7 +62,7 @@ import {
   requestAppRatingWithDelayStorage,
 } from '@/utilities/request-app-review';
 import useSubscriptionAlert from '@/lib/hooks/use-subscription-banner';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-controller';
+import { KeyboardAvoidingView } from 'react-native-keyboard-controller';
 import { CloseIcon } from '@/components/ui/icons/close';
 import Toast from '@/components/toast';
 import MessageMediaAttachments from '@/components/message-media-attachments';
@@ -428,7 +428,6 @@ const ChatScreen = () => {
   const { data, isPending: isFetchingAllConversationsPending } =
     useAllUserConversations();
   const conversationsCount = data?.count || 0;
-  console.log('conversationsCount', conversationsCount);
   // Hooks for messaging
   const { sendStreamingMessage } = useSendStreamingMessage();
   const { isUpgradeRequired } = useSubscriptionAlert();
@@ -688,19 +687,19 @@ const ChatScreen = () => {
       {DEVICE_TYPE.IOS && (
         <Toaster autoWiggleOnUpdate="toast-change" pauseWhenPageIsHidden />
       )}
-      <KeyboardAwareScrollView
+      {/* <KeyboardAwareScrollView
         contentContainerStyle={{
           //   paddingBottom: isKeyboardVisible && DEVICE_TYPE.ANDROID ? 100 : 0,
           flex: 1,
         }}
         keyboardShouldPersistTaps="handled"
         // bottomOffset={500}
-      >
-        {/* <KeyboardAvoidingView
+      > */}
+      <KeyboardAvoidingView
         behavior="padding"
         className="flex-1"
         keyboardVerticalOffset={DEVICE_TYPE.ANDROID ? 40 : 0}
-      > */}
+      >
         <View className="flex-1 bg-white dark:bg-transparent">
           {/* Header */}
           <View className="flex-row items-center  border-b border-gray-200 bg-white px-4 py-3 dark:border-gray-600 dark:bg-transparent">
@@ -811,8 +810,6 @@ const ChatScreen = () => {
 
               const shouldBlurMessage =
                 isFreeTrialLimitReached && isAssistantMessage && index >= 1;
-              console.log('isFreeTrialLimitReached', isFreeTrialLimitReached);
-              console.log('shouldBlurMessage', shouldBlurMessage);
               return (
                 <ChatBubble
                   message={item}
@@ -909,7 +906,7 @@ const ChatScreen = () => {
             </TouchableOpacity>
           </View>
         </View>
-      </KeyboardAwareScrollView>
+      </KeyboardAvoidingView>
       <ImagePickerModal
         title=""
         data={['Select from the library', 'Take a picture', 'Choose file']}
@@ -967,24 +964,24 @@ function getChatMessagesStyles(
       color: baseTextColor,
     },
     paragraph: {
-      fontFamily: 'Font-Regular',
+      fontFamily: 'Font-Medium',
     },
     list_item: {
-      fontFamily: 'Font-Regular',
+      fontFamily: 'Font-Medium',
     },
     code_inline: {
       backgroundColor: colors.primary[900],
-      fontFamily: 'Font-Regular',
+      fontFamily: 'Font-Medium',
     },
     span: {
-      fontFamily: 'Font-Regular',
+      fontFamily: 'Font-Medium',
     },
     strong: {
       fontFamily: 'Font-Extra-Bold',
       fontWeight: '800',
     },
     em: {
-      fontFamily: 'Font-Regular',
+      fontFamily: 'Font-Medium',
       fontStyle: 'italic',
     },
   };
@@ -1006,17 +1003,17 @@ function getChatMessagesStyles(
       fontWeight: '800',
     },
     paragraph: {
-      fontFamily: 'Font-Regular',
+      fontFamily: 'Font-Medium',
     },
     list_item: {
-      fontFamily: 'Font-Regular',
+      fontFamily: 'Font-Medium',
     },
     code_inline: {
       backgroundColor: colors.primary[900],
-      fontFamily: 'Font-Regular',
+      fontFamily: 'Font-Medium',
     },
     span: {
-      fontFamily: 'Font-Regular',
+      fontFamily: 'Font-Medium',
     },
     strong: {
       fontFamily: 'Font-Extra-Bold',

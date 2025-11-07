@@ -84,7 +84,7 @@
     "upgradePlan": "Upgrade Plan",
     "viewProfile": "View Profile",
     "yes": "Yes",
-    "chatBotPlaceholder": "Hi! If you have any questions about {{topic}} domain. Dr. Med is available to assist you"
+    "chatBotPlaceholder": "Hi! If you have any questions about {{topic}} domain, Dr. Med is available to assist you"
   },
   "weekDays": {
     "today": "Today",
@@ -229,7 +229,7 @@
       },
       "freeTrialPreview": {
         "heading": "Enjoy your free trial! 🎉",
-        "review": "The medical scan analysis gave me valuable insights into the images, and the chat support is very helpful.",
+        "review": "I use this app for medical questions, radiology scans, and studying — it’s amazing!",
         "reviewTrust": "📈 Trusted by 5,212+ users"
       },
       "languageAnalysisModal": {

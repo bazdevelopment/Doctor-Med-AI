@@ -26,7 +26,7 @@ const CardWrapper = ({
       {/* Chevron Icon */}
       <Icon
         icon={<ArrowRight />}
-        size={25}
+        size={18}
         onPress={onPress}
         color={chevronColor}
       />
