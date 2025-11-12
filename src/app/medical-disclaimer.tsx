@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, View } from 'react-native';
 
 import Branding from '@/components/branding';
 import { translate } from '@/lib';
-import { Text } from '@/components/ui';
+import { Button, colors, SafeAreaView, Text } from '@/components/ui';
+import { ArrowRightSharp } from '@/components/ui/icons/arrow-right-sharp';
 
 const disclaimerTexts = [
   {
@@ -17,16 +18,16 @@ const disclaimerTexts = [
   // },
   {
     text: translate('rootLayout.screens.disclaimerScreen.firstConsent'),
-    className: 'mb-8 text-base',
+    className: 'mb-8 text-lg',
   },
 
   {
     text: translate('rootLayout.screens.disclaimerScreen.secondConsent'),
-    className: 'mb-8 text-base',
+    className: 'mb-8 text-lg',
   },
   {
     text: translate('rootLayout.screens.disclaimerScreen.fourthConsent'),
-    className: 'mb-8 font-bold-poppins text-base',
+    className: 'mb-8 font-bold-poppins text-lg',
   },
   // {
   //   text: translate('rootLayout.screens.disclaimerScreen.thirdConsent'),
@@ -39,11 +40,11 @@ const disclaimerTexts = [
   },
 ];
 
-const MedicalDisclaimerScreen = () => {
+const MedicalDisclaimerScreen = ({ goToNextScreen }) => {
   const [checked, setChecked] = useState(false);
 
   return (
-    <>
+    <SafeAreaView>
       <ScrollView
         contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 200 }}
         className="bg-white dark:bg-transparent"
@@ -60,7 +61,20 @@ const MedicalDisclaimerScreen = () => {
           </Text>
         ))}
       </ScrollView>
-    </>
+      {goToNextScreen && ( // if goToNextScreen is provided then it seems it's part of the onboarding flow
+        <View className={`px-6 bottom-24`}>
+          <Button
+            label={translate('general.continue')}
+            variant="default"
+            className="h-[55px] rounded-full bg-primary-900 pl-5 dark:bg-primary-900"
+            textClassName="font-semibold-poppins text-lg dark:text-white "
+            iconPosition="right"
+            icon={<ArrowRightSharp color={colors.white} />}
+            onPress={goToNextScreen}
+          />
+        </View>
+      )}
+    </SafeAreaView>
   );
 };
 

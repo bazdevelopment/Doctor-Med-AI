@@ -1,5 +1,3 @@
-/* eslint-disable max-lines-per-function */
-import { useColorScheme } from 'nativewind';
 import React, { useEffect } from 'react';
 import { View, ScrollView, SafeAreaView, Text } from 'react-native';
 
@@ -11,10 +9,9 @@ import Avatar from '@/components/avatar';
 import { StarIcon } from '@/components/ui/icons/star';
 import { translate } from '@/lib';
 import { Button, colors } from '@/components/ui';
-import getDeviceSizeCategory from '@/utilities/get-device-size-category';
 import { requestAppRatingWithDelay } from '@/utilities/request-app-review';
 import { ArrowRightSharp } from '@/components/ui/icons/arrow-right-sharp';
-import { router } from 'react-query-kit';
+import useRemoteConfig from '@/lib/hooks/use-remote-config';
 
 // Social Proof Component
 const SocialProofCard = () => (
@@ -53,6 +50,8 @@ const SocialProofCard = () => (
 );
 
 const FreeTrialPreview = ({ onFinish }) => {
+  const { SHOW_SOCIAL_PROOF_ONBOARDING } = useRemoteConfig();
+
   useEffect(() => {
     requestAppRatingWithDelay(500);
   }, []);
@@ -68,9 +67,11 @@ const FreeTrialPreview = ({ onFinish }) => {
           {translate('rootLayout.screens.freeTrialPreview.heading')}
         </Text>
 
-        <FadeInView delay={100}>
-          <SocialProofCard />
-        </FadeInView>
+        {SHOW_SOCIAL_PROOF_ONBOARDING && (
+          <FadeInView delay={100}>
+            <SocialProofCard />
+          </FadeInView>
+        )}
         <HorizontalLine className="mt-4 mb-3" />
         <PremiumFeaturesOverview />
       </ScrollView>

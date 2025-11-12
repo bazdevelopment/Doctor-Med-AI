@@ -69,17 +69,21 @@ export default function TabLayout() {
     storeDeviceInfo();
   }, []);
 
-  useEffect(() => {
-    QuickActions.setItems<QuickActions.Action>([
-      {
-        title: translate('deleteApp.title'),
-        subtitle: translate('deleteApp.subtitle'),
-        icon: 'heart_icon',
-        id: '0',
-        params: { href: '/rate' },
-      },
-    ]);
-  }, []);
+  /**
+   * ![todo] enable this after review is accepted
+   */
+
+  // useEffect(() => {
+  //   QuickActions.setItems<QuickActions.Action>([
+  //     {
+  //       title: translate('deleteApp.title'),
+  //       subtitle: translate('deleteApp.subtitle'),
+  //       icon: 'heart_icon',
+  //       id: '0',
+  //       params: { href: '/rate' },
+  //     },
+  //   ]);
+  // }, []);
 
   if (isPendingUserinfo || isPendingRevenueCatSdkInit)
     return <InitialLoadSpinner />;

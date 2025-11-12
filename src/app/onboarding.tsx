@@ -7,6 +7,8 @@ import { useIsOnboarded } from '@/lib/hooks/use-is-onboarded';
 import FirstOnboardingScreen from '@/screens/onboarding/first-onboarding-screen';
 import ThirdOnboardingScreen from '@/screens/onboarding/third-screen-onboarding';
 import FreeTrialPreview from '@/screens/onboarding/free-trial-preview';
+import MedicalDisclaimerScreen from './medical-disclaimer';
+import useRemoteConfig from '@/lib/hooks/use-remote-config';
 
 export interface IOnboardingCollectedData {
   preferredName: string;
@@ -18,6 +20,8 @@ export default function Onboarding() {
   });
   const [currentScreenIndex, setCurrentScreenIndex] = useState(0);
   const [_, setIsOnboarded] = useIsOnboarded();
+
+  const { SHOW_MEDICAL_DISCLAIMER_ONBOARDING } = useRemoteConfig();
 
   const handleGoToNextScreen = () => {
     setCurrentScreenIndex((prevIndex) => prevIndex + 1);
@@ -45,6 +49,7 @@ export default function Onboarding() {
       <FirstOnboardingScreen />
       <SecondOnboardingScreen />
       <ThirdOnboardingScreen />
+      {SHOW_MEDICAL_DISCLAIMER_ONBOARDING && <MedicalDisclaimerScreen />}
       <FreeTrialPreview />
     </FlowModal>
   );

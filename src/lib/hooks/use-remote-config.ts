@@ -7,6 +7,9 @@ const useRemoteConfig = (): {
   SHOW_RATE_SCREEN: string;
   SHOW_ADMIN_SCREENS: string;
   AI_ANALYSIS_PROMPT_FIREBASE: string;
+  MAX_IMAGES_SELECTION_LIMIT: number;
+  SHOW_MEDICAL_DISCLAIMER_ONBOARDING: boolean;
+  SHOW_SOCIAL_PROOF_ONBOARDING: boolean;
 } => {
   const [configs, setConfigs] = useState({});
 
@@ -69,6 +72,9 @@ const useRemoteConfig = (): {
     SHOW_RATE_SCREEN: string;
     SHOW_ADMIN_SCREENS: string;
     AI_ANALYSIS_PROMPT_FIREBASE: string;
+    MAX_IMAGES_SELECTION_LIMIT: number;
+    SHOW_MEDICAL_DISCLAIMER_ONBOARDING: boolean;
+    SHOW_SOCIAL_PROOF_ONBOARDING: boolean;
   };
 };
 

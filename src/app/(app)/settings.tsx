@@ -117,16 +117,17 @@ export default function Settings() {
             <Item text="settings.version" value={Env.VERSION} />
           </ItemsContainer>
 
-          <ItemsContainer title="settings.support_us">
-            {/* <ShareItem /> */}
+          {SHOW_RATE_SCREEN && (
+            <ItemsContainer title="settings.support_us">
+              {/* <ShareItem /> */}
 
-            <Item
-              text="settings.rate"
-              icon={<Rate color={iconColor} />}
-              onPress={() => router.navigate('/rate')}
-            />
-          </ItemsContainer>
-
+              <Item
+                text="settings.rate"
+                icon={<Rate color={iconColor} />}
+                onPress={() => router.navigate('/rate')}
+              />
+            </ItemsContainer>
+          )}
           <ItemsContainer title="settings.links">
             <Item
               text="settings.citations"

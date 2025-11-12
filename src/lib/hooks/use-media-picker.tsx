@@ -22,6 +22,7 @@ import { generateUniqueId } from '@/utilities/generate-unique-id';
 import { translate } from '../i18n';
 import Toast from '@/components/toast';
 import CustomAlert from '@/components/custom-alert';
+import useRemoteConfig from './use-remote-config';
 
 interface IMediaPicker {
   onCloseModal: () => void;
@@ -29,6 +30,7 @@ interface IMediaPicker {
 
 export const useMediaPiker = ({ onCloseModal }: IMediaPicker) => {
   const [files, setFiles] = useState([]);
+  const { MAX_IMAGES_SELECTION_LIMIT } = useRemoteConfig();
 
   const handleRemoveFile = (fileId: string) => {
     const newFiles = files.filter((file) => file.id !== fileId);
@@ -78,7 +80,7 @@ export const useMediaPiker = ({ onCloseModal }: IMediaPicker) => {
         allowsEditing: false, // Disable editing for multiple selection
         quality: 0.9, //!if you use quality=1 the image size will be bigger and the risk is to exceed the AI limit (5MB currently)
         base64: false,
-        selectionLimit: 8,
+        selectionLimit: MAX_IMAGES_SELECTION_LIMIT || 8,
       });
 
       // Check if the user didn't cancel the action and assets are available

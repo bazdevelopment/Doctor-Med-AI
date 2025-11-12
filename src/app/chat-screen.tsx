@@ -83,7 +83,7 @@ const RANDOM_QUESTIONS = [
   translate('rootLayout.screens.chatScreen.randomQuestions.four'),
   translate('rootLayout.screens.chatScreen.randomQuestions.five'),
   translate('rootLayout.screens.chatScreen.randomQuestions.six'),
-  translate('rootLayout.screens.chatScreen.randomQuestions.seven'),
+  // translate('rootLayout.screens.chatScreen.randomQuestions.seven'),
   translate('rootLayout.screens.chatScreen.randomQuestions.eight'),
   translate('rootLayout.screens.chatScreen.randomQuestions.nine'),
   translate('rootLayout.screens.chatScreen.randomQuestions.ten'),

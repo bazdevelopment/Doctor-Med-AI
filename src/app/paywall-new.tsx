@@ -143,24 +143,26 @@ const PricingCard = ({
           <Text className="font-bold-poppins text-lg text-gray-900">
             {title}
           </Text>
-          {badge && (
+
+          {/* {badge && (
             <View className="ml-3 rounded-lg bg-red-500 px-3 py-1">
               <Text className="font-bold-poppins text-[13px] text-white">
                 {badge}
               </Text>
             </View>
-          )}
+          )} */}
         </View>
 
         <View>
           {originalPrice && (
-            <View className="mt-1 flex-row">
-              <Text className="mr-2 font-semibold-poppins text-lg text-gray-600 line-through">
+            <View className="mt-1 flex-row items-center">
+              {/* <Text className="mr-2 font-semibold-poppins text-lg text-gray-600 line-through">
                 {originalPrice}
-              </Text>
+              </Text> */}
               <Text className="text-lg font-medium-poppins text-gray-900">
                 {price} {translate('general.perYear')}
               </Text>
+
               {/* {isFree && (
                 <View className="ml-3 rounded bg-green-500 px-2 py-1">
                   <Text className="text-xs font-bold text-white">FREE</Text>
@@ -168,13 +170,14 @@ const PricingCard = ({
               )} */}
             </View>
           )}
-          {isFree && (
+          {/* [TODO] enable again this after apple approved the app */}
+          {/* {isFree && (
             <View className="absolute -top-6 right-3 self-end rounded px-2 py-1">
               <Text className="font-extra-bold-poppins text-xl text-black">
                 {translate('general.free')}
               </Text>
             </View>
-          )}
+          )} */}
         </View>
 
         {subtitle && (
@@ -425,15 +428,15 @@ const PaywallNew = () => {
                     isFree={true}
                   />
 
-                  <Text className="ml-2 -top-2 text-center font-medium-poppins text-sm text-gray-900">
+                  {/* <Text className="ml-2 -top-2 text-center font-medium-poppins text-sm text-gray-900">
                     {freeTrialEnabled ? translate('general.noPaymentNow') : ''}
-                  </Text>
+                  </Text> */}
                 </>
               )}
             </View>
 
             {/* Free Trial Toggle */}
-            <View className="mb-8 flex-row items-center justify-between rounded-2xl bg-gray-100 p-4 dark:bg-charcoal-800">
+            {/* <View className="mb-8 flex-row items-center justify-between rounded-2xl bg-gray-100 p-4 dark:bg-charcoal-800">
               <Text className="font-bold-poppins text-lg text-gray-900 flex-1 mr-2">
                 {translate(
                   'rootLayout.screens.paywallOnboarding.freeTierOfferings.freeTrialEnabled'
@@ -444,12 +447,12 @@ const PaywallNew = () => {
                 onChange={handleSwitchToggle}
                 accessibilityLabel="switch-paywall"
               />
-            </View>
+            </View> */}
 
             {/* Try for Free Button */}
             <TouchableOpacity
               onPress={handlePurchase}
-              className="mb-2 h-16 items-center justify-center rounded-xl bg-blue-500 shadow-lg"
+              className="mb-2 mt-6 h-16 items-center justify-center rounded-xl bg-blue-500 shadow-lg"
               activeOpacity={0.8}
               disabled={isPendingUpdateUser}
             >
@@ -486,6 +489,10 @@ const PaywallNew = () => {
                   onPress={restorePurchase}
                   loading={isPendingRestorePurchase}
                 />
+
+                <Text className="text-center mt-6 text-sm text-charcoal-800">
+                  {`*Your subscription will be charged to your ${DEVICE_TYPE.IOS ? 'App Store' : 'Google Play account'} and renews automatically unless canceled at least 24 hours before the end of the current subscription period. You can manage or cancel your subscription anytime in your account settings. The subscription will renew at the same price and plan you selected unless you change or cancel it.`}
+                </Text>
 
                 {/* <Text className="mx-4 text-base text-gray-400">•</Text>
 

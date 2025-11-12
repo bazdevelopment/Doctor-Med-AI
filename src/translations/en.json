@@ -55,7 +55,7 @@
     "tabs": {
       "home": "Home",
       "chat": "Chat",
-      "aiDoctors": "AI Doctors",
+      "aiDoctors": "AI Assistants",
       "settings": "Settings"
     },
     "medicalDisclaimer": "Medical Disclaimer",
@@ -255,7 +255,6 @@
           "four": "What is the difference between an MRI and a CT scan?",
           "five": "What are the early signs of diabetes?",
           "six": "How do I interpret my basic blood test results?",
-          "seven": "What is the treatment for a urinary tract infection (UTI)?",
           "eight": "Can you explain what an echocardiogram is used for?",
           "nine": "What are the guidelines for a healthy diet?",
           "ten": "What causes high cholesterol?",
