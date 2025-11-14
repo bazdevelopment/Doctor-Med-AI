@@ -1,12 +1,13 @@
 import { router } from 'expo-router';
 import { View } from 'react-native';
 
+import { translate } from '@/lib';
+
 import SeeAllButton from '../see-all-button';
 import SpecializationCard, {
   type MedicalSpecialization,
 } from '../specialization-card';
 import { Text } from '../ui';
-import { translate } from '@/lib';
 
 // Main Specializations Component (Home Screen Preview)
 const MedicalSpecializationsPreview: React.FC = () => {
@@ -30,7 +31,7 @@ const MedicalSpecializationsPreview: React.FC = () => {
     <View className="bg-gray-50 pb-4 dark:bg-transparent">
       {/* Header */}
       <View className="flex-row items-center justify-between px-4 pb-3 pt-6">
-        <Text className="font-bold-poppins text-xl text-gray-800">
+        <Text className="flex-1 font-bold-poppins text-xl text-gray-800">
           {translate('general.medicalAssistants')}
         </Text>
 

@@ -1,20 +1,23 @@
+import { useScrollToTop } from '@react-navigation/native';
 import React, { useRef, useState } from 'react';
+import { RefreshControl } from 'react-native';
 
+import { useFetchUserNotifications } from '@/api/push-notifications/push-notifications.hooks';
+import { useGetCustomerInfo } from '@/api/subscription/subscription.hooks';
+import { useUser } from '@/api/user/user.hooks';
 import CustomHomeHeader from '@/components/custom-home-header';
+import DisclaimerBanner from '@/components/disclaimer-banner';
 import MedicalCardsList from '@/components/medical-cards-list';
 import MedicalImagesGallery from '@/components/medical-images-gallery';
 import MedicalSpecializationsPreview from '@/components/medical-specialization-preview';
+import { type INotificationItem } from '@/components/notifications/notification-item/notification-item.interface';
 import { ScrollView } from '@/components/ui';
-import { INotificationItem } from '@/components/notifications/notification-item/notification-item.interface';
-import { useFetchUserNotifications } from '@/api/push-notifications/push-notifications.hooks';
 import { useSelectedLanguage } from '@/lib';
-import { useUser } from '@/api/user/user.hooks';
-import { useScrollToTop } from '@react-navigation/native';
-import { useGetCustomerInfo } from '@/api/subscription/subscription.hooks';
-import { RefreshControl } from 'react-native';
+import useRemoteConfig from '@/lib/hooks/use-remote-config';
 
 export default function Home() {
   const { language } = useSelectedLanguage();
+  const { SHOW_MEDICAL_DISCLAIMER_BANNER } = useRemoteConfig();
   const [isManualRefreshing, setIsManualRefreshing] = useState(false);
   const { data: userInfo, refetch: refetchUserInfo } = useUser(language);
   const scrollViewRef = useRef(null);
@@ -67,6 +70,7 @@ export default function Home() {
       }
     >
       <CustomHomeHeader unReadMessages={unReadMessages} />
+      {SHOW_MEDICAL_DISCLAIMER_BANNER && <DisclaimerBanner />}
       <MedicalCardsList className="p-3" />
       <MedicalImagesGallery className="mt-2" />
       <MedicalSpecializationsPreview />

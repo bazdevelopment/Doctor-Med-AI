@@ -21,7 +21,7 @@
     "chatbotPlaceholder": "Ask me anything...",
     "completedScans": "Scans completed",
     "conversationHistory": "Conversation history",
-    "medicalAssistants": "Medical Assistants",
+    "medicalAssistants": "Medical Specialties Explorer",
     "searchAssistant": "Search Assistant...",
     "analyzingMediaFilesPlaceholder": "Analyzing Media Files...",
     "copyText": {
@@ -103,8 +103,8 @@
       "subheading": "Enjoy all benefits without restrictions"
     },
     "MedicalCard": {
-      "medicalImagesAnalyzer": "Medical Images Analyzer",
-      "askMedicalAssistant": "Ask Medical AI Assistant",
+      "medicalImagesAnalyzer": "Medical Image Learning Lab",
+      "askMedicalAssistant": "Ask AI Assistant",
       "medicalAssistant": "Medical Assistant",
       "imageTypes": {
         "xray": "X-Ray",

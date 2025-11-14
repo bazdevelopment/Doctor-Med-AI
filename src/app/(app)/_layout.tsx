@@ -1,28 +1,27 @@
+import { useNetInfo } from '@react-native-community/netinfo';
+import { useQuickActionRouting } from 'expo-quick-actions/router';
 import { Redirect, router, Tabs } from 'expo-router';
 import { useColorScheme } from 'nativewind';
 import React, { useEffect } from 'react';
-import * as QuickActions from 'expo-quick-actions';
-import { useQuickActionRouting } from 'expo-quick-actions/router';
-import { useNetInfo } from '@react-native-community/netinfo';
 
+import { useInitializeRevenueCat } from '@/api/subscription/subscription.hooks';
+import { useUser } from '@/api/user/user.hooks';
+import InitialLoadSpinner from '@/components/initial-load-spinner.ts';
 import { colors, SafeAreaView, useModal } from '@/components/ui';
 import { HomeIcon, Settings } from '@/components/ui/icons';
 import { ChatIcon } from '@/components/ui/icons/chat';
 import { StethoscopeIcon } from '@/components/ui/icons/stethoscope';
-import { DEVICE_TYPE } from '@/utilities/device-type';
-import { useUser } from '@/api/user/user.hooks';
-import { translate, useIsFirstTime, useSelectedLanguage } from '@/lib';
 import { firebaseAuth } from '@/firebase/config';
-import { useInitializeRevenueCat } from '@/api/subscription/subscription.hooks';
-import InitialLoadSpinner from '@/components/initial-load-spinner.ts';
-import { useCrashlytics } from '@/lib/hooks/use-crashlytics';
-import { useIsOnboarded } from '@/lib/hooks/use-is-onboarded';
 import { checkForAppUpdate } from '@/firebase/remote-config';
-import useRemoteConfig from '@/lib/hooks/use-remote-config';
+import { translate, useIsFirstTime, useSelectedLanguage } from '@/lib';
+import { useCrashlytics } from '@/lib/hooks/use-crashlytics';
 import { useHaptic } from '@/lib/hooks/use-haptics';
-import { playSound } from '@/utilities/play-sound';
-import usePushNotifications from '@/lib/hooks/use-push-notifications';
+import { useIsOnboarded } from '@/lib/hooks/use-is-onboarded';
 import { usePushNotificationToken } from '@/lib/hooks/use-push-notification-token';
+import usePushNotifications from '@/lib/hooks/use-push-notifications';
+import useRemoteConfig from '@/lib/hooks/use-remote-config';
+import { DEVICE_TYPE } from '@/utilities/device-type';
+import { playSound } from '@/utilities/play-sound';
 
 export default function TabLayout() {
   const { colorScheme } = useColorScheme();

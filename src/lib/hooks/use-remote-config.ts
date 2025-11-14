@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import remoteConfig from '@react-native-firebase/remote-config';
 import { useCallback, useEffect, useState } from 'react';
 
@@ -10,6 +11,7 @@ const useRemoteConfig = (): {
   MAX_IMAGES_SELECTION_LIMIT: number;
   SHOW_MEDICAL_DISCLAIMER_ONBOARDING: boolean;
   SHOW_SOCIAL_PROOF_ONBOARDING: boolean;
+  SHOW_MEDICAL_DISCLAIMER_BANNER: boolean;
 } => {
   const [configs, setConfigs] = useState({});
 
@@ -75,6 +77,7 @@ const useRemoteConfig = (): {
     MAX_IMAGES_SELECTION_LIMIT: number;
     SHOW_MEDICAL_DISCLAIMER_ONBOARDING: boolean;
     SHOW_SOCIAL_PROOF_ONBOARDING: boolean;
+    SHOW_MEDICAL_DISCLAIMER_BANNER: boolean;
   };
 };
 

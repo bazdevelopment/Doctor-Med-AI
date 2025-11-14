@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { ScrollView, View } from 'react-native';
 
 import Branding from '@/components/branding';
-import { translate } from '@/lib';
 import { Button, colors, SafeAreaView, Text } from '@/components/ui';
 import { ArrowRightSharp } from '@/components/ui/icons/arrow-right-sharp';
+import { translate } from '@/lib';
+import { DEVICE_TYPE } from '@/utilities/device-type';
 
 const disclaimerTexts = [
   {
@@ -44,7 +45,10 @@ const MedicalDisclaimerScreen = ({ goToNextScreen }) => {
   const [checked, setChecked] = useState(false);
 
   return (
-    <SafeAreaView>
+    <SafeAreaView
+      edges={{ top: 'off' }}
+      className={DEVICE_TYPE.ANDROID ? 'mt-10' : undefined}
+    >
       <ScrollView
         contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 200 }}
         className="bg-white dark:bg-transparent"
@@ -62,7 +66,7 @@ const MedicalDisclaimerScreen = ({ goToNextScreen }) => {
         ))}
       </ScrollView>
       {goToNextScreen && ( // if goToNextScreen is provided then it seems it's part of the onboarding flow
-        <View className={`px-6 bottom-24`}>
+        <View className={`bottom-24 px-6`}>
           <Button
             label={translate('general.continue')}
             variant="default"

@@ -1,4 +1,3 @@
-import { router } from 'expo-router';
 import React from 'react';
 import {
   Keyboard,
@@ -8,15 +7,14 @@ import {
   View,
 } from 'react-native';
 
+import { useCreateAnonymousAccount } from '@/api/user/user.hooks';
 import Branding from '@/components/branding';
 import { Button, SafeAreaView, Text } from '@/components/ui';
 import { WelcomeIllustration } from '@/components/ui/illustrations/welcome';
-import { translate, useIsFirstTime, useSelectedLanguage } from '@/lib';
-import getDeviceSizeCategory from '@/utilities/get-device-size-category';
-import { useCreateAnonymousAccount } from '@/api/user/user.hooks';
-import { useStoreUserId } from '@/lib/hooks/use-store-user-id';
 import { firebaseAuth } from '@/firebase/config';
-import { useIsOnboarded } from '@/lib/hooks/use-is-onboarded';
+import { translate, useIsFirstTime, useSelectedLanguage } from '@/lib';
+import { useStoreUserId } from '@/lib/hooks/use-store-user-id';
+import getDeviceSizeCategory from '@/utilities/get-device-size-category';
 
 const Welcome = () => {
   const { isVerySmallDevice, isLargeDevice } = getDeviceSizeCategory();

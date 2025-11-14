@@ -1,10 +1,10 @@
+import { router } from 'expo-router';
 import { ScrollView, View } from 'react-native';
 
-import ImageCard, { type IMedicalImageCard } from '../image-card';
-import SeeAllButton from '../see-all-button';
-import { Text } from '../ui';
-import { router } from 'expo-router';
 import { translate } from '@/lib';
+
+import ImageCard, { type IMedicalImageCard } from '../image-card';
+import { Text } from '../ui';
 
 const MedicalImagesGallery = ({ className }: { className: string }) => {
   const handleSeeAll = () => {};
@@ -88,7 +88,7 @@ const medicalImagesData: IMedicalImageCard[] = [
   {
     id: '6',
     title: translate('components.MedicalCard.imageTypes.skinLesion'),
-    image: require('../../assets/images/medical/skin.png'),
+    image: require('../../assets/images/medical/skin-lession.png'),
     description: 'Dermatological examination images',
     category: 'Dermatology',
   },
