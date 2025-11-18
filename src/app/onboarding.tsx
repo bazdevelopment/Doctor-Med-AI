@@ -2,13 +2,14 @@ import { router } from 'expo-router';
 import React, { useState } from 'react';
 
 import FlowModal from '@/components/flow-modal';
-import SecondOnboardingScreen from '@/screens/onboarding/second-onboarding-screen';
 import { useIsOnboarded } from '@/lib/hooks/use-is-onboarded';
-import FirstOnboardingScreen from '@/screens/onboarding/first-onboarding-screen';
-import ThirdOnboardingScreen from '@/screens/onboarding/third-screen-onboarding';
-import FreeTrialPreview from '@/screens/onboarding/free-trial-preview';
-import MedicalDisclaimerScreen from './medical-disclaimer';
 import useRemoteConfig from '@/lib/hooks/use-remote-config';
+import FirstOnboardingScreen from '@/screens/onboarding/first-onboarding-screen';
+import FreeTrialPreview from '@/screens/onboarding/free-trial-preview';
+import SecondOnboardingScreen from '@/screens/onboarding/second-onboarding-screen';
+import ThirdOnboardingScreen from '@/screens/onboarding/third-screen-onboarding';
+
+import MedicalDisclaimerScreen from './medical-disclaimer';
 
 export interface IOnboardingCollectedData {
   preferredName: string;

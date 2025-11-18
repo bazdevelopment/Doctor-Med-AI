@@ -22,12 +22,12 @@ import Toast from '@/components/toast';
 import { Button, colors } from '@/components/ui';
 import { LogoutIcon } from '@/components/ui/icons/logout';
 import { Rate } from '@/components/ui/icons/rate';
+import UpgradeBanner from '@/components/upgrade-banner';
 import { translate, useSelectedLanguage } from '@/lib';
 import { Env } from '@/lib/env';
 import useRemoteConfig from '@/lib/hooks/use-remote-config';
-import { DEVICE_TYPE } from '@/utilities/device-type';
-import UpgradeBanner from '@/components/upgrade-banner';
 import useSubscriptionAlert from '@/lib/hooks/use-subscription-banner';
+import { DEVICE_TYPE } from '@/utilities/device-type';
 
 export default function Settings() {
   const { colorScheme } = useColorScheme();
