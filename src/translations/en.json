@@ -327,11 +327,11 @@
       "onboarding": {
         "firstOnboarding": {
           "title": "Your AI-Powered Healthcare Companion",
-          "subtitle": "Get instant medical insights and guidance from specialized AI doctors, anytime, anywhere."
+          "subtitle": "Explore general health information and insights powered by AI — designed for educational use only, not medical advice."
         },
         "secondOnboarding": {
-          "title": "Ask, Upload, and Get Medical Insights",
-          "subtitle": "Chat with AI doctors from different specialties, or upload medical images for quick medical analysis."
+          "title": "Ask, Learn, and Explore Health Topics",
+          "subtitle": "Chat about health topics with AI-powered explanations. Always seek a healthcare professional for medical concerns."
         },
         "thirdOnboarding": {
           "title": "Your Privacy Matters",
