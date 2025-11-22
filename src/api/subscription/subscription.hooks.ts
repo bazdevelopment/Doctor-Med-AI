@@ -10,11 +10,11 @@ import Purchases, {
 import { createMutation, createQuery } from 'react-query-kit';
 
 import Toast from '@/components/toast';
+import { translate } from '@/lib';
+import { requestAppRatingWithDelay } from '@/utilities/request-app-review';
+import { wait } from '@/utilities/wait';
 
 import { queryClient } from '../common';
-import { translate } from '@/lib';
-import { wait } from '@/utilities/wait';
-import { requestAppRatingWithDelay } from '@/utilities/request-app-review';
 
 // Query to fetch offerings
 export const useGetOfferings = createQuery<PurchasesOffering | null, Error>({

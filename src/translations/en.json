@@ -93,9 +93,9 @@
   },
   "components": {
     "PremiumFeaturesOverview": {
-      "first": "Get analysis from various medical scans, including X-RAY, CT, MRI, ECG and more",
+      "first": "Learn about different medical scans, including X-Ray, CT, MRI, and ECG and more.",
       "second": "Access to all premium features",
-      "fourth": "Unlimited chats with a 24/7 medical AI assistants",
+      "fourth": "Unlimited chats with 24/7 medical AI assistants",
       "third": "No ads"
     },
     "UpgradeBanner": {
@@ -249,20 +249,20 @@
       },
       "chatScreen": {
         "randomQuestions": {
-          "one": "What does a chest X-ray show?",
-          "two": "What are the common symptoms of a heart attack?",
-          "three": "How can I lower my blood pressure naturally?",
-          "four": "What is the difference between an MRI and a CT scan?",
-          "five": "What are the early signs of diabetes?",
-          "six": "How do I interpret my basic blood test results?",
-          "eight": "Can you explain what an echocardiogram is used for?",
-          "nine": "What are the guidelines for a healthy diet?",
-          "ten": "What causes high cholesterol?",
-          "eleven": "How is a brain tumor detected on an MRI?",
-          "twelve": "What is the role of family medicine?",
-          "thirteen": "What are the risk factors for a stroke?",
-          "fourteen": "How to manage anxiety and stress?",
-          "fifteen": "What are the latest guidelines for managing hypertension?"
+          "one": "What does a chest X-ray help visualize?",
+          "two": "What signs are commonly associated with heart emergencies?",
+          "three": "What factors influence blood pressure levels?",
+          "four": "How do MRI and CT scans differ in how they create images?",
+          "five": "What early indicators are often linked to diabetes in general education?",
+          "six": "What information is typically included in basic blood test reports?",
+          "eight": "What does an echocardiogram show about the heart?",
+          "nine": "What principles define a general healthy diet?",
+          "ten": "What factors can contribute to higher cholesterol levels?",
+          "eleven": "How can MRI images show structures in the brain?",
+          "twelve": "What does family medicine focus on as a field?",
+          "thirteen": "What factors are associated with a higher risk of stroke?",
+          "fourteen": "What topics are commonly discussed around stress and anxiety?",
+          "fifteen": "What concepts are included in hypertension as a health condition?"
         }
       },
       "notifications": {
@@ -320,14 +320,14 @@
           "title": "Unlock Premium Features Today!",
           "firstOffering": "Access All Premium Features",
           "secondOffering": "Ad-Free Experience",
-          "thirdOffering": "Unlimited analysis of medical images, videos, PDF scans + reports",
-          "fourthOffering": "Unlimited chats with a 24/7 AI medical assistants"
+          "thirdOffering": "Unlimited exploration of images, videos, PDF scans & reports",
+          "fourthOffering": "Unlimited chats with 24/7 AI medical assistants"
         }
       },
       "onboarding": {
         "firstOnboarding": {
           "title": "Your AI-Powered Healthcare Companion",
-          "subtitle": "Explore general health information and insights powered by AI — designed for educational use only, not medical advice."
+          "subtitle": "Explore general wellness topics and insights powered by AI — designed for educational use only, not medical advice."
         },
         "secondOnboarding": {
           "title": "Ask, Learn, and Explore Health Topics",

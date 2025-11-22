@@ -737,7 +737,7 @@ const ChatScreen = () => {
               />
               <View className="ml-2">
                 <Text className="font-bold-poppins text-xl dark:text-white">
-                  Dr. Med
+                  Dr. Med AI
                 </Text>
                 {isStreaming ? (
                   <Text className="text-xs text-gray-500 dark:text-white">

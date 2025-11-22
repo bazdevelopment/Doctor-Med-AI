@@ -3,6 +3,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useColorScheme } from 'nativewind';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Linking, ScrollView, TouchableOpacity, View } from 'react-native';
 import { type CustomerInfo } from 'react-native-purchases';
 
@@ -14,24 +15,21 @@ import {
 } from '@/api/subscription/subscription.hooks';
 import { useUpdateUser, useUser } from '@/api/user/user.hooks';
 import Icon from '@/components/icon';
-
 import {
-  colors,
-  CheckboxIcon,
-  Text,
-  Image,
   Button,
-  Switch,
+  CheckboxIcon,
+  colors,
+  Image,
   SafeAreaView,
+  Text,
 } from '@/components/ui';
+import { CheckIcon } from '@/components/ui/icons/check';
 import { CloseIcon } from '@/components/ui/icons/close';
-import { useCrashlytics } from '@/lib/hooks/use-crashlytics';
 import { SUBSCRIPTION_PLANS_PER_PLATFORM } from '@/constants/constants/subscriptions';
 import { translate, useIsFirstTime } from '@/lib';
+import { useCrashlytics } from '@/lib/hooks/use-crashlytics';
 import { DEVICE_TYPE } from '@/utilities/device-type';
-import { CheckIcon } from '@/components/ui/icons/check';
 import { updateUserAndNavigate } from '@/utilities/update-user-and-navigate';
-import { useTranslation } from 'react-i18next';
 
 const formatPaywallData = (offerings: any) => {
   if (!offerings) return [];
@@ -159,7 +157,7 @@ const PricingCard = ({
               {/* <Text className="mr-2 font-semibold-poppins text-lg text-gray-600 line-through">
                 {originalPrice}
               </Text> */}
-              <Text className="text-lg font-medium-poppins text-gray-900">
+              <Text className="font-medium-poppins text-lg text-gray-900">
                 {price} {translate('general.perYear')}
               </Text>
 
@@ -181,14 +179,14 @@ const PricingCard = ({
         </View>
 
         {subtitle && (
-          <Text className="text-lg font-medium-poppins text-black">
+          <Text className="font-medium-poppins text-lg text-black">
             {subtitle}
           </Text>
         )}
       </View>
 
       <View
-        className={`h-6 w-6 rounded-full border-2 ${
+        className={`size-6 rounded-full border-2 ${
           isSelected
             ? 'border-blue-500 bg-blue-500'
             : 'border-gray-300 bg-white dark:bg-black'
@@ -278,13 +276,13 @@ const PaywallNew = () => {
     },
     {
       title: translate(
-        'rootLayout.screens.paywallOnboarding.freeTierOfferings.thirdOffering'
+        'rootLayout.screens.paywallOnboarding.freeTierOfferings.fourthOffering'
       ),
       icon: <CheckboxIcon />,
     },
     {
       title: translate(
-        'rootLayout.screens.paywallOnboarding.freeTierOfferings.fourthOffering'
+        'rootLayout.screens.paywallOnboarding.freeTierOfferings.thirdOffering'
       ),
       icon: <CheckboxIcon />,
     },
@@ -319,7 +317,7 @@ const PaywallNew = () => {
         setIsFirstTime,
         allowAppAccess,
       });
-      DEVICE_TYPE.IOS && router.dismiss();
+      // DEVICE_TYPE.IOS && router.dismiss();
 
       // !!remove from now asking the review
       // if (conversationsCount === 0) requestAppRatingWithDelay(3000); // !important display the banner if the used didn't start any conversation, if there is at least one conversation, then the rating will be displayed in the chat screen
@@ -468,7 +466,7 @@ const PaywallNew = () => {
 
             {/* Footer Links */}
             <View className="items-center">
-              <View className="flex-row flex-wrap w-full items-center justify-between">
+              <View className="w-full flex-row flex-wrap items-center justify-between">
                 <Button
                   label={translate('general.termsOfUse')}
                   variant="ghost"
@@ -490,7 +488,7 @@ const PaywallNew = () => {
                   loading={isPendingRestorePurchase}
                 />
 
-                <Text className="text-center mt-6 text-sm text-charcoal-800">
+                <Text className="mt-6 text-center text-sm text-charcoal-800">
                   {`*Your subscription will be charged to your ${DEVICE_TYPE.IOS ? 'App Store' : 'Google Play account'} and renews automatically unless canceled at least 24 hours before the end of the current subscription period. You can manage or cancel your subscription anytime in your account settings. The subscription will renew at the same price and plan you selected unless you change or cancel it.`}
                 </Text>
 

@@ -1,6 +1,7 @@
-import { generateUniqueId } from '@/utilities/generate-unique-id';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect } from 'react';
+
+import { generateUniqueId } from '@/utilities/generate-unique-id';
 
 const Chat = () => {
   const { topic = '' } = useLocalSearchParams();

@@ -53,7 +53,7 @@ const medicalImagesData: IMedicalImageCard[] = [
   {
     id: '1',
     title: translate('components.MedicalCard.imageTypes.xray'),
-    image: require('../../assets/images/medical/chest-xray.jpg'),
+    image: require('../../assets/images/medical/chest-xray-2.jpg'),
     description: 'Radiographic imaging for bones and chest',
     category: 'Radiology',
   },
