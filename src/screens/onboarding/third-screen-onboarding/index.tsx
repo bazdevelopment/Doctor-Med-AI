@@ -1,8 +1,10 @@
+import React from 'react';
+import { ScrollView, View } from 'react-native';
+
 import { Button, colors, Image, ProgressBar, Text } from '@/components/ui';
 import { ArrowRightSharp } from '@/components/ui/icons/arrow-right-sharp';
 import { translate } from '@/lib';
-import React from 'react';
-import { ScrollView, View } from 'react-native';
+import { DEVICE_TYPE } from '@/utilities/device-type';
 
 const ThirdOnboardingScreen = ({
   goToNextScreen,
@@ -15,14 +17,14 @@ const ThirdOnboardingScreen = ({
   return (
     <>
       <ScrollView
-        contentContainerClassName="bg-white dark:bg-transparent mt-10"
+        contentContainerClassName={`bg-white dark:bg-transparent ${DEVICE_TYPE.ANDROID ? 'mt-16' : 'mt-10'}`}
         showsVerticalScrollIndicator={false}
       >
         <View className="items-center justify-center px-6 dark:bg-transparent">
           {/* <Branding isLogoVisible invertedColors /> */}
           <ProgressBar
             initialProgress={progress}
-            className="bg-transparent mb-10 border-[1px] rounded-full border-primary-900 w-full"
+            className="mb-10 w-full rounded-full border border-primary-900 bg-transparent"
           />
 
           <Image
@@ -34,7 +36,7 @@ const ThirdOnboardingScreen = ({
             <Text className="font-bold-poppins text-4xl">
               {translate('rootLayout.screens.onboarding.thirdOnboarding.title')}
             </Text>
-            <Text className="text-lg font-medium-poppins mt-4 text-charcoal-800 dark:text-white">
+            <Text className="mt-4 font-medium-poppins text-lg text-charcoal-800 dark:text-white">
               {translate(
                 'rootLayout.screens.onboarding.thirdOnboarding.subtitle'
               )}
@@ -42,7 +44,7 @@ const ThirdOnboardingScreen = ({
           </View>
         </View>
       </ScrollView>
-      <View className={`px-6 bottom-8 `}>
+      <View className={`bottom-8 px-6 `}>
         <Button
           label={translate('general.continue')}
           variant="default"

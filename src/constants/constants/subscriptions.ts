@@ -2,8 +2,8 @@ import { Platform } from 'react-native';
 
 export const SUBSCRIPTIONS_PLANS_ANDROID = {
   MONTHLY: 'doctor_med_ai_1month_subscription:monthly-subscription',
-  YEARLY: 'doctor_med_ai_1year_subscription:yearly-subscription',
-  WEEKLY: 'doctor_med_ai_1week_subscription:weekly-subscription',
+  YEARLY: 'doctor_med_ai_1year_subscription_v2:yearly-subscription',
+  WEEKLY: 'doctor_med_ai_1week_subscription_v2:weekly-subscription',
 };
 
 export const SUBSCRIPTIONS_PLANS_IOS = {

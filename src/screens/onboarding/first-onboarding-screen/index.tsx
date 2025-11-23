@@ -1,10 +1,12 @@
+import React from 'react';
+import { ScrollView, View } from 'react-native';
+
 import { Button, colors, ProgressBar, Text } from '@/components/ui';
 import { ArrowRightSharp } from '@/components/ui/icons/arrow-right-sharp';
 import { WelcomeDoctorIllustration } from '@/components/ui/illustrations/welcome-doctor';
 import { translate } from '@/lib';
+import { DEVICE_TYPE } from '@/utilities/device-type';
 import getDeviceSizeCategory from '@/utilities/get-device-size-category';
-import React from 'react';
-import { ScrollView, View } from 'react-native';
 
 const FirstOnboardingScreen = ({
   goToNextScreen,
@@ -15,20 +17,20 @@ const FirstOnboardingScreen = ({
   totalSteps: number;
   currentScreenIndex: number;
 }) => {
-  const { isVerySmallDevice, isLargeDevice } = getDeviceSizeCategory();
+  const { isVerySmallDevice } = getDeviceSizeCategory();
 
   const progress = ((currentScreenIndex + 1) / totalSteps) * 100;
   return (
     <>
       <ScrollView
-        contentContainerClassName="bg-white dark:bg-transparent mt-10"
+        contentContainerClassName={`bg-white dark:bg-transparent ${DEVICE_TYPE.ANDROID ? 'mt-16' : 'mt-10'}`}
         showsVerticalScrollIndicator={false}
       >
-        <View className="items-center justify-center px-6 dark:bg-transparent mb-[100]">
+        <View className="mb-[100] items-center justify-center px-6 dark:bg-transparent">
           {/* <Branding isLogoVisible invertedColors /> */}
           <ProgressBar
             initialProgress={progress}
-            className="bg-transparent mb-10 border-[1px] rounded-full border-primary-900 w-full"
+            className="mb-10 w-full rounded-full border border-primary-900 bg-transparent"
           />
           <WelcomeDoctorIllustration
             width={isVerySmallDevice ? 250 : 350}
@@ -39,7 +41,7 @@ const FirstOnboardingScreen = ({
             <Text className="font-bold-poppins text-3xl">
               {translate('rootLayout.screens.onboarding.firstOnboarding.title')}
             </Text>
-            <Text className="text-lg mt-4 text-charcoal-800 dark:text-white">
+            <Text className="mt-4 text-lg text-charcoal-800 dark:text-white">
               {translate(
                 'rootLayout.screens.onboarding.firstOnboarding.subtitle'
               )}
@@ -47,7 +49,7 @@ const FirstOnboardingScreen = ({
           </View>
         </View>
       </ScrollView>
-      <View className={`px-6 bottom-8 `}>
+      <View className={`bottom-8 px-6 `}>
         <Button
           label={translate('general.continue')}
           variant="default"
