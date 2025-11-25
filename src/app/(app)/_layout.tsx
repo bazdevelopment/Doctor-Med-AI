@@ -105,14 +105,17 @@ export default function TabLayout() {
   return (
     <SafeAreaView
       className="flex-1 bg-white dark:bg-transparent"
-      edges={DEVICE_TYPE.ANDROID ? ['bottom', 'top'] : ['top']}
+      edges={DEVICE_TYPE.ANDROID ? ['top'] : ['top']}
     >
       <Tabs
         screenOptions={{
           tabBarLabelStyle: { fontSize: 12, fontWeight: 'bold' },
           tabBarActiveTintColor: colors.primary[900],
           tabBarInactiveTintColor: isDark ? colors.white : colors.charcoal[500],
-          tabBarStyle: { paddingTop: DEVICE_TYPE.ANDROID ? 8 : 3 },
+          tabBarStyle: {
+            paddingTop: DEVICE_TYPE.ANDROID ? 8 : 3,
+            marginBottom: DEVICE_TYPE.ANDROID ? 15 : 0,
+          },
         }}
       >
         <Tabs.Screen

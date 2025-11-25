@@ -1,24 +1,24 @@
 import React, { useEffect } from 'react';
-import { View, ScrollView, SafeAreaView, Text } from 'react-native';
+import { SafeAreaView, ScrollView, Text, View } from 'react-native';
 
-import PremiumFeaturesOverview from '@/components/premium-features-overivew';
-import FadeInView from '@/components/fade-in-view/fade-in-view';
-import { DEVICE_TYPE } from '@/utilities/device-type';
-import HorizontalLine from '@/components/horizontal-line';
 import Avatar from '@/components/avatar';
+import FadeInView from '@/components/fade-in-view/fade-in-view';
+import HorizontalLine from '@/components/horizontal-line';
+import PremiumFeaturesOverview from '@/components/premium-features-overivew';
+import { Button, colors } from '@/components/ui';
+import { ArrowRightSharp } from '@/components/ui/icons/arrow-right-sharp';
 import { StarIcon } from '@/components/ui/icons/star';
 import { translate } from '@/lib';
-import { Button, colors } from '@/components/ui';
-import { requestAppRatingWithDelay } from '@/utilities/request-app-review';
-import { ArrowRightSharp } from '@/components/ui/icons/arrow-right-sharp';
 import useRemoteConfig from '@/lib/hooks/use-remote-config';
+import { DEVICE_TYPE } from '@/utilities/device-type';
+import { requestAppRatingWithDelay } from '@/utilities/request-app-review';
 
 // Social Proof Component
 const SocialProofCard = () => (
-  <View className="rounded-2xl bg-primary-900/10 border-[1.5px] border-primary-900 dark:bg-charcoal-900 p-5">
+  <View className="rounded-2xl border-[1.5px] border-primary-900 bg-primary-900/10 p-5 dark:bg-charcoal-900">
     <View className="mb-1 flex-row items-center justify-between">
       <View className="flex-row items-center">
-        <View className="mr-3 h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-purple-400 to-pink-400">
+        <View className="mr-3 size-12 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-purple-400 to-pink-400">
           <Avatar
             image={require('../../../assets/images/random/portrait-female-doctor.png')}
             size="small"
@@ -26,7 +26,7 @@ const SocialProofCard = () => (
           />
         </View>
         <View className="flex-row gap-4">
-          <Text className="text-lg font-bold-poppins text-gray-900 dark:text-white">
+          <Text className="font-bold-poppins text-lg text-gray-900 dark:text-white">
             Natalia S.
           </Text>
           <View className="flex-row gap-1">
@@ -40,7 +40,7 @@ const SocialProofCard = () => (
       </View>
     </View>
 
-    <Text className="text-base font-bold-poppins leading-5 dark:text-white">
+    <Text className="font-bold-poppins text-base leading-5 dark:text-white">
       {translate('rootLayout.screens.freeTrialPreview.review')}
     </Text>
     <Text className="mt-2 text-sm text-gray-900  dark:text-white">
@@ -72,11 +72,11 @@ const FreeTrialPreview = ({ onFinish }) => {
             <SocialProofCard />
           </FadeInView>
         )}
-        <HorizontalLine className="mt-4 mb-3" />
+        <HorizontalLine className="mb-3 mt-4" />
         <PremiumFeaturesOverview />
       </ScrollView>
       {/* Bottom Navigation */}
-      <View className={`px-6 bottom-8`}>
+      <View className="bottom-16 px-6">
         <Button
           label={translate('general.continue')}
           variant="default"

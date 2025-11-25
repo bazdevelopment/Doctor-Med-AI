@@ -66,7 +66,7 @@ const MedicalDisclaimerScreen = ({ goToNextScreen }) => {
         ))}
       </ScrollView>
       {goToNextScreen && ( // if goToNextScreen is provided then it seems it's part of the onboarding flow
-        <View className={`bottom-24 px-6`}>
+        <View className={`bottom-36 px-6`}>
           <Button
             label={translate('general.continue')}
             variant="default"
