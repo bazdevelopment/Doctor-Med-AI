@@ -103,7 +103,7 @@
       "subheading": "Enjoy all benefits without restrictions"
     },
     "MedicalCard": {
-      "medicalImagesAnalyzer": "Medical Image Learning Lab",
+      "medicalImagesAnalyzer": "Study Radiology Imaging",
       "askMedicalAssistant": "Ask AI Assistant",
       "medicalAssistant": "Medical Assistant",
       "imageTypes": {
@@ -232,7 +232,7 @@
     "screens": {
       "welcome": {
         "accountButton": "I already have an account",
-        "heading": "Welcome to Doctor Med AI!",
+        "heading": "Welcome to MedStudy AI!",
         "startButton": "Let's get started!"
       },
       "freeTrialPreview": {
@@ -284,19 +284,19 @@
         "subheading": "Your connection seems to be unstable. Please verify your network status"
       },
       "newAppVersionScreen": {
-        "heading": "A new version of Doctor Med AI is available",
+        "heading": "A new version of MedStudy AI is available",
         "subheading": "Update to the latest version to continue enjoying all app features — it only takes 5 seconds!",
         "action": "Get it now!"
       },
       "disclaimerScreen": {
         "heading": "Important Medical Disclaimer",
-        "subheading": "Doctor Med AI is designed for radiology professionals, healthcare experts, medical students, and enthusiasts",
+        "subheading": "MedStudy AI is designed for radiology professionals, healthcare experts, medical students, and enthusiasts",
         "consentAgreement": "I have read and consent to the disclaimer.",
-        "firstConsent": "Doctor Med AI does not provide health measurements or treatment advice, nor is it intended for such purposes. Users of Doctor Med AI must apply their clinical judgment and verify information from authoritative sources before making any clinical decisions.",
-        "secondConsent": "Doctor Med AI is not a diagnostic tool, treatment platform, or a replacement for professional medical advice. It offers AI-generated insights to assist healthcare professionals in accessing medical knowledge and analyzing medical images and documents. Doctor Med AI is an AI-driven informational and educational app designed more to support licensed healthcare professionals.",
-        "thirdConsent": "Doctor Med AI is not designed for patient use. It does not provide direct medical diagnoses, treatment recommendations, or patient management functionalities.",
-        "fourthConsent": "Doctor Med AI is not classified as a medical device and does not claim regulatory approval. It is intended for educational and informational purposes to complement professional expertise.",
-        "fifthConsent": "Doctor Med AI does not collect, store, or process personal or patient data. All user interactions are confidential and limited to the scope of the app."
+        "firstConsent": "MedStudy AI does not provide health measurements or treatment advice, nor is it intended for such purposes. Users of MedStudy AI must apply their clinical judgment and verify information from authoritative sources before making any clinical decisions.",
+        "secondConsent": "MedStudy AI is not a diagnostic tool, treatment platform, or a replacement for professional medical advice. It offers AI-generated insights to assist healthcare professionals in accessing medical knowledge and analyzing medical images and documents. MedStudy AI is an AI-driven informational and educational app designed more to support licensed healthcare professionals.",
+        "thirdConsent": "MedStudy AI is not designed for patient use. It does not provide direct medical diagnoses, treatment recommendations, or patient management functionalities.",
+        "fourthConsent": "MedStudy AI is not classified as a medical device and does not claim regulatory approval. It is intended for educational and informational purposes to complement professional expertise.",
+        "fifthConsent": "MedStudy AI does not collect, store, or process personal or patient data. All user interactions are confidential and limited to the scope of the app."
       },
       "contactUs": {
         "heading": "Feel free to email us directly, and our team will get back to you as soon as possible",
@@ -326,12 +326,12 @@
       },
       "onboarding": {
         "firstOnboarding": {
-          "title": "Your AI-Powered Healthcare Companion",
-          "subtitle": "Explore general wellness topics and insights powered by AI — designed for educational use only, not medical advice."
+          "title": "Your AI-Enhanced Medical Study Companion",
+          "subtitle": "Explore research-based wellness concepts and AI-generated learning insights."
         },
         "secondOnboarding": {
-          "title": "Ask, Learn, and Explore Health Topics",
-          "subtitle": "Chat about health topics with AI-powered explanations. Always seek a healthcare professional for medical concerns."
+          "title": "Ask, Learn, and Explore Medical Topics",
+          "subtitle": "Chat about medical subjects, study topics, or general research questions and receive AI-driven explanations"
         },
         "thirdOnboarding": {
           "title": "Your Privacy Matters",
@@ -473,7 +473,7 @@
     "noSubscriptionToRestore": "Oops! It looks like you don't have an active subscription at the moment. To continue enjoying full access, please choose one of our subscription plans.",
     "restorationSuccessful": "Restoration was successful! Enjoy!",
     "restorationError": "An error occurred while restoring the purchase.",
-    "medicalDisclaimerAlert": "The Doctor Med AI app does not replace medical consultation. Some diagnoses are for informational/educational purposes only. For medical recommendations, always consult a doctor or licensed specialist.",
+    "medicalDisclaimerAlert": "The MedStudy AI app does not replace medical consultation. Some diagnoses are for informational/educational purposes only. For medical recommendations, always consult a doctor or licensed specialist.",
     "scanLimitReached": "We're optimizing scan quality for you! You'll be able to scan again in around {{hours}} hours and {{minutes}} minutes. Have any questions about any medical topic? Ask our chat assistant while you wait!",
     "mixedMediaNotAllowed": "For better accuracy, do not upload a mix of different media files. Please upload only images, videos, or pdfs — not all together.",
     "multipleVideosNotAllowed": "For better accuracy, please upload only one video at a time.",

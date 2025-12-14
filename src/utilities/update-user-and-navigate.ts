@@ -1,8 +1,11 @@
-import { queryClient } from '@/api';
-import { IOnboardingCollectedData } from '@/app/onboarding';
-import { CrashlyticsLogLevel } from '@/crashlytics/crashlytics.types';
 import { router } from 'expo-router';
-import { CustomerInfo } from 'react-native-purchases';
+import { type CustomerInfo } from 'react-native-purchases';
+
+import { queryClient } from '@/api';
+import { type IOnboardingCollectedData } from '@/app/onboarding';
+import { type CrashlyticsLogLevel } from '@/crashlytics/crashlytics.types';
+
+import { DEVICE_TYPE } from './device-type';
 
 export const updateUserAndNavigate = async ({
   userId,
@@ -49,6 +52,7 @@ export const updateUserAndNavigate = async ({
       if (allowAppAccess === 'false') {
         router.back();
       } else {
+        DEVICE_TYPE.IOS && router.dismiss(); //!important to do this, otherwise the screen gets hanged only on ios
         router.navigate('/(app)');
       }
       setIsFirstTime(false);

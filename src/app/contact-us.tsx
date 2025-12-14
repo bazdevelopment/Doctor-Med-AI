@@ -3,11 +3,11 @@ import { TouchableOpacity, View } from 'react-native';
 
 import Icon from '@/components/icon';
 import Toast from '@/components/toast';
-import { useClipboard } from '@/lib/hooks/use-clipboard';
-import { translate } from '@/lib';
 import { colors, Text } from '@/components/ui';
 import CopyIcon from '@/components/ui/icons/copy';
 import { MailIcon } from '@/components/ui/icons/mail';
+import { translate } from '@/lib';
+import { useClipboard } from '@/lib/hooks/use-clipboard';
 
 const ContactUs = () => {
   const emailAddress = 'doctormedaiapp@gmail.com';

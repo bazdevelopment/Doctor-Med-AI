@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import { Ionicons } from '@expo/vector-icons';
 import { BlurView } from '@react-native-community/blur';
 import { FlashList } from '@shopify/flash-list';
@@ -45,10 +46,6 @@ import { RobotIcon } from '@/components/ui/icons/robot';
 import { SendIcon } from '@/components/ui/icons/send';
 import { SoundOn } from '@/components/ui/icons/sound-on';
 import { StopIcon } from '@/components/ui/icons/stop';
-import {
-  BLURRING_CONTENT_CONVERSATIONS_LIMIT,
-  MAX_CONVERSATIONS_ALLOWED_FREE_TRIAL,
-} from '@/constants/constants/limits';
 import { translate, useSelectedLanguage } from '@/lib';
 import { Env } from '@/lib/env';
 import useBackHandler from '@/lib/hooks/use-back-handler';
@@ -382,12 +379,15 @@ const ChatScreen = () => {
   const [userMessage, setUserMessage] = useState('');
   const [pendingMessages, setPendingMessages] = useState<MessageType[]>([]);
 
-  const [isStreaming, setIsStreaming] = useState(false);
   const [currentlySpeakingId, setCurrentlySpeakingId] = useState<string | null>(
     null
   );
 
-  const { SHOW_MEDICAL_DISCLAIMER_BANNER } = useRemoteConfig();
+  const {
+    SHOW_MEDICAL_DISCLAIMER_BANNER,
+    BLURRING_CONTENT_CONVERSATIONS_LIMIT,
+    MAX_CONVERSATIONS_ALLOWED_FREE_TRIAL,
+  } = useRemoteConfig();
 
   const [lastUserMessageIndex, setLastUserMessageIndex] = useState<
     number | null
@@ -419,7 +419,7 @@ const ChatScreen = () => {
     useConversationHistory(conversationId as string);
 
   const { canRequest: canRequestInAppRating } = shouldRequestInAppRating();
-
+  console.log('canRequestInAppRating', canRequestInAppRating);
   const showPicker = () => setVisible(true);
   const closePicker = () => setVisible(false);
 
@@ -438,7 +438,12 @@ const ChatScreen = () => {
 
   const conversationsCount = data?.count || 0;
   // Hooks for messaging
-  const { sendStreamingMessage } = useSendStreamingMessage();
+  const {
+    mutateAsync: sendStreamingMessage,
+    isPending: isPendingStreamingMessage,
+  } = useSendStreamingMessage({
+    onComplete: onResetFiles,
+  });
   const { isUpgradeRequired } = useSubscriptionAlert();
 
   const handleSpeak = (messageId: string, text: string) => {
@@ -490,12 +495,10 @@ const ChatScreen = () => {
         language: selectedLanguage,
         onStream: (chunk: string) => {},
         onComplete: (fullResponse: string) => {
-          setIsStreaming(false);
           onResetFiles?.();
         },
         onError: (error: Error) => {
           // console.error('Error sending message:', error);
-          setIsStreaming(false);
           Toast.error('Failed to send message. Please try again.');
         },
       });
@@ -575,9 +578,6 @@ const ChatScreen = () => {
     // Store the index of the user's message
     setLastUserMessageIndex(messages.length);
 
-    // Reset streaming message
-    setIsStreaming(true);
-
     try {
       await sendStreamingMessage({
         prompt:
@@ -594,12 +594,10 @@ const ChatScreen = () => {
         language: selectedLanguage,
         onStream: (chunk: string) => {},
         onComplete: (fullResponse: string) => {
-          setIsStreaming(false);
           onResetFiles?.();
         },
         onError: (error: Error) => {
           // console.error('Error sending message:', error);
-          setIsStreaming(false);
           Toast.error('Failed to send message. Please try again.');
         },
       });
@@ -610,7 +608,6 @@ const ChatScreen = () => {
       );
     } catch (error) {
       // console.error('Error sending message:', error);
-      setIsStreaming(false);
       setPendingMessages((prev) =>
         prev.map((msg) =>
           msg.content === newMessage.content
@@ -731,20 +728,20 @@ const ChatScreen = () => {
               }
             />
             <View className="-left-2 flex-1 flex-row items-center justify-center">
-              <Image
+              {/* <Image
                 source={require('../assets/images/random/assistant-avatar-3.jpg')}
                 className="mr-2 size-8 rounded-full"
-              />
+              /> */}
               <View className="ml-2">
                 <Text className="font-bold-poppins text-xl dark:text-white">
-                  Dr. Med AI
+                  Med Assistant
                 </Text>
-                {isStreaming ? (
-                  <Text className="text-xs text-gray-500 dark:text-white">
+                {isPendingStreamingMessage ? (
+                  <Text className="text-center text-xs text-gray-500 dark:text-white">
                     {translate('general.typing')}
                   </Text>
                 ) : (
-                  <View className="flex-row items-center gap-2">
+                  <View className="flex-row items-center justify-center gap-2">
                     <View className="size-2 rounded-full bg-success-400" />
                     <Text className="text-xs text-gray-500 dark:text-white">
                       {translate('general.online')}
@@ -811,7 +808,7 @@ const ChatScreen = () => {
               isSpeaking,
               isUpgradeRequired,
               conversationsCount,
-              isStreaming,
+              isPendingStreamingMessage,
             ]}
             keyExtractor={(item, index) => index.toString()}
             contentContainerStyle={{
@@ -840,11 +837,13 @@ const ChatScreen = () => {
               );
             }}
             estimatedItemSize={100}
-            ListFooterComponent={isStreaming ? <TypingIndicator /> : null}
+            ListFooterComponent={
+              isPendingStreamingMessage ? <TypingIndicator /> : null
+            }
           />
 
           {/* File Preview */}
-          {!!files?.length && !isStreaming && (
+          {!!files?.length && !isPendingStreamingMessage && (
             <ImagePreviewGallery files={files} onRemoveFile={onRemoveFile} />
           )}
 
@@ -908,7 +907,7 @@ const ChatScreen = () => {
             <TouchableOpacity
               onPress={() => handleSendMessage(userMessage)}
               disabled={
-                isStreaming ||
+                isPendingStreamingMessage ||
                 isFetchingAllConversationsPending ||
                 (!userMessage.trim() && !files?.length)
               }
@@ -973,7 +972,7 @@ function getChatMessagesStyles(
     body: {
       marginTop: -7,
       marginBottom: -7,
-      fontSize: 15,
+      fontSize: 14.5,
       lineHeight: 22,
       color: baseTextColor,
     },
@@ -1007,7 +1006,7 @@ function getChatMessagesStyles(
     body: {
       marginTop: -7,
       marginBottom: -7,
-      fontSize: 15,
+      fontSize: 14.5,
       lineHeight: 22,
       color: darkTextColor,
     },
@@ -1037,7 +1036,7 @@ function getChatMessagesStyles(
       fontWeight: '800',
     },
     em: {
-      fontFamily: 'Font-Regular',
+      fontFamily: 'Font-Medium',
       fontStyle: 'italic',
     },
   };

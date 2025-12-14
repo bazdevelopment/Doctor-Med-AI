@@ -1,27 +1,28 @@
 /* eslint-disable max-lines-per-function */
-import React from 'react';
 import * as DocumentPicker from 'expo-document-picker';
 import * as FileSystem from 'expo-file-system';
 import * as ImageManipulator from 'expo-image-manipulator';
 import * as ImagePicker from 'expo-image-picker';
+import React from 'react';
 import { useState } from 'react';
 import { Linking, Platform } from 'react-native';
 
+import CustomAlert from '@/components/custom-alert';
+import Toast from '@/components/toast';
 import {
   IMAGE_SIZE_LIMIT_MB,
   VIDEO_LENGTH_SECONDS_LIMIT,
   VIDEO_SIZE_LIMIT_MB,
 } from '@/constants/constants/limits';
-import { wait } from '@/utilities/wait';
-import { isVideoDurationLong } from '@/utilities/is-video-duration-long';
-import { getImageExtension } from '@/utilities/get-image-extension';
-import { getFileSizeInMB } from '@/utilities/get-file-size-in-mb';
 import { checkFileSize } from '@/utilities/check-file-size';
-import { getVideoDuration } from '@/utilities/get-video-duration';
 import { generateUniqueId } from '@/utilities/generate-unique-id';
+import { getFileSizeInMB } from '@/utilities/get-file-size-in-mb';
+import { getImageExtension } from '@/utilities/get-image-extension';
+import { getVideoDuration } from '@/utilities/get-video-duration';
+import { isVideoDurationLong } from '@/utilities/is-video-duration-long';
+import { wait } from '@/utilities/wait';
+
 import { translate } from '../i18n';
-import Toast from '@/components/toast';
-import CustomAlert from '@/components/custom-alert';
 import useRemoteConfig from './use-remote-config';
 
 interface IMediaPicker {

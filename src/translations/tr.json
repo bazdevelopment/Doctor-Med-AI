@@ -232,7 +232,7 @@
     "screens": {
       "welcome": {
         "accountButton": "Zaten bir hesabım var",
-        "heading": "Doctor Med AI'ya Hoş Geldiniz!",
+        "heading": "MedStudy AI'ya Hoş Geldiniz!",
         "startButton": "Hadi Başlayalım!"
       },
       "freeTrialPreview": {
@@ -285,19 +285,19 @@
         "subheading": "Bağlantınız kararsız görünüyor. Lütfen ağ durumunuzu doğrulayın"
       },
       "newAppVersionScreen": {
-        "heading": "Doctor Med AI'nın yeni bir sürümü mevcut",
+        "heading": "MedStudy AI'nın yeni bir sürümü mevcut",
         "subheading": "Tüm uygulama özelliklerinden yararlanmaya devam etmek için en son sürüme güncelleyin - sadece 5 saniye sürüyor!",
         "action": "Hemen Alın!"
       },
       "disclaimerScreen": {
         "heading": "Önemli Tıbbi Sorumluluk Reddi",
-        "subheading": "Doctor Med AI, radyoloji profesyonelleri, sağlık uzmanları, tıp öğrencileri ve meraklılar için tasarlanmıştır",
+        "subheading": "MedStudy AI, radyoloji profesyonelleri, sağlık uzmanları, tıp öğrencileri ve meraklılar için tasarlanmıştır",
         "consentAgreement": "Sorumluluk reddini okudum ve kabul ediyorum.",
-        "firstConsent": "Doctor Med AI sağlık ölçümleri veya tedavi tavsiyesi sağlamaz, ne de bu amaçlar için tasarlanmıştır. Doctor Med AI kullanıcıları, herhangi bir klinik karar vermeden önce kendi klinik yargılarını uygulamalı ve yetkili kaynaklardan bilgi doğrulamalıdır.",
-        "secondConsent": "Doctor Med AI bir teşhis aracı, tedavi platformu veya profesyonel tıbbi tavsiyenin yerine geçmez. Sağlık uzmanlarının tıbbi bilgiye erişmelerine ve tıbbi görüntüleri ve belgeleri analiz etmelerine yardımcı olmak için AI tarafından oluşturulmuş içgörüler sunar. Doctor Med AI, lisanslı sağlık uzmanlarını desteklemek için tasarlanmış AI destekli bilgilendirici ve eğitici bir uygulamadır.",
-        "thirdConsent": "Doctor Med AI hasta kullanımı için tasarlanmamıştır. Doğrudan tıbbi teşhisler, tedavi önerileri veya hasta yönetimi işlevselliği sağlamaz.",
-        "fourthConsent": "Doctor Med AI tıbbi cihaz olarak sınıflandırılmamıştır ve düzenleyici onay iddiasında bulunmaz. Profesyonel uzmanlığı tamamlamak için eğitim ve bilgilendirme amaçlıdır.",
-        "fifthConsent": "Doctor Med AI kişisel veya hasta verilerini toplamaz, saklamaz veya işlemez. Tüm kullanıcı etkileşimleri gizlidir ve uygulamanın kapsamıyla sınırlıdır."
+        "firstConsent": "MedStudy AI sağlık ölçümleri veya tedavi tavsiyesi sağlamaz, ne de bu amaçlar için tasarlanmıştır. MedStudy AI kullanıcıları, herhangi bir klinik karar vermeden önce kendi klinik yargılarını uygulamalı ve yetkili kaynaklardan bilgi doğrulamalıdır.",
+        "secondConsent": "MedStudy AI bir teşhis aracı, tedavi platformu veya profesyonel tıbbi tavsiyenin yerine geçmez. Sağlık uzmanlarının tıbbi bilgiye erişmelerine ve tıbbi görüntüleri ve belgeleri analiz etmelerine yardımcı olmak için AI tarafından oluşturulmuş içgörüler sunar. MedStudy AI, lisanslı sağlık uzmanlarını desteklemek için tasarlanmış AI destekli bilgilendirici ve eğitici bir uygulamadır.",
+        "thirdConsent": "MedStudy AI hasta kullanımı için tasarlanmamıştır. Doğrudan tıbbi teşhisler, tedavi önerileri veya hasta yönetimi işlevselliği sağlamaz.",
+        "fourthConsent": "MedStudy AI tıbbi cihaz olarak sınıflandırılmamıştır ve düzenleyici onay iddiasında bulunmaz. Profesyonel uzmanlığı tamamlamak için eğitim ve bilgilendirme amaçlıdır.",
+        "fifthConsent": "MedStudy AI kişisel veya hasta verilerini toplamaz, saklamaz veya işlemez. Tüm kullanıcı etkileşimleri gizlidir ve uygulamanın kapsamıyla sınırlıdır."
       },
       "contactUs": {
         "heading": "Bizimle doğrudan e-posta yoluyla iletişime geçmekten çekinmeyin, ekibimiz en kısa sürede size dönüş yapacaktır",
@@ -474,7 +474,7 @@
     "noSubscriptionToRestore": "Oops! Görünüşe göre şu anda aktif bir aboneliğiniz yok. Tam erişimin keyfini çıkarmaya devam etmek için lütfen abonelik planlarımızdan birini seçin.",
     "restorationSuccessful": "Geri yükleme başarılı oldu! Keyfini çıkarın!",
     "restorationError": "Satın alma geri yüklenirken bir hata oluştu.",
-    "medicalDisclaimerAlert": "Doctor Med AI uygulaması tıbbi danışmanın yerine geçmez. Bazı teşhisler yalnızca bilgilendirme/eğitim amaçlıdır. Tıbbi öneriler için her zaman bir doktora veya lisanslı uzmana danışın.",
+    "medicalDisclaimerAlert": "MedStudy AI uygulaması tıbbi danışmanın yerine geçmez. Bazı teşhisler yalnızca bilgilendirme/eğitim amaçlıdır. Tıbbi öneriler için her zaman bir doktora veya lisanslı uzmana danışın.",
     "scanLimitReached": "Sizin için tarama kalitesini optimize ediyoruz! Yaklaşık {{hours}} saat {{minutes}} dakika sonra tekrar tarama yapabileceksiniz. Herhangi bir tıbbi konu hakkında sorunuz var mı? Beklerken sohbet asistanımıza sorun!",
     "mixedMediaNotAllowed": "Daha iyi doğruluk için farklı medya dosyalarının karışımını yüklemeyin. Lütfen yalnızca görseller, videolar veya pdf'ler yükleyin - hepsini birlikte değil.",
     "multipleVideosNotAllowed": "Daha iyi doğruluk için lütfen aynı anda yalnızca bir video yükleyin.",

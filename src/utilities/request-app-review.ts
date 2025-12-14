@@ -1,5 +1,6 @@
-import { storage } from '@/lib/storage';
 import * as StoreReview from 'expo-store-review';
+
+import { storage } from '@/lib/storage';
 
 const STORAGE_KEYS = {
   HAS_RATED: 'app_has_rated',

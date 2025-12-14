@@ -232,7 +232,7 @@
     "screens": {
       "welcome": {
         "accountButton": "我已有账户",
-        "heading": "欢迎使用 Doctor Med AI！",
+        "heading": "欢迎使用 MedStudy AI！",
         "startButton": "让我们开始吧！"
       },
       "freeTrialPreview": {
@@ -285,19 +285,19 @@
         "subheading": "您的连接似乎不稳定。请检查网络状态"
       },
       "newAppVersionScreen": {
-        "heading": "Doctor Med AI 有新版本可用",
+        "heading": "MedStudy AI 有新版本可用",
         "subheading": "更新到最新版本以继续享受所有应用功能 — 只需5秒钟！",
         "action": "立即获取！"
       },
       "disclaimerScreen": {
         "heading": "重要医疗免责声明",
-        "subheading": "Doctor Med AI 专为放射科专业人员、医疗专家、医学生和爱好者设计",
+        "subheading": "MedStudy AI 专为放射科专业人员、医疗专家、医学生和爱好者设计",
         "consentAgreement": "我已阅读并同意免责声明。",
-        "firstConsent": "Doctor Med AI 不提供健康测量或治疗建议，也不用于此类目的。Doctor Med AI 用户必须应用其临床判断，并在做出临床决策前从权威来源验证信息。",
-        "secondConsent": "Doctor Med AI 不是诊断工具、治疗平台或专业医疗建议的替代品。它提供AI生成的见解，以帮助医疗专业人员获取医学知识并分析医学影像和文档。Doctor Med AI 是一个AI驱动的信息和教育应用，旨在支持持照医疗专业人员。",
-        "thirdConsent": "Doctor Med AI 并非为患者使用而设计。它不提供直接的医学诊断、治疗建议或患者管理功能。",
-        "fourthConsent": "Doctor Med AI 未被归类为医疗设备，也不声称获得监管批准。它旨在用于教育和信息目的，以补充专业专业知识。",
-        "fifthConsent": "Doctor Med AI 不收集、存储或处理个人或患者数据。所有用户互动都是保密的，并限于应用范围。"
+        "firstConsent": "MedStudy AI 不提供健康测量或治疗建议，也不用于此类目的。MedStudy AI 用户必须应用其临床判断，并在做出临床决策前从权威来源验证信息。",
+        "secondConsent": "MedStudy AI 不是诊断工具、治疗平台或专业医疗建议的替代品。它提供AI生成的见解，以帮助医疗专业人员获取医学知识并分析医学影像和文档。MedStudy AI 是一个AI驱动的信息和教育应用，旨在支持持照医疗专业人员。",
+        "thirdConsent": "MedStudy AI 并非为患者使用而设计。它不提供直接的医学诊断、治疗建议或患者管理功能。",
+        "fourthConsent": "MedStudy AI 未被归类为医疗设备，也不声称获得监管批准。它旨在用于教育和信息目的，以补充专业专业知识。",
+        "fifthConsent": "MedStudy AI 不收集、存储或处理个人或患者数据。所有用户互动都是保密的，并限于应用范围。"
       },
       "contactUs": {
         "heading": "欢迎直接给我们发送电子邮件，我们的团队会尽快回复您",
@@ -474,7 +474,7 @@
     "noSubscriptionToRestore": "糟糕！看起来您目前没有活跃订阅。要继续享受完全访问权限，请选择我们的订阅计划之一。",
     "restorationSuccessful": "恢复成功！尽情享受！",
     "restorationError": "恢复购买时出错。",
-    "medicalDisclaimerAlert": "Doctor Med AI 应用不能替代医疗咨询。某些诊断仅用于信息/教育目的。对于医疗建议，请务必咨询医生或持照专家。",
+    "medicalDisclaimerAlert": "MedStudy AI 应用不能替代医疗咨询。某些诊断仅用于信息/教育目的。对于医疗建议，请务必咨询医生或持照专家。",
     "scanLimitReached": "我们正在为您优化扫描质量！您将在大约{{hours}}小时{{minutes}}分钟后能够再次扫描。有任何医疗问题吗？在等待时询问我们的聊天助手！",
     "mixedMediaNotAllowed": "为了更好的准确性，请不要上传不同类型的媒体文件混合。请仅上传图像、视频或pdf — 不要全部一起上传。",
     "multipleVideosNotAllowed": "为了更好的准确性，请一次仅上传一个视频。",

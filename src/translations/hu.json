@@ -232,7 +232,7 @@
     "screens": {
       "welcome": {
         "accountButton": "Már van fiókom",
-        "heading": "Üdvözöljük a Doctor Med AI-ban!",
+        "heading": "Üdvözöljük a MedStudy AI-ban!",
         "startButton": "Kezdjük!"
       },
       "freeTrialPreview": {
@@ -285,19 +285,19 @@
         "subheading": "Kapcsolata instabilnak tűnik. Kérjük, ellenőrizze hálózati állapotát"
       },
       "newAppVersionScreen": {
-        "heading": "A Doctor Med AI új verziója elérhető",
+        "heading": "A MedStudy AI új verziója elérhető",
         "subheading": "Frissítsen a legújabb verzióra, hogy továbbra is élvezhesse az alkalmazás összes funkcióját - ez csak 5 másodpercet vesz igénybe!",
         "action": "Szerezd meg most!"
       },
       "disclaimerScreen": {
         "heading": "Fontos orvosi jogi nyilatkozat",
-        "subheading": "A Doctor Med AI radiológiai szakemberek, egészségügyi szakértők, orvostanhallgatók és lelkesek számára készült",
+        "subheading": "A MedStudy AI radiológiai szakemberek, egészségügyi szakértők, orvostanhallgatók és lelkesek számára készült",
         "consentAgreement": "Elolvastam és elfogadom a jogi nyilatkozatot.",
-        "firstConsent": "A Doctor Med AI nem nyújt egészségügyi méréseket vagy kezelési tanácsot, és nem is ilyen célra szolgál. A Doctor Med AI felhasználóinak klinikai ítélőképességüket kell alkalmazniuk, és hiteles forrásokból ellenőrizniük kell az információkat, mielőtt klinikai döntéseket hoznának.",
-        "secondConsent": "A Doctor Med AI nem diagnosztikai eszköz, kezelési platform vagy helyettesítője a szakmai orvosi tanácsadásnak. AI által generált betekintést kínál az egészségügyi szakemberek számára az orvosi ismeretek eléréséhez és az orvosi képek és dokumentumok elemzéséhez. A Doctor Med AI egy AI által működtetett tájékoztató és oktatási alkalmazás, amely elsősorban engedéllyel rendelkező egészségügyi szakemberek támogatására tervezték.",
-        "thirdConsent": "A Doctor Med AI nem beteghasználatra tervezték. Nem nyújt közvetlen orvosi diagnózisokat, kezelési ajánlásokat vagy betegkezelési funkciókat.",
-        "fourthConsent": "A Doctor Med AI nem minősül orvosi eszköznek, és nem igényel szabályozási jóváhagyást. Oktatási és tájékoztatási célokat szolgál a szakmai szaktudás kiegészítésére.",
-        "fifthConsent": "A Doctor Med AI nem gyűjt, tárol vagy dolgoz fel személyes vagy betegadatokat. Minden felhasználói interakció bizalmas és az alkalmazás keretein belül korlátozódik."
+        "firstConsent": "A MedStudy AI nem nyújt egészségügyi méréseket vagy kezelési tanácsot, és nem is ilyen célra szolgál. A MedStudy AI felhasználóinak klinikai ítélőképességüket kell alkalmazniuk, és hiteles forrásokból ellenőrizniük kell az információkat, mielőtt klinikai döntéseket hoznának.",
+        "secondConsent": "A MedStudy AI nem diagnosztikai eszköz, kezelési platform vagy helyettesítője a szakmai orvosi tanácsadásnak. AI által generált betekintést kínál az egészségügyi szakemberek számára az orvosi ismeretek eléréséhez és az orvosi képek és dokumentumok elemzéséhez. A MedStudy AI egy AI által működtetett tájékoztató és oktatási alkalmazás, amely elsősorban engedéllyel rendelkező egészségügyi szakemberek támogatására tervezték.",
+        "thirdConsent": "A MedStudy AI nem beteghasználatra tervezték. Nem nyújt közvetlen orvosi diagnózisokat, kezelési ajánlásokat vagy betegkezelési funkciókat.",
+        "fourthConsent": "A MedStudy AI nem minősül orvosi eszköznek, és nem igényel szabályozási jóváhagyást. Oktatási és tájékoztatási célokat szolgál a szakmai szaktudás kiegészítésére.",
+        "fifthConsent": "A MedStudy AI nem gyűjt, tárol vagy dolgoz fel személyes vagy betegadatokat. Minden felhasználói interakció bizalmas és az alkalmazás keretein belül korlátozódik."
       },
       "contactUs": {
         "heading": "Nyugodtan küldjön közvetlen e-mailt, csapatunk a lehető leghamarabb válaszol",
@@ -474,7 +474,7 @@
     "noSubscriptionToRestore": "Hoppá! Úgy tűnik, jelenleg nincs aktív előfizetése. A teljes hozzáférés élvezetéhez kérjük, válasszon egy előfizetési csomagunkat.",
     "restorationSuccessful": "A visszaállítás sikeres! Élvezze!",
     "restorationError": "Hiba történt a vásárlás visszaállítása során.",
-    "medicalDisclaimerAlert": "A Doctor Med AI alkalmazás nem helyettesíti az orvosi konzultációt. Egyes diagnózisok csak tájékoztató/oktatási célokat szolgálnak. Orvosi ajánlásokért mindig forduljon orvoshoz vagy engedéllyel rendelkező szakemberhez.",
+    "medicalDisclaimerAlert": "A MedStudy AI alkalmazás nem helyettesíti az orvosi konzultációt. Egyes diagnózisok csak tájékoztató/oktatási célokat szolgálnak. Orvosi ajánlásokért mindig forduljon orvoshoz vagy engedéllyel rendelkező szakemberhez.",
     "scanLimitReached": "Optimalizáljuk az Ön számára a vizsgálat minőségét! Körülbelül {{hours}} óra és {{minutes}} perc múlva újra vizsgálhat. Van kérdése orvosi témában? Kérdezze meg csevegő asszisztenstünket, amíg vár!",
     "mixedMediaNotAllowed": "A jobb pontosság érdekében ne töltsön fel különböző médiafájlok keverékét. Kérjük, csak képeket, videókat vagy pdf-eket töltsön fel - ne mindet egyszerre.",
     "multipleVideosNotAllowed": "A jobb pontosság érdekében kérjük, egyszerre csak egy videót töltsön fel.",

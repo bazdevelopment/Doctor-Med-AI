@@ -232,7 +232,7 @@
     "screens": {
       "welcome": {
         "accountButton": "Već imam račun",
-        "heading": "Dobrodošli u Doctor Med AI!",
+        "heading": "Dobrodošli u MedStudy AI!",
         "startButton": "Započnimo!"
       },
       "freeTrialPreview": {
@@ -285,19 +285,19 @@
         "subheading": "Vaša veza se čini nestabilnom. Provjerite status mreže"
       },
       "newAppVersionScreen": {
-        "heading": "Nova verzija Doctor Med AI je dostupna",
+        "heading": "Nova verzija MedStudy AI je dostupna",
         "subheading": "Ažurirajte na najnoviju verziju da nastavite uživati u svim značajkama aplikacije — traje samo 5 sekundi!",
         "action": "Preuzmi sada!"
       },
       "disclaimerScreen": {
         "heading": "Važna medicinska izjava o odricanju od odgovornosti",
-        "subheading": "Doctor Med AI je dizajniran za radiološke profesionalce, zdravstvene stručnjake, studente medicine i entuzijaste",
+        "subheading": "MedStudy AI je dizajniran za radiološke profesionalce, zdravstvene stručnjake, studente medicine i entuzijaste",
         "consentAgreement": "Pročitao/la sam i pristajem na izjavu o odricanju od odgovornosti.",
-        "firstConsent": "Doctor Med AI ne pruža zdravstvene mjere ili savjete o liječenju, niti je namijenjen za takve svrhe. Korisnici Doctor Med AI moraju primijeniti svoju kliničku prosudbu i provjeriti informacije iz autoritativnih izvora prije donošenja kliničkih odluka.",
-        "secondConsent": "Doctor Med AI nije dijagnostički alat, platforma za liječenje ili zamjena za profesionalne medicinske savjete. Nudi AI-generirane uvide kako bi pomogao zdravstvenim radnicima u pristupu medicinskom znanju i analizi medicinskih slika i dokumenata. Doctor Med AI je AI-pokrenuta informativna i edukativna aplikacija dizajnirana da podrži licencirane zdravstvene profesionalce.",
-        "thirdConsent": "Doctor Med AI nije dizajniran za upotrebu pacijenata. Ne pruža izravne medicinske dijagnoze, preporuke za liječenje ili funkcionalnosti upravljanja pacijentima.",
-        "fourthConsent": "Doctor Med AI nije klasificiran kao medicinski uređaj i ne traži regulatorno odobrenje. Namijenjen je u obrazovne i informativne svrhe kako bi nadopunio stručnost profesionalaca.",
-        "fifthConsent": "Doctor Med AI ne prikuplja, pohranjuje ili obrađuje osobne ili pacijentske podatke. Sve interakcije korisnika su povjerljive i ograničene na opseg aplikacije."
+        "firstConsent": "MedStudy AI ne pruža zdravstvene mjere ili savjete o liječenju, niti je namijenjen za takve svrhe. Korisnici MedStudy AI moraju primijeniti svoju kliničku prosudbu i provjeriti informacije iz autoritativnih izvora prije donošenja kliničkih odluka.",
+        "secondConsent": "MedStudy AI nije dijagnostički alat, platforma za liječenje ili zamjena za profesionalne medicinske savjete. Nudi AI-generirane uvide kako bi pomogao zdravstvenim radnicima u pristupu medicinskom znanju i analizi medicinskih slika i dokumenata. MedStudy AI je AI-pokrenuta informativna i edukativna aplikacija dizajnirana da podrži licencirane zdravstvene profesionalce.",
+        "thirdConsent": "MedStudy AI nije dizajniran za upotrebu pacijenata. Ne pruža izravne medicinske dijagnoze, preporuke za liječenje ili funkcionalnosti upravljanja pacijentima.",
+        "fourthConsent": "MedStudy AI nije klasificiran kao medicinski uređaj i ne traži regulatorno odobrenje. Namijenjen je u obrazovne i informativne svrhe kako bi nadopunio stručnost profesionalaca.",
+        "fifthConsent": "MedStudy AI ne prikuplja, pohranjuje ili obrađuje osobne ili pacijentske podatke. Sve interakcije korisnika su povjerljive i ograničene na opseg aplikacije."
       },
       "contactUs": {
         "heading": "Slobodno nam pošaljite izravnu e-poštu, a naš tim će vam se javiti što je prije moguće",
@@ -474,7 +474,7 @@
     "noSubscriptionToRestore": "Ups! Čini se da trenutno nemate aktivnu pretplatu. Da biste nastavili uživati u punom pristupu, odaberite jedan od naših planova pretplate.",
     "restorationSuccessful": "Vraćanje je bilo uspješno! Uživajte!",
     "restorationError": "Došlo je do pogreške pri vraćanju kupnje.",
-    "medicalDisclaimerAlert": "Aplikacija Doctor Med AI ne zamjenjuje medicinsku konzultaciju. Neke dijagnoze su samo u informativne/edukativne svrhe. Za medicinske preporuke, uvijek se konzultirajte s liječnikom ili licenciranim stručnjakom.",
+    "medicalDisclaimerAlert": "Aplikacija MedStudy AI ne zamjenjuje medicinsku konzultaciju. Neke dijagnoze su samo u informativne/edukativne svrhe. Za medicinske preporuke, uvijek se konzultirajte s liječnikom ili licenciranim stručnjakom.",
     "scanLimitReached": "Optimiziramo kvalitetu skeniranja za vas! Moći ćete ponovno skenirati za otprilike {{hours}} sati i {{minutes}} minuta. Imate li pitanja o medicinskim temama? Pitajte našeg chat asistenta dok čekate!",
     "mixedMediaNotAllowed": "Radi bolje točnosti, ne učitavajte mješavinu različitih medijskih datoteka. Učitajte samo slike, videozapise ili pdf-ove — ne sve zajedno.",
     "multipleVideosNotAllowed": "Radi bolje točnosti, učitajte samo jedan videozapis odjednom.",

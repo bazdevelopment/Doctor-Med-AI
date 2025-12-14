@@ -232,7 +232,7 @@
     "screens": {
       "welcome": {
         "accountButton": "Jag har redan ett konto",
-        "heading": "Välkommen till Doctor Med AI!",
+        "heading": "Välkommen till MedStudy AI!",
         "startButton": "Låt oss börja!"
       },
       "freeTrialPreview": {
@@ -285,19 +285,19 @@
         "subheading": "Din anslutning verkar vara instabil. Vänligen verifiera din nätverksstatus"
       },
       "newAppVersionScreen": {
-        "heading": "En ny version av Doctor Med AI är tillgänglig",
+        "heading": "En ny version av MedStudy AI är tillgänglig",
         "subheading": "Uppdatera till den senaste versionen för att fortsätta njuta av alla appfunktioner - det tar bara 5 sekunder!",
         "action": "Skaffa den nu!"
       },
       "disclaimerScreen": {
         "heading": "Viktigt medicinskt ansvarsfriskrivning",
-        "subheading": "Doctor Med AI är designad för röntgenpersonal, hälso- och sjukvårdsexperter, medicinstudenter och entusiaster",
+        "subheading": "MedStudy AI är designad för röntgenpersonal, hälso- och sjukvårdsexperter, medicinstudenter och entusiaster",
         "consentAgreement": "Jag har läst och samtycker till ansvarsfriskrivningen.",
-        "firstConsent": "Doctor Med AI tillhandahåller inte hälsoåtgärder eller behandlingsråd, och är inte avsett för sådana ändamål. Användare av Doctor Med AI måste tillämpa sitt kliniska omdöme och verifiera information från auktoritativa källor innan de fattar kliniska beslut.",
-        "secondConsent": "Doctor Med AI är inte ett diagnostiskt verktyg, behandlingsplattform eller ersättning för professionellt medicinskt råd. Den erbjuder AI-genererade insikter för att hjälpa hälso- och sjukvårdspersonal att komma åt medicinsk kunskap och analysera medicinska bilder och dokument. Doctor Med AI är en AI-driven informativ och pedagogisk app designad mer för att stödja legitimerad hälso- och sjukvårdspersonal.",
-        "thirdConsent": "Doctor Med AI är inte designad för patientanvändning. Den tillhandahåller inte direkta medicinska diagnoser, behandlingsrekommendationer eller patienthanteringsfunktioner.",
-        "fourthConsent": "Doctor Med AI klassificeras inte som en medicinsk apparat och gör inte anspråk på regulatoriskt godkännande. Den är avsedd för utbildnings- och informationsändamål för att komplettera professionell expertis.",
-        "fifthConsent": "Doctor Med AI samlar inte in, lagrar eller bearbetar person- eller patientdata. Alla användarinteraktioner är konfidentiella och begränsade till appens omfattning."
+        "firstConsent": "MedStudy AI tillhandahåller inte hälsoåtgärder eller behandlingsråd, och är inte avsett för sådana ändamål. Användare av MedStudy AI måste tillämpa sitt kliniska omdöme och verifiera information från auktoritativa källor innan de fattar kliniska beslut.",
+        "secondConsent": "MedStudy AI är inte ett diagnostiskt verktyg, behandlingsplattform eller ersättning för professionellt medicinskt råd. Den erbjuder AI-genererade insikter för att hjälpa hälso- och sjukvårdspersonal att komma åt medicinsk kunskap och analysera medicinska bilder och dokument. MedStudy AI är en AI-driven informativ och pedagogisk app designad mer för att stödja legitimerad hälso- och sjukvårdspersonal.",
+        "thirdConsent": "MedStudy AI är inte designad för patientanvändning. Den tillhandahåller inte direkta medicinska diagnoser, behandlingsrekommendationer eller patienthanteringsfunktioner.",
+        "fourthConsent": "MedStudy AI klassificeras inte som en medicinsk apparat och gör inte anspråk på regulatoriskt godkännande. Den är avsedd för utbildnings- och informationsändamål för att komplettera professionell expertis.",
+        "fifthConsent": "MedStudy AI samlar inte in, lagrar eller bearbetar person- eller patientdata. Alla användarinteraktioner är konfidentiella och begränsade till appens omfattning."
       },
       "contactUs": {
         "heading": "Tveka inte att maila oss direkt, och vårt team återkommer till dig så snart som möjligt",
@@ -474,7 +474,7 @@
     "noSubscriptionToRestore": "Hoppsan! Det verkar som om du inte har en aktiv prenumeration för tillfället. För att fortsätta njuta av full tillgång, vänligen välj en av våra prenumerationsplaner.",
     "restorationSuccessful": "Återställningen lyckades! Njut!",
     "restorationError": "Ett fel uppstod när köpet återställdes.",
-    "medicalDisclaimerAlert": "Doctor Med AI-appen ersätter inte medicinsk konsultation. Vissa diagnoser är endast för informations-/utbildningsändamål. För medicinska rekommendationer, konsultera alltid en läkare eller auktoriserad specialist.",
+    "medicalDisclaimerAlert": "MedStudy AI-appen ersätter inte medicinsk konsultation. Vissa diagnoser är endast för informations-/utbildningsändamål. För medicinska rekommendationer, konsultera alltid en läkare eller auktoriserad specialist.",
     "scanLimitReached": "Vi optimerar skanningskvaliteten för dig! Du kommer att kunna skanna igen om cirka {{hours}} timmar och {{minutes}} minuter. Har du några frågor om något medicinskt ämne? Fråga vår chattassistent medan du väntar!",
     "mixedMediaNotAllowed": "För bättre noggrannhet, ladda inte upp en blandning av olika mediafiler. Vänligen ladda upp endast bilder, videor eller pdf - inte alla tillsammans.",
     "multipleVideosNotAllowed": "För bättre noggrannhet, vänligen ladda upp endast en video åt gången.",

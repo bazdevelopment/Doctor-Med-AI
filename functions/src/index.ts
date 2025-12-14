@@ -4,6 +4,7 @@ import * as functions from 'firebase-functions/v1';
 import {
   getAllConversationsHandler,
   getConversationHandler,
+  sendChatMessageHandler,
 } from './conversation';
 import * as pushNotificationsFunctions from './push-notifications';
 import * as userFunctions from './user';
@@ -79,4 +80,12 @@ export const fetchUserNotifications = usCentralFunctions.https.onCall(
 
 export const markNotificationAsRead = usCentralFunctions.https.onCall(
   pushNotificationsFunctions.handleMarkNotificationAsRead
+);
+
+// export const sendChatMessage = usCentralFunctions.https.onCall(
+//   conversationOpenAIFunctions.sendChatMessageOpenAI
+// );
+
+export const sendChatMessage = usCentralFunctions.https.onCall(
+  sendChatMessageHandler
 );

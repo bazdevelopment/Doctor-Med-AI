@@ -3,6 +3,11 @@ import remoteConfig from '@react-native-firebase/remote-config';
 import { useCallback, useEffect, useState } from 'react';
 
 import { DEFAULT_PROMPT } from '@/constants/constants/default-prompt';
+import {
+  BLURRING_CONTENT_CONVERSATIONS_LIMIT_BACKUP,
+  MAX_CONVERSATIONS_ALLOWED_FREE_TRIAL_BACKUP,
+  MAX_SCANS_ALLOWED_FREE_TRIAL_BACKUP,
+} from '@/constants/constants/limits';
 
 // 1. Define defaults here. This acts as the "Source of Truth" for values and types.
 const DEFAULT_CONFIGS = {
@@ -15,6 +20,11 @@ const DEFAULT_CONFIGS = {
   SHOW_MEDICAL_DISCLAIMER_ONBOARDING: true,
   SHOW_SOCIAL_PROOF_ONBOARDING: false,
   SHOW_MEDICAL_DISCLAIMER_BANNER: true,
+  BLURRING_CONTENT_CONVERSATIONS_LIMIT:
+    BLURRING_CONTENT_CONVERSATIONS_LIMIT_BACKUP,
+  MAX_CONVERSATIONS_ALLOWED_FREE_TRIAL:
+    MAX_CONVERSATIONS_ALLOWED_FREE_TRIAL_BACKUP,
+  MAX_SCANS_ALLOWED_FREE_TRIAL: MAX_SCANS_ALLOWED_FREE_TRIAL_BACKUP,
 };
 
 // 2. Infer the type automatically from the default object
@@ -83,13 +93,14 @@ const useRemoteConfig = (): RemoteConfigType => {
     initRemoteConfig();
 
     // Set up real-time listener
-    const unsubscribe = remoteConfig().onConfigUpdated(async (event, error) => {
-      if (!error) {
+    const unsubscribe = remoteConfig().onConfigUpdated(
+      async (event, error) => {
+        // if (!error) {
         await remoteConfig().activate();
         setConfigs(getParsedConfigs());
       }
-    });
-
+      // });
+    );
     return () => unsubscribe();
   }, [getParsedConfigs]);
 

@@ -232,7 +232,7 @@
     "screens": {
       "welcome": {
         "accountButton": "Tôi đã có tài khoản",
-        "heading": "Chào mừng đến với Doctor Med AI!",
+        "heading": "Chào mừng đến với MedStudy AI!",
         "startButton": "Bắt đầu nào!"
       },
       "freeTrialPreview": {
@@ -285,19 +285,19 @@
         "subheading": "Kết nối của bạn có vẻ không ổn định. Vui lòng kiểm tra trạng thái mạng"
       },
       "newAppVersionScreen": {
-        "heading": "Phiên bản mới của Doctor Med AI có sẵn",
+        "heading": "Phiên bản mới của MedStudy AI có sẵn",
         "subheading": "Cập nhật lên phiên bản mới nhất để tiếp tục tận hưởng tất cả tính năng ứng dụng - chỉ mất 5 giây!",
         "action": "Nhận ngay!"
       },
       "disclaimerScreen": {
         "heading": "Tuyên bố miễn trừ trách nhiệm y tế quan trọng",
-        "subheading": "Doctor Med AI được thiết kế cho chuyên gia X-quang, chuyên gia chăm sóc sức khỏe, sinh viên y khoa và người đam mê",
+        "subheading": "MedStudy AI được thiết kế cho chuyên gia X-quang, chuyên gia chăm sóc sức khỏe, sinh viên y khoa và người đam mê",
         "consentAgreement": "Tôi đã đọc và đồng ý với tuyên bố miễn trừ trách nhiệm.",
-        "firstConsent": "Doctor Med AI không cung cấp phép đo sức khỏe hoặc lời khuyên điều trị, và không nhằm mục đích đó. Người dùng Doctor Med AI phải áp dụng phán đoán lâm sàng của họ và xác minh thông tin từ các nguồn có thẩm quyền trước khi đưa ra quyết định lâm sàng.",
-        "secondConsent": "Doctor Med AI không phải là công cụ chẩn đoán, nền tảng điều trị hoặc thay thế cho lời khuyên y tế chuyên nghiệp. Nó cung cấp thông tin chi tiết được tạo bởi AI để giúp chuyên gia chăm sóc sức khỏe truy cập kiến thức y tế và phân tích hình ảnh và tài liệu y tế. Doctor Med AI là ứng dụng thông tin và giáo dục được hỗ trợ bởi AI được thiết kế để hỗ trợ chuyên gia chăm sóc sức khỏe có giấy phép.",
-        "thirdConsent": "Doctor Med AI không được thiết kế cho bệnh nhân sử dụng. Nó không cung cấp chẩn đoán y tế trực tiếp, khuyến nghị điều trị hoặc chức năng quản lý bệnh nhân.",
-        "fourthConsent": "Doctor Med AI không được phân loại là thiết bị y tế và không yêu cầu phê duyệt quy định. Nó nhằm mục đích giáo dục và thông tin để bổ sung cho chuyên môn chuyên nghiệp.",
-        "fifthConsent": "Doctor Med AI không thu thập, lưu trữ hoặc xử lý dữ liệu cá nhân hoặc dữ liệu bệnh nhân. Tất cả tương tác của người dùng đều được bảo mật và giới hạn trong phạm vi ứng dụng."
+        "firstConsent": "MedStudy AI không cung cấp phép đo sức khỏe hoặc lời khuyên điều trị, và không nhằm mục đích đó. Người dùng MedStudy AI phải áp dụng phán đoán lâm sàng của họ và xác minh thông tin từ các nguồn có thẩm quyền trước khi đưa ra quyết định lâm sàng.",
+        "secondConsent": "MedStudy AI không phải là công cụ chẩn đoán, nền tảng điều trị hoặc thay thế cho lời khuyên y tế chuyên nghiệp. Nó cung cấp thông tin chi tiết được tạo bởi AI để giúp chuyên gia chăm sóc sức khỏe truy cập kiến thức y tế và phân tích hình ảnh và tài liệu y tế. MedStudy AI là ứng dụng thông tin và giáo dục được hỗ trợ bởi AI được thiết kế để hỗ trợ chuyên gia chăm sóc sức khỏe có giấy phép.",
+        "thirdConsent": "MedStudy AI không được thiết kế cho bệnh nhân sử dụng. Nó không cung cấp chẩn đoán y tế trực tiếp, khuyến nghị điều trị hoặc chức năng quản lý bệnh nhân.",
+        "fourthConsent": "MedStudy AI không được phân loại là thiết bị y tế và không yêu cầu phê duyệt quy định. Nó nhằm mục đích giáo dục và thông tin để bổ sung cho chuyên môn chuyên nghiệp.",
+        "fifthConsent": "MedStudy AI không thu thập, lưu trữ hoặc xử lý dữ liệu cá nhân hoặc dữ liệu bệnh nhân. Tất cả tương tác của người dùng đều được bảo mật và giới hạn trong phạm vi ứng dụng."
       },
       "contactUs": {
         "heading": "Hãy gửi email trực tiếp cho chúng tôi và nhóm của chúng tôi sẽ liên hệ lại với bạn sớm nhất có thể",
@@ -474,7 +474,7 @@
     "noSubscriptionToRestore": "Rất tiếc! Có vẻ như bạn không có đăng ký hoạt động tại thời điểm này. Để tiếp tục tận hưởng quyền truy cập đầy đủ, vui lòng chọn một trong các gói đăng ký của chúng tôi.",
     "restorationSuccessful": "Khôi phục thành công! Tận hưởng!",
     "restorationError": "Đã xảy ra lỗi khi khôi phục giao dịch mua.",
-    "medicalDisclaimerAlert": "Ứng dụng Doctor Med AI không thay thế tư vấn y tế. Một số chẩn đoán chỉ dành cho mục đích thông tin/giáo dục. Để được khuyến nghị y tế, luôn tham khảo ý kiến bác sĩ hoặc chuyên gia được cấp phép.",
+    "medicalDisclaimerAlert": "Ứng dụng MedStudy AI không thay thế tư vấn y tế. Một số chẩn đoán chỉ dành cho mục đích thông tin/giáo dục. Để được khuyến nghị y tế, luôn tham khảo ý kiến bác sĩ hoặc chuyên gia được cấp phép.",
     "scanLimitReached": "Chúng tôi đang tối ưu hóa chất lượng quét cho bạn! Bạn sẽ có thể quét lại sau khoảng {{hours}} giờ và {{minutes}} phút. Có câu hỏi về chủ đề y tế? Hỏi trợ lý trò chuyện của chúng tôi trong khi chờ đợi!",
     "mixedMediaNotAllowed": "Để chính xác hơn, không tải lên hỗn hợp các tệp đa phương tiện khác nhau. Vui lòng chỉ tải lên hình ảnh, video hoặc pdf - không phải tất cả cùng nhau.",
     "multipleVideosNotAllowed": "Để chính xác hơn, vui lòng chỉ tải lên một video tại một thời điểm.",

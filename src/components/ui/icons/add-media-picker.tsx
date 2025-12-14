@@ -1,6 +1,7 @@
-import { ISvgProps } from '@/types';
 import * as React from 'react';
 import Svg, { Path, Rect } from 'react-native-svg';
+
+import { type ISvgProps } from '@/types';
 
 export const AddMediaPicker = (props: ISvgProps) => (
   <Svg

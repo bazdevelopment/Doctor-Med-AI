@@ -232,7 +232,7 @@
     "screens": {
       "welcome": {
         "accountButton": "Am deja un cont",
-        "heading": "Bun venit la Doctor Med AI!",
+        "heading": "Bun venit la MedStudy AI!",
         "startButton": "Să începem!"
       },
       "freeTrialPreview": {
@@ -285,19 +285,19 @@
         "subheading": "Conexiunea ta pare instabilă. Verifică-ți starea rețelei"
       },
       "newAppVersionScreen": {
-        "heading": "O versiune nouă a Doctor Med AI este disponibilă",
+        "heading": "O versiune nouă a MedStudy AI este disponibilă",
         "subheading": "Actualizează la ultima versiune pentru a continua să te bucuri de toate funcțiile aplicației — durează doar 5 secunde!",
         "action": "Obține-o acum!"
       },
       "disclaimerScreen": {
         "heading": "Disclaimer medical important",
-        "subheading": "Doctor Med AI este conceput pentru profesioniști în radiologie, experți în sănătate, studenți la medicină și entuziaști",
+        "subheading": "MedStudy AI este conceput pentru profesioniști în radiologie, experți în sănătate, studenți la medicină și entuziaști",
         "consentAgreement": "Am citit și sunt de acord cu disclaimer-ul.",
-        "firstConsent": "Doctor Med AI nu oferă măsurători de sănătate sau sfaturi de tratament și nu este destinat unor astfel de scopuri. Utilizatorii Doctor Med AI trebuie să își aplice judecata clinică și să verifice informațiile din surse autoritative înainte de a lua decizii clinice.",
-        "secondConsent": "Doctor Med AI nu este un instrument de diagnostic, platformă de tratament sau înlocuitor pentru sfaturi medicale profesionale. Oferă perspective generate de AI pentru a ajuta profesioniștii din sănătate să acceseze cunoștințe medicale și să analizeze imagini și documente medicale. Doctor Med AI este o aplicație informațională și educațională condusă de AI concepută mai mult pentru a sprijini profesioniștii din sănătate autorizați.",
-        "thirdConsent": "Doctor Med AI nu este conceput pentru utilizarea pacienților. Nu oferă diagnostice medicale directe, recomandări de tratament sau funcționalități de management al pacienților.",
-        "fourthConsent": "Doctor Med AI nu este clasificat ca dispozitiv medical și nu pretinde aprobări de reglementare. Este destinat scopurilor educaționale și informaționale pentru a completa expertiza profesională.",
-        "fifthConsent": "Doctor Med AI nu colectează, stochează sau procesează date personale sau ale pacienților. Toate interacțiunile utilizatorilor sunt confidențiale și limitate la domeniul de aplicare al aplicației."
+        "firstConsent": "MedStudy AI nu oferă măsurători de sănătate sau sfaturi de tratament și nu este destinat unor astfel de scopuri. Utilizatorii MedStudy AI trebuie să își aplice judecata clinică și să verifice informațiile din surse autoritative înainte de a lua decizii clinice.",
+        "secondConsent": "MedStudy AI nu este un instrument de diagnostic, platformă de tratament sau înlocuitor pentru sfaturi medicale profesionale. Oferă perspective generate de AI pentru a ajuta profesioniștii din sănătate să acceseze cunoștințe medicale și să analizeze imagini și documente medicale. MedStudy AI este o aplicație informațională și educațională condusă de AI concepută mai mult pentru a sprijini profesioniștii din sănătate autorizați.",
+        "thirdConsent": "MedStudy AI nu este conceput pentru utilizarea pacienților. Nu oferă diagnostice medicale directe, recomandări de tratament sau funcționalități de management al pacienților.",
+        "fourthConsent": "MedStudy AI nu este clasificat ca dispozitiv medical și nu pretinde aprobări de reglementare. Este destinat scopurilor educaționale și informaționale pentru a completa expertiza profesională.",
+        "fifthConsent": "MedStudy AI nu colectează, stochează sau procesează date personale sau ale pacienților. Toate interacțiunile utilizatorilor sunt confidențiale și limitate la domeniul de aplicare al aplicației."
       },
       "contactUs": {
         "heading": "Nu ezita să ne trimiți un email direct, iar echipa noastră te va contacta cât mai curând posibil",
@@ -474,7 +474,7 @@
     "noSubscriptionToRestore": "Ups! Se pare că nu ai un abonament activ momentan. Pentru a continua să te bucuri de acces complet, te rugăm să alegi unul dintre planurile noastre de abonament.",
     "restorationSuccessful": "Restaurarea a fost reușită! Bucură-te!",
     "restorationError": "A apărut o eroare la restaurarea achiziției.",
-    "medicalDisclaimerAlert": "Aplicația Doctor Med AI nu înlocuiește consultația medicală. Unele diagnostice sunt doar în scop informativ/educațional. Pentru recomandări medicale, consultă întotdeauna un medic sau un specialist autorizat.",
+    "medicalDisclaimerAlert": "Aplicația MedStudy AI nu înlocuiește consultația medicală. Unele diagnostice sunt doar în scop informativ/educațional. Pentru recomandări medicale, consultă întotdeauna un medic sau un specialist autorizat.",
     "scanLimitReached": "Optimizăm calitatea scanării pentru tine! Vei putea scana din nou în aproximativ {{hours}} ore și {{minutes}} minute. Ai întrebări despre vreun subiect medical? Întreabă asistentul nostru de chat în timp ce aștepți!",
     "mixedMediaNotAllowed": "Pentru o acuratețe mai bună, nu încărca un amestec de fișiere media diferite. Te rugăm să încarci doar imagini, videoclipuri sau pdf-uri — nu toate împreună.",
     "multipleVideosNotAllowed": "Pentru o acuratețe mai bună, te rugăm să încarci doar un videoclip pe rând.",

@@ -1,6 +1,6 @@
-import React from 'react';
-import { View, Image, TouchableOpacity, Text, Linking } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import React from 'react';
+import { Image, Linking, Text, TouchableOpacity, View } from 'react-native';
 
 interface MessageMediaAttachmentsProps {
   urls: string[];
@@ -76,9 +76,9 @@ const MessageMediaAttachments: React.FC<MessageMediaAttachmentsProps> = ({
             <TouchableOpacity
               key={index}
               onPress={() => handleDocumentPress(url)}
-              className="w-[70px] h-[90px] rounded-xl m-1 bg-gray-100 dark:bg-gray-800 justify-center items-center p-2 active:opacity-70"
+              className="m-1 h-[90px] w-[70px] items-center justify-center rounded-xl bg-gray-100 p-2 active:opacity-70 dark:bg-gray-800"
             >
-              <View className="justify-center items-center flex-1">
+              <View className="flex-1 items-center justify-center">
                 <Ionicons
                   name={getDocumentIcon(fileExtension)}
                   size={28}
@@ -86,7 +86,7 @@ const MessageMediaAttachments: React.FC<MessageMediaAttachmentsProps> = ({
                 />
               </View>
               <Text
-                className="text-[10px] text-gray-600 dark:text-gray-400 text-center mt-1"
+                className="mt-1 text-center text-[10px] text-gray-600 dark:text-gray-400"
                 numberOfLines={2}
                 ellipsizeMode="middle"
               >
@@ -107,7 +107,7 @@ const MessageMediaAttachments: React.FC<MessageMediaAttachmentsProps> = ({
           >
             <Image
               source={{ uri: url }}
-              className="w-[70px] h-[70px] rounded-xl m-1"
+              className="m-1 size-[70px] rounded-xl"
               resizeMode="cover"
             />
           </TouchableOpacity>

@@ -232,7 +232,7 @@
     "screens": {
       "welcome": {
         "accountButton": "Ich habe bereits ein Konto",
-        "heading": "Willkommen bei Doctor Med AI!",
+        "heading": "Willkommen bei MedStudy AI!",
         "startButton": "Lass uns beginnen!"
       },
       "freeTrialPreview": {
@@ -285,19 +285,19 @@
         "subheading": "Ihre Verbindung scheint instabil zu sein. Bitte überprüfen Sie Ihren Netzwerkstatus"
       },
       "newAppVersionScreen": {
-        "heading": "Eine neue Version von Doctor Med AI ist verfügbar",
+        "heading": "Eine neue Version von MedStudy AI ist verfügbar",
         "subheading": "Aktualisieren Sie auf die neueste Version, um weiterhin alle App-Funktionen zu genießen - es dauert nur 5 Sekunden!",
         "action": "Jetzt holen!"
       },
       "disclaimerScreen": {
         "heading": "Wichtiger medizinischer Haftungsausschluss",
-        "subheading": "Doctor Med AI ist für Radiologie-Fachkräfte, Gesundheitsexperten, Medizinstudenten und Enthusiasten konzipiert",
+        "subheading": "MedStudy AI ist für Radiologie-Fachkräfte, Gesundheitsexperten, Medizinstudenten und Enthusiasten konzipiert",
         "consentAgreement": "Ich habe den Haftungsausschluss gelesen und stimme zu.",
-        "firstConsent": "Doctor Med AI bietet keine Gesundheitsmessungen oder Behandlungsempfehlungen und ist auch nicht für solche Zwecke gedacht. Nutzer von Doctor Med AI müssen ihr klinisches Urteilsvermögen anwenden und Informationen aus autoritativen Quellen überprüfen, bevor sie klinische Entscheidungen treffen.",
-        "secondConsent": "Doctor Med AI ist kein Diagnosewerkzeug, keine Behandlungsplattform oder ein Ersatz für professionellen medizinischen Rat. Es bietet KI-generierte Einblicke, um medizinisches Fachpersonal beim Zugang zu medizinischem Wissen und bei der Analyse medizinischer Bilder und Dokumente zu unterstützen. Doctor Med AI ist eine KI-gestützte Informations- und Bildungs-App, die eher lizenzierten medizinischen Fachkräften Unterstützung bieten soll.",
-        "thirdConsent": "Doctor Med AI ist nicht für die Patientenverwendung konzipiert. Es bietet keine direkten medizinischen Diagnosen, Behandlungsempfehlungen oder Patientenmanagement-Funktionalitäten.",
-        "fourthConsent": "Doctor Med AI ist nicht als Medizinprodukt klassifiziert und beansprucht keine regulatorische Zulassung. Es ist für Bildungs- und Informationszwecke gedacht, um professionelle Expertise zu ergänzen.",
-        "fifthConsent": "Doctor Med AI sammelt, speichert oder verarbeitet keine persönlichen oder Patientendaten. Alle Nutzerinteraktionen sind vertraulich und auf den Umfang der App beschränkt."
+        "firstConsent": "MedStudy AI bietet keine Gesundheitsmessungen oder Behandlungsempfehlungen und ist auch nicht für solche Zwecke gedacht. Nutzer von MedStudy AI müssen ihr klinisches Urteilsvermögen anwenden und Informationen aus autoritativen Quellen überprüfen, bevor sie klinische Entscheidungen treffen.",
+        "secondConsent": "MedStudy AI ist kein Diagnosewerkzeug, keine Behandlungsplattform oder ein Ersatz für professionellen medizinischen Rat. Es bietet KI-generierte Einblicke, um medizinisches Fachpersonal beim Zugang zu medizinischem Wissen und bei der Analyse medizinischer Bilder und Dokumente zu unterstützen. MedStudy AI ist eine KI-gestützte Informations- und Bildungs-App, die eher lizenzierten medizinischen Fachkräften Unterstützung bieten soll.",
+        "thirdConsent": "MedStudy AI ist nicht für die Patientenverwendung konzipiert. Es bietet keine direkten medizinischen Diagnosen, Behandlungsempfehlungen oder Patientenmanagement-Funktionalitäten.",
+        "fourthConsent": "MedStudy AI ist nicht als Medizinprodukt klassifiziert und beansprucht keine regulatorische Zulassung. Es ist für Bildungs- und Informationszwecke gedacht, um professionelle Expertise zu ergänzen.",
+        "fifthConsent": "MedStudy AI sammelt, speichert oder verarbeitet keine persönlichen oder Patientendaten. Alle Nutzerinteraktionen sind vertraulich und auf den Umfang der App beschränkt."
       },
       "contactUs": {
         "heading": "Sie können uns gerne direkt per E-Mail kontaktieren, unser Team wird sich so schnell wie möglich bei Ihnen melden",
@@ -474,7 +474,7 @@
     "noSubscriptionToRestore": "Hoppla! Es scheint, dass Sie momentan kein aktives Abonnement haben. Um weiterhin vollen Zugriff zu genießen, wählen Sie bitte einen unserer Abonnementpläne.",
     "restorationSuccessful": "Wiederherstellung war erfolgreich! Viel Spaß!",
     "restorationError": "Beim Wiederherstellen des Kaufs ist ein Fehler aufgetreten.",
-    "medicalDisclaimerAlert": "Die Doctor Med AI App ersetzt keine medizinische Beratung. Einige Diagnosen dienen nur Informations-/Bildungszwecken. Für medizinische Empfehlungen konsultieren Sie immer einen Arzt oder lizenzierten Spezialisten.",
+    "medicalDisclaimerAlert": "Die MedStudy AI App ersetzt keine medizinische Beratung. Einige Diagnosen dienen nur Informations-/Bildungszwecken. Für medizinische Empfehlungen konsultieren Sie immer einen Arzt oder lizenzierten Spezialisten.",
     "scanLimitReached": "Wir optimieren die Scan-Qualität für Sie! Sie können in etwa {{hours}} Stunden und {{minutes}} Minuten erneut scannen. Haben Sie Fragen zu medizinischen Themen? Fragen Sie unseren Chat-Assistenten, während Sie warten!",
     "mixedMediaNotAllowed": "Für bessere Genauigkeit laden Sie bitte keine Mischung verschiedener Mediendateien hoch. Laden Sie nur Bilder, Videos oder PDFs hoch - nicht alle zusammen.",
     "multipleVideosNotAllowed": "Für bessere Genauigkeit laden Sie bitte nur ein Video auf einmal hoch.",

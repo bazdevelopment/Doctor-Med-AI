@@ -145,8 +145,8 @@ export const generateOptCodeTemplate = (
 
     <!-- Footer Section -->
     <div class="footer">
-      <p>If you have any questions, feel free to <a href="mailto:medscanaiapp@gmail.com">contact us</a>.</p>
-      <p>&copy; 2025 MedScan AI. All rights reserved.</p>
+      <p>If you have any questions, feel free to <a href="mailto:doctormedaiapp@gmail.com">contact us</a>.</p>
+      <p>&copy; 2026 MedStudy AI. All rights reserved.</p>
     </div>
   </div>
 </body>

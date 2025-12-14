@@ -232,7 +232,7 @@
     "screens": {
       "welcome": {
         "accountButton": "Saya sudah mempunyai akaun",
-        "heading": "Selamat Datang ke Doctor Med AI!",
+        "heading": "Selamat Datang ke MedStudy AI!",
         "startButton": "Mari Mulakan!"
       },
       "freeTrialPreview": {
@@ -285,19 +285,19 @@
         "subheading": "Sambungan anda kelihatan tidak stabil. Sila semak status rangkaian anda"
       },
       "newAppVersionScreen": {
-        "heading": "Versi baharu Doctor Med AI tersedia",
+        "heading": "Versi baharu MedStudy AI tersedia",
         "subheading": "Kemas kini ke versi terkini untuk terus menikmati semua ciri aplikasi - hanya mengambil masa 5 saat!",
         "action": "Dapatkan Sekarang!"
       },
       "disclaimerScreen": {
         "heading": "Penafian Perubatan Penting",
-        "subheading": "Doctor Med AI direka untuk profesional radiologi, pakar penjagaan kesihatan, pelajar perubatan dan peminat",
+        "subheading": "MedStudy AI direka untuk profesional radiologi, pakar penjagaan kesihatan, pelajar perubatan dan peminat",
         "consentAgreement": "Saya telah baca dan bersetuju dengan penafian.",
-        "firstConsent": "Doctor Med AI tidak menyediakan pengukuran kesihatan atau nasihat rawatan, dan tidak bertujuan untuk tujuan sedemikian. Pengguna Doctor Med AI mesti menggunakan pertimbangan klinikal mereka dan mengesahkan maklumat daripada sumber berwibawa sebelum membuat sebarang keputusan klinikal.",
-        "secondConsent": "Doctor Med AI bukan alat diagnostik, platform rawatan atau pengganti nasihat perubatan profesional. Ia menawarkan pandangan yang dijana AI untuk membantu profesional penjagaan kesihatan mengakses pengetahuan perubatan dan menganalisis imej dan dokumen perubatan. Doctor Med AI adalah aplikasi maklumat dan pendidikan berasaskan AI yang direka lebih untuk menyokong profesional penjagaan kesihatan berlesen.",
-        "thirdConsent": "Doctor Med AI tidak direka untuk kegunaan pesakit. Ia tidak menyediakan diagnosis perubatan langsung, cadangan rawatan atau fungsi pengurusan pesakit.",
-        "fourthConsent": "Doctor Med AI tidak dikelaskan sebagai peranti perubatan dan tidak menuntut kelulusan kawal selia. Ia bertujuan untuk tujuan pendidikan dan maklumat untuk melengkapkan kepakaran profesional.",
-        "fifthConsent": "Doctor Med AI tidak mengumpul, menyimpan atau memproses data peribadi atau data pesakit. Semua interaksi pengguna adalah sulit dan terhad kepada skop aplikasi."
+        "firstConsent": "MedStudy AI tidak menyediakan pengukuran kesihatan atau nasihat rawatan, dan tidak bertujuan untuk tujuan sedemikian. Pengguna MedStudy AI mesti menggunakan pertimbangan klinikal mereka dan mengesahkan maklumat daripada sumber berwibawa sebelum membuat sebarang keputusan klinikal.",
+        "secondConsent": "MedStudy AI bukan alat diagnostik, platform rawatan atau pengganti nasihat perubatan profesional. Ia menawarkan pandangan yang dijana AI untuk membantu profesional penjagaan kesihatan mengakses pengetahuan perubatan dan menganalisis imej dan dokumen perubatan. MedStudy AI adalah aplikasi maklumat dan pendidikan berasaskan AI yang direka lebih untuk menyokong profesional penjagaan kesihatan berlesen.",
+        "thirdConsent": "MedStudy AI tidak direka untuk kegunaan pesakit. Ia tidak menyediakan diagnosis perubatan langsung, cadangan rawatan atau fungsi pengurusan pesakit.",
+        "fourthConsent": "MedStudy AI tidak dikelaskan sebagai peranti perubatan dan tidak menuntut kelulusan kawal selia. Ia bertujuan untuk tujuan pendidikan dan maklumat untuk melengkapkan kepakaran profesional.",
+        "fifthConsent": "MedStudy AI tidak mengumpul, menyimpan atau memproses data peribadi atau data pesakit. Semua interaksi pengguna adalah sulit dan terhad kepada skop aplikasi."
       },
       "contactUs": {
         "heading": "Jangan teragak-agak untuk menghantar e-mel kepada kami secara langsung, dan pasukan kami akan menghubungi anda secepat mungkin",
@@ -474,7 +474,7 @@
     "noSubscriptionToRestore": "Alamak! Nampaknya anda tidak mempunyai langganan aktif buat masa ini. Untuk terus menikmati akses penuh, sila pilih salah satu pelan langganan kami.",
     "restorationSuccessful": "Pemulihan berjaya! Nikmati!",
     "restorationError": "Ralat berlaku semasa memulihkan pembelian.",
-    "medicalDisclaimerAlert": "Apl Doctor Med AI tidak menggantikan perundingan perubatan. Sesetengah diagnosis adalah untuk tujuan maklumat/pendidikan sahaja. Untuk cadangan perubatan, sentiasa berjumpa doktor atau pakar berlesen.",
+    "medicalDisclaimerAlert": "Apl MedStudy AI tidak menggantikan perundingan perubatan. Sesetengah diagnosis adalah untuk tujuan maklumat/pendidikan sahaja. Untuk cadangan perubatan, sentiasa berjumpa doktor atau pakar berlesen.",
     "scanLimitReached": "Kami mengoptimumkan kualiti imbasan untuk anda! Anda boleh mengimbas semula dalam kira-kira {{hours}} jam dan {{minutes}} minit. Ada soalan tentang topik perubatan? Tanya pembantu sembang kami semasa menunggu!",
     "mixedMediaNotAllowed": "Untuk ketepatan yang lebih baik, jangan muat naik campuran fail media yang berbeza. Sila muat naik hanya imej, video atau pdf - bukan semua sekali.",
     "multipleVideosNotAllowed": "Untuk ketepatan yang lebih baik, sila muat naik hanya satu video pada satu masa.",

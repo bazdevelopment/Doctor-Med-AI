@@ -1,6 +1,7 @@
-import { ISvgProps } from '@/types';
 import * as React from 'react';
 import Svg, { Path } from 'react-native-svg';
+
+import { type ISvgProps } from '@/types';
 
 export const SendIcon = (props: ISvgProps) => (
   <Svg

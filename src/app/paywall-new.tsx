@@ -144,7 +144,7 @@ const PricingCard = ({
 
           {/* {badge && (
             <View className="ml-3 rounded-lg bg-red-500 px-3 py-1">
-              <Text className="font-bold-poppins text-[13px] text-white">
+              <Text className="font-bold-poppins text-[12px] text-white">
                 {badge}
               </Text>
             </View>
@@ -154,10 +154,10 @@ const PricingCard = ({
         <View>
           {originalPrice && (
             <View className="mt-1 flex-row items-center">
-              {/* <Text className="mr-2 font-semibold-poppins text-lg text-gray-600 line-through">
+              {/* <Text className="mr-2 font-semibold-poppins text-[14.5px] text-gray-600 line-through">
                 {originalPrice}
               </Text> */}
-              <Text className="font-medium-poppins text-lg text-gray-900">
+              <Text className="font-medium-poppins text-[14.5px] text-gray-900">
                 {price} {translate('general.perYear')}
               </Text>
 
@@ -179,7 +179,7 @@ const PricingCard = ({
         </View>
 
         {subtitle && (
-          <Text className="font-medium-poppins text-lg text-black">
+          <Text className="font-medium-poppins text-[14.5px] text-black">
             {subtitle}
           </Text>
         )}
@@ -349,9 +349,10 @@ const PaywallNew = () => {
                   onUpdateUser,
                   logEvent,
                   setIsFirstTime,
+                  allowAppAccess,
                 });
                 // requestAppRatingWithDelay(3000);
-                DEVICE_TYPE.IOS && router.dismiss();
+                // DEVICE_TYPE.IOS && router.dismiss();
                 return;
               }
 
@@ -474,7 +475,7 @@ const PaywallNew = () => {
                   textClassName="text-black dark:text-white font-semibold-poppins"
                   onPress={() =>
                     Linking.openURL(
-                      'https://doctormedaitermsconditions.netlify.app/'
+                      'https://medstudyaitermsconditions.netlify.app/'
                     )
                   }
                 />
@@ -488,7 +489,7 @@ const PaywallNew = () => {
                   loading={isPendingRestorePurchase}
                 />
 
-                <Text className="mt-6 text-center text-sm text-charcoal-800">
+                <Text className="mt-6 text-center text-[11px] text-charcoal-800">
                   {`*Your subscription will be charged to your ${DEVICE_TYPE.IOS ? 'App Store' : 'Google Play account'} and renews automatically unless canceled at least 24 hours before the end of the current subscription period. You can manage or cancel your subscription anytime in your account settings. The subscription will renew at the same price and plan you selected unless you change or cancel it.`}
                 </Text>
 

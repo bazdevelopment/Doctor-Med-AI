@@ -1,7 +1,9 @@
-import React from 'react';
-import { View, TouchableOpacity, Modal, Pressable } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import React from 'react';
+import { Modal, Pressable, TouchableOpacity, View } from 'react-native';
+
 import { translate } from '@/lib';
+
 import { Text } from '../ui';
 
 type ImagePickerModalProps = {
@@ -51,9 +53,9 @@ export const ImagePickerModal: React.FC<ImagePickerModalProps> = ({
       onRequestClose={onBackdropPress}
     >
       <Pressable className="flex-1 bg-black/40 " onPress={onBackdropPress}>
-        <View className="bg-neutral-800 rounded-2xl w-72 overflow-hidden shadow-lg bottom-20 absolute left-20 flex-1">
+        <View className="absolute bottom-20 left-20 w-72 flex-1 overflow-hidden rounded-2xl bg-neutral-800 shadow-lg">
           {title ? (
-            <Text className="text-gray-300 text-center text-sm py-2 border-b border-neutral-700">
+            <Text className="border-b border-neutral-700 py-2 text-center text-sm text-gray-300">
               {title}
             </Text>
           ) : null}
@@ -62,19 +64,19 @@ export const ImagePickerModal: React.FC<ImagePickerModalProps> = ({
             <TouchableOpacity
               key={index}
               onPress={item.action}
-              className={`flex-row items-center justify-between px-4 py-3 border-b border-neutral-700 ${
+              className={`flex-row items-center justify-between border-b border-neutral-700 px-4 py-3 ${
                 index === data.length - 1 ? 'border-b-0' : ''
               }`}
             >
-              <Text className="text-white text-base">{item.title}</Text>
+              <Text className="text-base text-white">{item.title}</Text>
               <MaterialIcons name={item.icon as any} size={22} color="white" />
             </TouchableOpacity>
           ))}
           <TouchableOpacity
-            className="bg-neutral-800 rounded-2xl w-72 py-1 py-4 shadow-lg border-t border-neutral-700 "
+            className="w-72 rounded-2xl border-t border-neutral-700 bg-neutral-800 py-1 py-4 shadow-lg "
             onPress={onCancelPress}
           >
-            <Text className="text-white  font-semibold-poppins px-4">
+            <Text className="px-4  font-semibold-poppins text-white">
               {translate('general.cancel')}
             </Text>
           </TouchableOpacity>

@@ -91,7 +91,7 @@ const Welcome = () => {
             <TouchableOpacity
               onPress={() =>
                 Linking.openURL(
-                  'https://doctormedaitermsconditions.netlify.app/'
+                  'https://medstudyaitermsconditions.netlify.app/'
                 )
               }
             >
@@ -102,7 +102,7 @@ const Welcome = () => {
             <Text className="text-sm"> {translate('general.and')} </Text>
             <TouchableOpacity
               onPress={() =>
-                Linking.openURL('https://doctormedaiprivacy.netlify.app/')
+                Linking.openURL('https://medstudyaiprivacy.netlify.app/')
               }
             >
               <Text className="text-sm text-primary-900 dark:text-primary-900">

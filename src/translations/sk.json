@@ -232,7 +232,7 @@
     "screens": {
       "welcome": {
         "accountButton": "Už mám účet",
-        "heading": "Vitajte v Doctor Med AI!",
+        "heading": "Vitajte v MedStudy AI!",
         "startButton": "Začnime!"
       },
       "freeTrialPreview": {
@@ -285,19 +285,19 @@
         "subheading": "Vaše pripojenie sa zdá byť nestabilné. Skontrolujte stav siete"
       },
       "newAppVersionScreen": {
-        "heading": "Je k dispozícii nová verzia Doctor Med AI",
+        "heading": "Je k dispozícii nová verzia MedStudy AI",
         "subheading": "Aktualizujte na najnovšiu verziu, aby ste naďalej využívali všetky funkcie aplikácie - trvá to len 5 sekúnd!",
         "action": "Získajte teraz!"
       },
       "disclaimerScreen": {
         "heading": "Dôležité lekárske vyhlásenie",
-        "subheading": "Doctor Med AI je určený pre rádiológov, zdravotníckych odborníkov, študentov medicíny a nadšencov",
+        "subheading": "MedStudy AI je určený pre rádiológov, zdravotníckych odborníkov, študentov medicíny a nadšencov",
         "consentAgreement": "Prečítal som si a súhlasím s vyhlásením.",
-        "firstConsent": "Doctor Med AI neposkytuje zdravotné merania ani liečebné rady, ani nie je určený na takéto účely. Používatelia Doctor Med AI musia uplatniť svoj klinický úsudok a overiť informácie z autoritatívnych zdrojov pred akýmkoľvek klinickým rozhodnutím.",
-        "secondConsent": "Doctor Med AI nie je diagnostický nástroj, liečebná platforma ani náhrada za odborné lekárske poradenstvo. Ponúka poznatky generované umelou inteligenciou na pomoc zdravotníckym pracovníkom pri prístupe k lekárskej znalosti a analýze lekárskech obrázkov a dokumentov. Doctor Med AI je informačná a vzdelávacia aplikácia poháňaná umelou inteligenciou, ktorá je navrhnutá skôr na podporu licencovaných zdravotníckych pracovníkov.",
-        "thirdConsent": "Doctor Med AI nie je navrhnutý pre použitie pacientmi. Neposkytuje priame lekárske diagnózy, odporúčania liečby ani funkcie riadenia pacientov.",
-        "fourthConsent": "Doctor Med AI nie je klasifikovaný ako lekársky prístroj a netvrdí, že má regulačné schválenie. Je určený na vzdelávacie a informačné účely na doplnenie profesionálnej odbornosti.",
-        "fifthConsent": "Doctor Med AI nezhromažďuje, neukladá ani nespracúva osobné údaje ani údaje pacientov. Všetky interakcie používateľov sú dôverné a obmedzené na rozsah aplikácie."
+        "firstConsent": "MedStudy AI neposkytuje zdravotné merania ani liečebné rady, ani nie je určený na takéto účely. Používatelia MedStudy AI musia uplatniť svoj klinický úsudok a overiť informácie z autoritatívnych zdrojov pred akýmkoľvek klinickým rozhodnutím.",
+        "secondConsent": "MedStudy AI nie je diagnostický nástroj, liečebná platforma ani náhrada za odborné lekárske poradenstvo. Ponúka poznatky generované umelou inteligenciou na pomoc zdravotníckym pracovníkom pri prístupe k lekárskej znalosti a analýze lekárskech obrázkov a dokumentov. MedStudy AI je informačná a vzdelávacia aplikácia poháňaná umelou inteligenciou, ktorá je navrhnutá skôr na podporu licencovaných zdravotníckych pracovníkov.",
+        "thirdConsent": "MedStudy AI nie je navrhnutý pre použitie pacientmi. Neposkytuje priame lekárske diagnózy, odporúčania liečby ani funkcie riadenia pacientov.",
+        "fourthConsent": "MedStudy AI nie je klasifikovaný ako lekársky prístroj a netvrdí, že má regulačné schválenie. Je určený na vzdelávacie a informačné účely na doplnenie profesionálnej odbornosti.",
+        "fifthConsent": "MedStudy AI nezhromažďuje, neukladá ani nespracúva osobné údaje ani údaje pacientov. Všetky interakcie používateľov sú dôverné a obmedzené na rozsah aplikácie."
       },
       "contactUs": {
         "heading": "Kľudne nám napíšte priamo e-mail a náš tím sa vám čoskoro ozve",
@@ -474,7 +474,7 @@
     "noSubscriptionToRestore": "Ops! Zdá sa, že momentálne nemáte aktívne predplatné. Ak chcete naďalej využívať plný prístup, vyberte si jeden z našich predplatných plánov.",
     "restorationSuccessful": "Obnovenie bolo úspešné! Tešte sa!",
     "restorationError": "Pri obnovovaní nákupu sa vyskytla chyba.",
-    "medicalDisclaimerAlert": "Aplikácia Doctor Med AI nenahradzuje lekárske konzultácie. Niektoré diagnózy sú len na informačné/vzdelávacie účely. Pre lekárske odporúčania sa vždy poraďte s lekárom alebo licencovaným špecialistom.",
+    "medicalDisclaimerAlert": "Aplikácia MedStudy AI nenahradzuje lekárske konzultácie. Niektoré diagnózy sú len na informačné/vzdelávacie účely. Pre lekárske odporúčania sa vždy poraďte s lekárom alebo licencovaným špecialistom.",
     "scanLimitReached": "Optimalizujeme pre vás kvalitu skenovania! Budete môcť znova skenovať približne o {{hours}} hodín a {{minutes}} minút. Máte nejaké otázky o nejakej lekárskej téme? Opýtajte sa nášho asistenta chatu, kým čakáte!",
     "mixedMediaNotAllowed": "Pre lepšiu presnosť nenahrávajte zmes rôznych médií. Nahrajte iba obrázky, videá alebo pdf - nie všetky spolu.",
     "multipleVideosNotAllowed": "Pre lepšiu presnosť nahrajte iba jedno video naraz.",

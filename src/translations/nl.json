@@ -232,7 +232,7 @@
     "screens": {
       "welcome": {
         "accountButton": "Ik heb al een account",
-        "heading": "Welkom bij Doctor Med AI!",
+        "heading": "Welkom bij MedStudy AI!",
         "startButton": "Laten we beginnen!"
       },
       "freeTrialPreview": {
@@ -285,19 +285,19 @@
         "subheading": "Uw verbinding lijkt onstabiel. Controleer uw netwerkstatus"
       },
       "newAppVersionScreen": {
-        "heading": "Een nieuwe versie van Doctor Med AI is beschikbaar",
+        "heading": "Een nieuwe versie van MedStudy AI is beschikbaar",
         "subheading": "Update naar de nieuwste versie om te blijven genieten van alle app-functies - het duurt maar 5 seconden!",
         "action": "Krijg het nu!"
       },
       "disclaimerScreen": {
         "heading": "Belangrijke medische disclaimer",
-        "subheading": "Doctor Med AI is ontworpen voor radiologieprofessionals, gezondheidsexperts, medische studenten en enthousiastelingen",
+        "subheading": "MedStudy AI is ontworpen voor radiologieprofessionals, gezondheidsexperts, medische studenten en enthousiastelingen",
         "consentAgreement": "Ik heb de disclaimer gelezen en ga ermee akkoord.",
-        "firstConsent": "Doctor Med AI biedt geen gezondheidsmetingen of behandeladvies, noch is het bedoeld voor dergelijke doeleinden. Gebruikers van Doctor Med AI moeten hun klinische oordeel toepassen en informatie van gezaghebbende bronnen verifiëren voordat ze klinische beslissingen nemen.",
-        "secondConsent": "Doctor Med AI is geen diagnostisch hulpmiddel, behandelplatform of vervanging voor professioneel medisch advies. Het biedt AI-gegenereerde inzichten om zorgprofessionals te helpen bij het toegang krijgen tot medische kennis en het analyseren van medische beelden en documenten. Doctor Med AI is een AI-aangedreven informatieve en educatieve app die meer is ontworpen om gelicentieerde zorgprofessionals te ondersteunen.",
-        "thirdConsent": "Doctor Med AI is niet ontworpen voor patiëntgebruik. Het biedt geen directe medische diagnoses, behandelingsaanbevelingen of patiëntbeheerfunctionaliteiten.",
-        "fourthConsent": "Doctor Med AI is niet geclassificeerd als een medisch hulpmiddel en claimt geen regelgevende goedkeuring. Het is bedoeld voor educatieve en informatieve doeleinden om professionele expertise aan te vullen.",
-        "fifthConsent": "Doctor Med AI verzamelt, slaat of verwerkt geen persoonlijke of patiëntgegevens. Alle gebruikersinteracties zijn vertrouwelijk en beperkt tot de reikwijdte van de app."
+        "firstConsent": "MedStudy AI biedt geen gezondheidsmetingen of behandeladvies, noch is het bedoeld voor dergelijke doeleinden. Gebruikers van MedStudy AI moeten hun klinische oordeel toepassen en informatie van gezaghebbende bronnen verifiëren voordat ze klinische beslissingen nemen.",
+        "secondConsent": "MedStudy AI is geen diagnostisch hulpmiddel, behandelplatform of vervanging voor professioneel medisch advies. Het biedt AI-gegenereerde inzichten om zorgprofessionals te helpen bij het toegang krijgen tot medische kennis en het analyseren van medische beelden en documenten. MedStudy AI is een AI-aangedreven informatieve en educatieve app die meer is ontworpen om gelicentieerde zorgprofessionals te ondersteunen.",
+        "thirdConsent": "MedStudy AI is niet ontworpen voor patiëntgebruik. Het biedt geen directe medische diagnoses, behandelingsaanbevelingen of patiëntbeheerfunctionaliteiten.",
+        "fourthConsent": "MedStudy AI is niet geclassificeerd als een medisch hulpmiddel en claimt geen regelgevende goedkeuring. Het is bedoeld voor educatieve en informatieve doeleinden om professionele expertise aan te vullen.",
+        "fifthConsent": "MedStudy AI verzamelt, slaat of verwerkt geen persoonlijke of patiëntgegevens. Alle gebruikersinteracties zijn vertrouwelijk en beperkt tot de reikwijdte van de app."
       },
       "contactUs": {
         "heading": "Voel u vrij om ons rechtstreeks te e-mailen, en ons team zal zo snel mogelijk contact met u opnemen",
@@ -474,7 +474,7 @@
     "noSubscriptionToRestore": "Oeps! Het lijkt erop dat u momenteel geen actief abonnement heeft. Kies een van onze abonnementsplannen om volledige toegang te blijven genieten.",
     "restorationSuccessful": "Herstel was succesvol! Geniet ervan!",
     "restorationError": "Er is een fout opgetreden bij het herstellen van de aankoop.",
-    "medicalDisclaimerAlert": "De Doctor Med AI-app vervangt geen medisch consult. Sommige diagnoses zijn alleen voor informatieve/educatieve doeleinden. Raadpleeg voor medische aanbevelingen altijd een arts of gelicentieerde specialist.",
+    "medicalDisclaimerAlert": "De MedStudy AI-app vervangt geen medisch consult. Sommige diagnoses zijn alleen voor informatieve/educatieve doeleinden. Raadpleeg voor medische aanbevelingen altijd een arts of gelicentieerde specialist.",
     "scanLimitReached": "We optimaliseren de scankwaliteit voor u! U kunt over ongeveer {{hours}} uur en {{minutes}} minuten opnieuw scannen. Heeft u vragen over een medisch onderwerp? Vraag het onze chatassistent terwijl u wacht!",
     "mixedMediaNotAllowed": "Voor betere nauwkeurigheid, upload geen mix van verschillende mediabestanden. Upload alleen afbeeldingen, video's of pdf's - niet allemaal samen.",
     "multipleVideosNotAllowed": "Voor betere nauwkeurigheid, upload slechts één video per keer.",

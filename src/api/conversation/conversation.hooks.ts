@@ -1,21 +1,21 @@
 // hooks/useConversation.ts (Updated for @google/genai)
 
-import { createMutation, createQuery } from 'react-query-kit';
-import { useState, useCallback, useRef } from 'react';
 import { GoogleGenAI } from '@google/genai';
-import Toast from '@/components/toast';
-import dayjs from 'dayjs';
-
 import firestore from '@react-native-firebase/firestore';
 import storage from '@react-native-firebase/storage';
+import dayjs from 'dayjs';
+import { useCallback } from 'react';
+import { createMutation, createQuery } from 'react-query-kit';
 
+import { Env } from '@/lib/env';
+import { LANGUAGES } from '@/utilities/languages';
+
+import { queryClient } from '../common';
 import {
   fetchAllUserConversations,
   fetchConversation,
+  sendChatMessageUsingAI,
 } from './conversation.requests';
-import { LANGUAGES } from '@/utilities/languages';
-import { Env } from '@/lib/env';
-import { queryClient } from '../common';
 
 // -------------------------------
 // 🔹 Types & Interfaces
@@ -181,7 +181,7 @@ const saveConversationToFirestore = async ({
 // 🔹 Streaming Message Hook
 // -------------------------------
 
-export const useSendStreamingMessage = () => {
+export const useSendStreamingMessageBackup = () => {
   const { encodeMultipleMedia } = useMediaEncoder();
   const { buildSystemPrompt } = usePromptBuilder();
   const { formatHistoryForGenAI } = useHistoryFormatter();
@@ -551,3 +551,33 @@ export const useHistoryFormatter = () => {
 
   return { formatHistoryForGenAI };
 };
+
+export const useSendStreamingMessage = ({ onComplete, onError }) => {
+  return createMutation({
+    mutationKey: ['send-streaming-message'],
+    mutationFn: async (params: StreamingMessageParams): Promise<any> => {
+      return sendChatMessageUsingAI(params);
+    },
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({
+        queryKey: ['conversation', data.conversationId],
+      });
+      queryClient.invalidateQueries({ queryKey: ['user-conversations'] });
+      onComplete?.(data);
+    },
+    onError: (error) => {
+      onError?.();
+
+      console.error('Failed to send message:', error);
+    },
+  })();
+};
+
+// export const useFinalStreamingMessage = ({ onComplete, onError }) => {
+//   const backup = useSendStreamingMessageBackup({ onComplete, onError });
+//   const main = useSendStreamingMessage({ onComplete, onError });
+
+//   const { ENABLE_SEND_MESSAGES_FUNCTION_BACKUP } = useRemoteConfig();
+
+//   return ENABLE_SEND_MESSAGES_FUNCTION_BACKUP ? backup : main;
+// };

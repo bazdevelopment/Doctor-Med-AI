@@ -2,14 +2,15 @@ import { router } from 'expo-router';
 import React from 'react';
 import { TouchableOpacity, View } from 'react-native';
 
+import useSubscriptionAlert from '@/lib/hooks/use-subscription-banner';
+
 import Branding from '../branding';
 import HorizontalLine from '../horizontal-line';
+import IconBadge from '../icon-badge';
 import MedicalDisclaimerButton from '../medical-disclaimer-button';
 import { Button, colors } from '../ui';
-import { CrownIcon } from '../ui/icons/crown';
 import { BellIcon } from '../ui/icons/bell';
-import IconBadge from '../icon-badge';
-import useSubscriptionAlert from '@/lib/hooks/use-subscription-banner';
+import { CrownIcon } from '../ui/icons/crown';
 
 const CustomHomeHeader = ({ unReadMessages }: { unReadMessages: number }) => {
   const { isUpgradeRequired } = useSubscriptionAlert();
@@ -30,7 +31,7 @@ const CustomHomeHeader = ({ unReadMessages }: { unReadMessages: number }) => {
         </TouchableOpacity>
       </View>
       <View className=" flex-row items-center justify-between">
-        <MedicalDisclaimerButton className="mt-3 mb-3 max-w-[50%]" />
+        <MedicalDisclaimerButton className="my-3 max-w-[50%]" />
         {isUpgradeRequired && (
           <Button
             label="PRO" //or PREMIUM

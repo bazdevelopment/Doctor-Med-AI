@@ -15,7 +15,7 @@ const Branding = ({
   return (
     <View className={`flex-row items-center ${className}`}>
       {isLogoVisible && (
-        <View className="dark:bg-blackEerie rounded-xl bg-primary-50 dark:p-0">
+        <View className="rounded-xl bg-primary-50 dark:bg-blackEerie dark:p-0">
           <Image
             source={require('../../../assets/icon_transparent.png')}
             className="size-[54px]"
@@ -27,7 +27,7 @@ const Branding = ({
         <Text
           className={`text-center font-bold-poppins text-[22px] tracking-[2px] text-black dark:text-white`}
         >
-          Doctor Med
+          MedStudy
         </Text>
         <Text
           className={`ml-2 text-center font-bold-poppins text-[22px] tracking-[2px] text-primary-900 dark:text-primary-900 ${textColor}`}

@@ -1,6 +1,6 @@
-import React from 'react';
-import { View, Image, TouchableOpacity, ScrollView, Text } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import React from 'react';
+import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
 export interface IMediPickerFile {
   id: string;
@@ -52,17 +52,17 @@ const ImagePreviewGallery: React.FC<ImagePreviewGalleryProps> = ({
   };
 
   return (
-    <View className="p-2 border-t border-gray-200 dark:border-gray-700">
+    <View className="border-t border-gray-200 p-2 dark:border-gray-700">
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {files.map((file) => {
           const isDoc = isDocument(file.fileMimeType);
           const isVid = isVideo(file.mimeType);
           return (
-            <View key={file.id} className="m-1 relative">
+            <View key={file.id} className="relative m-1">
               {isDoc ? (
                 // Document Preview
-                <View className="w-20 h-24 rounded-xl bg-gray-100 dark:bg-gray-800 justify-center items-center p-2">
-                  <View className="w-full h-16 justify-center items-center">
+                <View className="h-24 w-20 items-center justify-center rounded-xl bg-gray-100 p-2 dark:bg-gray-800">
+                  <View className="h-16 w-full items-center justify-center">
                     <Ionicons
                       name={getDocumentIcon(file.fileExtension)}
                       size={32}
@@ -71,7 +71,7 @@ const ImagePreviewGallery: React.FC<ImagePreviewGalleryProps> = ({
                     />
                   </View>
                   <Text
-                    className="text-xs text-gray-600 dark:text-gray-400 text-center mt-1"
+                    className="mt-1 text-center text-xs text-gray-600 dark:text-gray-400"
                     numberOfLines={2}
                     ellipsizeMode="middle"
                   >
@@ -80,14 +80,14 @@ const ImagePreviewGallery: React.FC<ImagePreviewGalleryProps> = ({
                 </View>
               ) : (
                 // Image/Video Preview
-                <View className="w-20 h-20 rounded-xl">
+                <View className="size-20 rounded-xl">
                   <Image
                     source={{ uri: file.fileUri || file?.uri }}
-                    className="w-full h-full rounded-xl"
+                    className="size-full rounded-xl"
                     resizeMode="cover"
                   />
                   {isVid && (
-                    <View className="absolute inset-0 justify-center items-center bg-black/30 rounded-xl">
+                    <View className="absolute inset-0 items-center justify-center rounded-xl bg-black/30">
                       <Ionicons name="play-circle" size={32} color="white" />
                     </View>
                   )}
@@ -96,7 +96,7 @@ const ImagePreviewGallery: React.FC<ImagePreviewGalleryProps> = ({
 
               {/* Remove Button */}
               <TouchableOpacity
-                className="absolute -top-1 -right-1 w-6 h-6 bg-black/60 rounded-full justify-center items-center border-2 border-white z-10"
+                className="absolute -right-1 -top-1 z-10 size-6 items-center justify-center rounded-full border-2 border-white bg-black/60"
                 onPress={() => onRemoveFile(file.id)}
               >
                 <Ionicons name="close" size={16} color="white" />

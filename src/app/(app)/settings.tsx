@@ -136,14 +136,14 @@ export default function Settings() {
             <Item
               text="settings.privacy"
               onPress={() =>
-                Linking.openURL('https://doctormedaiprivacy.netlify.app/')
+                Linking.openURL('https://medstudyaiprivacy.netlify.app/')
               }
             />
             <Item
               text="settings.terms"
               onPress={() =>
                 Linking.openURL(
-                  'https://doctormedaitermsconditions.netlify.app/'
+                  'https://medstudyaitermsconditions.netlify.app/'
                 )
               }
             />
@@ -201,7 +201,7 @@ export default function Settings() {
                             'Hinweis zu persönlichen medizinischen Bildern',
                           body: '',
                           // title: 'Notice About Personal microscopy Images',
-                          // body: 'We DO NOT encourage uploading personal microscopy images to MicroScan AI for individual analysis, as the results should not be considered final. Our AI models are still being researched and refined, and potential inaccuracies may occur. It’s great for learning and get general insights, but for in-depth reviews, consult a specialist. If you have any questions contact us via email - microscanaiapp@gmail.com',
+                          // body: 'We DO NOT encourage uploading personal microscopy images to MicroScan AI for individual analysis, as the results should not be considered final. Our AI models are still being researched and refined, and potential inaccuracies may occur. It’s great for learning and get general insights, but for in-depth reviews, consult a specialist. If you have any questions contact us via email - doctormedaiapp@gmail.com',
                           userId: '',
                           language,
                         })

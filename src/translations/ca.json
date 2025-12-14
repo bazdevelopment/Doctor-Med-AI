@@ -232,7 +232,7 @@
     "screens": {
       "welcome": {
         "accountButton": "Ja tinc un compte",
-        "heading": "Benvingut/da a Doctor Med AI!",
+        "heading": "Benvingut/da a MedStudy AI!",
         "startButton": "Comencem!"
       },
       "freeTrialPreview": {
@@ -285,19 +285,19 @@
         "subheading": "La vostra connexió sembla inestable. Si us plau, verifiqueu l'estat de la xarxa"
       },
       "newAppVersionScreen": {
-        "heading": "Hi ha disponible una nova versió de Doctor Med AI",
+        "heading": "Hi ha disponible una nova versió de MedStudy AI",
         "subheading": "Actualitzeu a la darrera versió per continuar gaudint de totes les funcions de l'app - només triga 5 segons!",
         "action": "Obteniu-la ara!"
       },
       "disclaimerScreen": {
         "heading": "Avís mèdic important",
-        "subheading": "Doctor Med AI està dissenyat per a professionals de radiologia, experts en salut, estudiants de medicina i entusiastes",
+        "subheading": "MedStudy AI està dissenyat per a professionals de radiologia, experts en salut, estudiants de medicina i entusiastes",
         "consentAgreement": "He llegit i accepto l'avís.",
-        "firstConsent": "Doctor Med AI no proporciona mesures de salut ni consells de tractament, ni està destinat a aquests propòsits. Els usuaris de Doctor Med AI han d'aplicar el seu judici clínic i verificar la informació de fonts autoritzades abans de prendre decisions clíniques.",
-        "secondConsent": "Doctor Med AI no és una eina de diagnòstic, una plataforma de tractament o un substitut del consell mèdic professional. Ofereix informació generada per IA per ajudar els professionals de la salut a accedir al coneixement mèdic i analitzar imatges i documents mèdics. Doctor Med AI és una aplicació informativa i educativa impulsada per IA dissenyada més per donar suport a professionals de la salut amb llicència.",
-        "thirdConsent": "Doctor Med AI no està dissenyat per a l'ús de pacients. No proporciona diagnòstics mèdics directes, recomanacions de tractament o funcionalitats de gestió de pacients.",
-        "fourthConsent": "Doctor Med AI no està classificat com a dispositiu mèdic i no pretén aprovació regulatoria. Està destinat a fins educatius i informatius per complementar l'expertesa professional.",
-        "fifthConsent": "Doctor Med AI no recull, emmagatzema ni processa dades personals o de pacients. Totes les interaccions dels usuaris són confidencials i limitades a l'abast de l'aplicació."
+        "firstConsent": "MedStudy AI no proporciona mesures de salut ni consells de tractament, ni està destinat a aquests propòsits. Els usuaris de MedStudy AI han d'aplicar el seu judici clínic i verificar la informació de fonts autoritzades abans de prendre decisions clíniques.",
+        "secondConsent": "MedStudy AI no és una eina de diagnòstic, una plataforma de tractament o un substitut del consell mèdic professional. Ofereix informació generada per IA per ajudar els professionals de la salut a accedir al coneixement mèdic i analitzar imatges i documents mèdics. MedStudy AI és una aplicació informativa i educativa impulsada per IA dissenyada més per donar suport a professionals de la salut amb llicència.",
+        "thirdConsent": "MedStudy AI no està dissenyat per a l'ús de pacients. No proporciona diagnòstics mèdics directes, recomanacions de tractament o funcionalitats de gestió de pacients.",
+        "fourthConsent": "MedStudy AI no està classificat com a dispositiu mèdic i no pretén aprovació regulatoria. Està destinat a fins educatius i informatius per complementar l'expertesa professional.",
+        "fifthConsent": "MedStudy AI no recull, emmagatzema ni processa dades personals o de pacients. Totes les interaccions dels usuaris són confidencials i limitades a l'abast de l'aplicació."
       },
       "contactUs": {
         "heading": "No dubteu a enviar-nos un correu electrònic directament, i el nostre equip us respondrà tan aviat com sigui possible",
@@ -474,7 +474,7 @@
     "noSubscriptionToRestore": "Vaja! Sembla que no teniu cap subscripció activa en aquest moment. Per continuar gaudint d'accés complet, si us plau, trieu un dels nostres plans de subscripció.",
     "restorationSuccessful": "La restauració ha estat exitosa! Gaudiu!",
     "restorationError": "S'ha produït un error en restaurar la compra.",
-    "medicalDisclaimerAlert": "L'aplicació Doctor Med AI no substitueix la consulta mèdica. Alguns diagnòstics són només per a fins informatius/educatius. Per a recomanacions mèdiques, consulteu sempre un metge o especialista amb llicència.",
+    "medicalDisclaimerAlert": "L'aplicació MedStudy AI no substitueix la consulta mèdica. Alguns diagnòstics són només per a fins informatius/educatius. Per a recomanacions mèdiques, consulteu sempre un metge o especialista amb llicència.",
     "scanLimitReached": "Estem optimitzant la qualitat de l'escaneig per a vosaltres! Podreu escanejar de nou en aproximadament {{hours}} hores i {{minutes}} minuts. Teniu alguna pregunta sobre algun tema mèdic? Pregunteu al nostre assistent de xat mentre espereu!",
     "mixedMediaNotAllowed": "Per a una millor precisió, no pengeu una barreja de diferents fitxers multimèdia. Si us plau, pengeu només imatges, vídeos o pdfs - no tots junts.",
     "multipleVideosNotAllowed": "Per a una millor precisió, si us plau, pengeu només un vídeo a la vegada.",

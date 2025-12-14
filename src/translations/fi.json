@@ -232,7 +232,7 @@
     "screens": {
       "welcome": {
         "accountButton": "Minulla on jo tili",
-        "heading": "Tervetuloa Doctor Med AI:hin!",
+        "heading": "Tervetuloa MedStudy AI:hin!",
         "startButton": "Aloitetaan!"
       },
       "freeTrialPreview": {
@@ -285,19 +285,19 @@
         "subheading": "Yhteytesi vaikuttaa epävakailta. Tarkista verkkotilasi"
       },
       "newAppVersionScreen": {
-        "heading": "Doctor Med AI:n uusi versio on saatavilla",
+        "heading": "MedStudy AI:n uusi versio on saatavilla",
         "subheading": "Päivitä uusimpaan versioon jatkaaksesi kaikkien sovellusominaisuuksien nauttimista — se kestää vain 5 sekuntia!",
         "action": "Hae se nyt!"
       },
       "disclaimerScreen": {
         "heading": "Tärkeä lääketieteellinen vastuuvapauslauseke",
-        "subheading": "Doctor Med AI on suunniteltu radiologia-ammattilaisille, terveydenhuoltoasiantuntijoille, lääketieteen opiskelijoille ja harrastajille",
+        "subheading": "MedStudy AI on suunniteltu radiologia-ammattilaisille, terveydenhuoltoasiantuntijoille, lääketieteen opiskelijoille ja harrastajille",
         "consentAgreement": "Olen lukenut ja hyväksyn vastuuvapauslausekkeen.",
-        "firstConsent": "Doctor Med AI ei tarjoa terveysmittauksia tai hoitoneuvoja, eikä se ole tarkoitettu sellaisiin tarkoituksiin. Doctor Med AI:n käyttäjien on sovellettava kliinistä harkintaansa ja varmennettava tiedot auktoritatiivisista lähteistä ennen kliinisiä päätöksiä.",
-        "secondConsent": "Doctor Med AI ei ole diagnostinen työkalu, hoitoalusta tai korvaus ammattimaiselle lääketieteelliselle neuvonnalle. Se tarjoaa tekoälyllä luotuja oivalluksia auttaakseen terveydenhuoltoammattilaisia pääsemään käsiksi lääketieteelliseen tietoon ja analysoimaan lääketieteellisiä kuvia ja asiakirjoja. Doctor Med AI on tekoälyyn perustuva informatiivinen ja koulutussovellus, joka on suunniteltu tukemaan lisensoidumpia terveydenhuoltoammattilaisia.",
-        "thirdConsent": "Doctor Med AI ei ole suunniteltu potilaskäyttöön. Se ei tarjoa suoria lääketieteellisiä diagnooseja, hoitosuosituksia tai potilashallintatoimintoja.",
-        "fourthConsent": "Doctor Med AI:ta ei luokitella lääketieteelliseksi laitteeksi, eikä se vaadi sääntelyhyväksyntää. Se on tarkoitettu koulutus- ja informaatiotarkoituksiin täydentämään ammattitaitoa.",
-        "fifthConsent": "Doctor Med AI ei kerää, tallenna tai käsittele henkilö- tai potilastietoja. Kaikki käyttäjävuorovaikutukset ovat luottamuksellisia ja rajoittuvat sovelluksen laajuuteen."
+        "firstConsent": "MedStudy AI ei tarjoa terveysmittauksia tai hoitoneuvoja, eikä se ole tarkoitettu sellaisiin tarkoituksiin. MedStudy AI:n käyttäjien on sovellettava kliinistä harkintaansa ja varmennettava tiedot auktoritatiivisista lähteistä ennen kliinisiä päätöksiä.",
+        "secondConsent": "MedStudy AI ei ole diagnostinen työkalu, hoitoalusta tai korvaus ammattimaiselle lääketieteelliselle neuvonnalle. Se tarjoaa tekoälyllä luotuja oivalluksia auttaakseen terveydenhuoltoammattilaisia pääsemään käsiksi lääketieteelliseen tietoon ja analysoimaan lääketieteellisiä kuvia ja asiakirjoja. MedStudy AI on tekoälyyn perustuva informatiivinen ja koulutussovellus, joka on suunniteltu tukemaan lisensoidumpia terveydenhuoltoammattilaisia.",
+        "thirdConsent": "MedStudy AI ei ole suunniteltu potilaskäyttöön. Se ei tarjoa suoria lääketieteellisiä diagnooseja, hoitosuosituksia tai potilashallintatoimintoja.",
+        "fourthConsent": "MedStudy AI:ta ei luokitella lääketieteelliseksi laitteeksi, eikä se vaadi sääntelyhyväksyntää. Se on tarkoitettu koulutus- ja informaatiotarkoituksiin täydentämään ammattitaitoa.",
+        "fifthConsent": "MedStudy AI ei kerää, tallenna tai käsittele henkilö- tai potilastietoja. Kaikki käyttäjävuorovaikutukset ovat luottamuksellisia ja rajoittuvat sovelluksen laajuuteen."
       },
       "contactUs": {
         "heading": "Voit vapaasti lähettää meille sähköpostia suoraan, ja tiimimme vastaa sinulle mahdollisimman pian",
@@ -474,7 +474,7 @@
     "noSubscriptionToRestore": "Hups! Näyttää siltä, että sinulla ei ole aktiivista tilausta tällä hetkellä. Jatkaaksesi täyden pääsyn nauttimista, valitse jokin tilaussuunnitelmistamme.",
     "restorationSuccessful": "Palautus onnistui! Nauti!",
     "restorationError": "Oston palautuksessa tapahtui virhe.",
-    "medicalDisclaimerAlert": "Doctor Med AI -sovellus ei korvaa lääketieteellistä konsultaatiota. Jotkin diagnoosit ovat vain tiedon- ja opetuskäyttöä varten. Lääketieteellisiä suosituksia varten ota aina yhteyttä lääkäriin tai lisensoituun asiantuntijaan.",
+    "medicalDisclaimerAlert": "MedStudy AI -sovellus ei korvaa lääketieteellistä konsultaatiota. Jotkin diagnoosit ovat vain tiedon- ja opetuskäyttöä varten. Lääketieteellisiä suosituksia varten ota aina yhteyttä lääkäriin tai lisensoituun asiantuntijaan.",
     "scanLimitReached": "Optimoidaan skannauslaatua puolestasi! Voit skannata uudelleen noin {{hours}} tunnin ja {{minutes}} minuutin kuluttua. Onko sinulla kysymyksiä lääketieteellisistä aiheista? Kysy chat-avustajaltamme odotellessasi!",
     "mixedMediaNotAllowed": "Parempaa tarkkuutta varten älä lataa erilaisten mediatiedostojen sekoitusta. Lataa vain kuvia, videoita tai pdf-tiedostoja — ei kaikkia yhdessä.",
     "multipleVideosNotAllowed": "Parempaa tarkkuutta varten lataa vain yksi video kerrallaan.",
